@@ -125,7 +125,7 @@ Normalizacion "geometrica"
 <font size = 3> *mi nueva variable areaRelativa es: el area del cuadrado
 chiquito dividido la del rectangulo grande* </font>
 
-![](area_plot.jpeg)
+![](/static/img/area_plot.jpeg)
 
 Normalizacion "geometrica"
 --------------------------

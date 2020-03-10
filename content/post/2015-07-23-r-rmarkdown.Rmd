@@ -184,7 +184,7 @@ _mi nueva variable areaRelativa es: el area del cuadrado chiquito dividido la de
 </font>
 
 
-![](area_plot.jpeg)
+![](/static/img/area_plot.jpeg)
 
 
 ## Normalizacion "geometrica"
