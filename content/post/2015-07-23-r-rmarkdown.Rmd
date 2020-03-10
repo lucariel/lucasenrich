@@ -21,7 +21,7 @@ _El problema_: Clusterizar diseños
 
 
 ```{r, out.width = "400px"}
-knitr::include_graphics("banner-example.png")
+knitr::include_graphics("../../static/img/cce/banner-example.png")
 ```
 
 
@@ -33,7 +33,7 @@ knitr::include_graphics("banner-example.png")
 
 
 ```{r, out.width= "65%", out.extra='style="float:left; padding:20px"'}
-knitr::include_graphics("input_data.png")
+knitr::include_graphics("../../static/img/cce/input_data.png")
 ```
 
 
@@ -61,7 +61,7 @@ library(dbscan)
 
 ```
 ```{r, out.width= "45%", out.extra='style="float:left; padding:20px"'}
-knitr::include_graphics("sin_norm2.png")
+knitr::include_graphics("../../static/img/cce/sin_norm2.png")
 
 ```
 
@@ -106,7 +106,7 @@ Opciones
 </font>
 
 ```{r, out.height= "10%",out.width= "60%", out.extra='style="float:center; padding:20px"'}
-knitr::include_graphics("normaliz_data.png")
+knitr::include_graphics("../../static/img/cce/normaliz_data.png")
 
 ```
 
@@ -197,7 +197,7 @@ _mi nueva variable disposicion es: el alto dividido por el ancho_
 </font>
 
 ```{r,out.width= "30%", out.extra='style="float:center; padding:0% 35%"'}
-knitr::include_graphics("rectangular.png")
+knitr::include_graphics("../../static/img/cce/rectangular.png")
 
 ```
 

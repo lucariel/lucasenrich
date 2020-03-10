@@ -2,17 +2,17 @@
 
 ¿Como hago para clasificar estilos de banners?
 
-    knitr::include_graphics("banner-example.png")
+    knitr::include_graphics("../../static/img/cce/banner-example.png")
 
-<img src="banner-example.png" width="400px" />
+<img src="../../static/img/cce/banner-example.png" width="400px" />
 
 **Input data**
 
 *Se sacan metadatos de un archivo de photoshop*
 
-    knitr::include_graphics("input_data.png")
+    knitr::include_graphics("../../static/img/cce/input_data.png")
 
-<img src="input_data.png" width="65%" style="float:left; padding:20px" />
+<img src="../../static/img/cce/input_data.png" width="65%" style="float:left; padding:20px" />
 
 -   <font size = 3> *y* : Distancia desde arriba </font>
 
@@ -34,9 +34,9 @@ Estrategia 1:
     #umap_data<- umap(data)
     #cl <-hdbscan(x = umap_data, minPts = 3)
 
-    knitr::include_graphics("sin_norm2.png")
+    knitr::include_graphics("../../static/img/cce/sin_norm2.png")
 
-<img src="sin_norm2.png" width="45%" style="float:left; padding:20px" />
+<img src="../../static/img/cce/sin_norm2.png" width="45%" style="float:left; padding:20px" />
 
 -   <font size = 3> Se puede ver un grupo diferenciado, pero los demas
     no estan tan claros. </font>
@@ -70,9 +70,9 @@ Opciones </font>
 
 <!-- -->
 
-    knitr::include_graphics("normaliz_data.png")
+    knitr::include_graphics("../../static/img/cce/normaliz_data.png")
 
-<img src="normaliz_data.png" width="60%" height="10%" style="float:center; padding:20px" />
+<img src="../../static/img/cce/normaliz_data.png" width="60%" height="10%" style="float:center; padding:20px" />
 
 **¿Puedo usar estas transformaciones en estos datos?**
 
@@ -136,9 +136,9 @@ Normalizacion "geometrica"
 <font size = 3> *mi nueva variable disposicion es: el alto dividido por
 el ancho* </font>
 
-    knitr::include_graphics("rectangular.png")
+    knitr::include_graphics("../../static/img/cce/rectangular.png")
 
-<img src="rectangular.png" width="30%" style="float:center; padding:0% 35%" />
+<img src="../../static/img/cce/rectangular.png" width="30%" style="float:center; padding:0% 35%" />
 
 Resultados
 ----------
