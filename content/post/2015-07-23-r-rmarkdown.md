@@ -136,9 +136,9 @@ Normalizacion "geometrica"
 <font size = 3> *mi nueva variable disposicion es: el alto dividido por
 el ancho* </font>
 
-    knitr::include_graphics("../../static/img/cce/rectangular.png")
+    knitr::include_graphics("rectangular.png")
 
-<img src="../../static/img/cce/rectangular.png" width="30%" style="float:center; padding:0% 35%" />
+<img src="rectangular.png" width="30%" style="float:center; padding:0% 35%" />
 
 Resultados
 ----------

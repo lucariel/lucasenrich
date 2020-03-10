@@ -197,7 +197,7 @@ _mi nueva variable disposicion es: el alto dividido por el ancho_
 </font>
 
 ```{r,out.width= "30%", out.extra='style="float:center; padding:0% 35%"'}
-knitr::include_graphics("../../static/img/cce/rectangular.png")
+knitr::include_graphics("rectangular.png")
 
 ```
 
