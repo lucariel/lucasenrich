@@ -21,7 +21,7 @@ _El problema_: Clusterizar diseños
 
 
 ```{r, out.width = "400px"}
-knitr::include_graphics("../../static/img/cce/banner-example.png")
+knitr::include_graphics("/static/img/banner-example.png")
 ```
 
 
@@ -33,7 +33,7 @@ knitr::include_graphics("../../static/img/cce/banner-example.png")
 
 
 ```{r, out.width= "65%", out.extra='style="float:left; padding:20px"'}
-knitr::include_graphics("../../static/img/cce/input_data.png")
+knitr::include_graphics("/static/img/input_data.png")
 ```
 
 
@@ -61,7 +61,7 @@ library(dbscan)
 
 ```
 ```{r, out.width= "45%", out.extra='style="float:left; padding:20px"'}
-knitr::include_graphics("/static/img/cce/sin_norm2.png")
+knitr::include_graphics("/static/img/sin_norm2.png")
 
 ```
 

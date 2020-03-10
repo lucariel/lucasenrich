@@ -2,17 +2,17 @@
 
 ¿Como hago para clasificar estilos de banners?
 
-    knitr::include_graphics("../../static/img/cce/banner-example.png")
+    knitr::include_graphics("/static/img/banner-example.png")
 
-<img src="../../static/img/cce/banner-example.png" width="400px" />
+<img src="/static/img/banner-example.png" width="400px" />
 
 **Input data**
 
 *Se sacan metadatos de un archivo de photoshop*
 
-    knitr::include_graphics("../../static/img/cce/input_data.png")
+    knitr::include_graphics("/static/img/input_data.png")
 
-<img src="../../static/img/cce/input_data.png" width="65%" style="float:left; padding:20px" />
+<img src="/static/img/input_data.png" width="65%" style="float:left; padding:20px" />
 
 -   <font size = 3> *y* : Distancia desde arriba </font>
 
@@ -34,9 +34,9 @@ Estrategia 1:
     #umap_data<- umap(data)
     #cl <-hdbscan(x = umap_data, minPts = 3)
 
-    knitr::include_graphics("/static/img/cce/sin_norm2.png")
+    knitr::include_graphics("/static/img/sin_norm2.png")
 
-<img src="/static/img/cce/sin_norm2.png" width="45%" style="float:left; padding:20px" />
+<img src="/static/img/sin_norm2.png" width="45%" style="float:left; padding:20px" />
 
 -   <font size = 3> Se puede ver un grupo diferenciado, pero los demas
     no estan tan claros. </font>
