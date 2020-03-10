@@ -10,9 +10,9 @@
 
 *Se sacan metadatos de un archivo de photoshop*
 
-    knitr::include_graphics("/static/img/input_data.png")
+    knitr::include_graphics("/img/input_data.png")
 
-<img src="/static/img/input_data.png" width="65%" style="float:left; padding:20px" />
+<img src="/img/input_data.png" width="65%" style="float:left; padding:20px" />
 
 -   <font size = 3> *y* : Distancia desde arriba </font>
 
@@ -34,9 +34,9 @@ Estrategia 1:
     #umap_data<- umap(data)
     #cl <-hdbscan(x = umap_data, minPts = 3)
 
-    knitr::include_graphics("/static/img/sin_norm2.png")
+    knitr::include_graphics("/img/sin_norm2.png")
 
-<img src="/static/img/sin_norm2.png" width="45%" style="float:left; padding:20px" />
+<img src="/img/sin_norm2.png" width="65%" style="float:left; padding:20px" />
 
 -   <font size = 3> Se puede ver un grupo diferenciado, pero los demas
     no estan tan claros. </font>
@@ -70,9 +70,9 @@ Opciones </font>
 
 <!-- -->
 
-    knitr::include_graphics("/static/img/cce/normaliz_data.png")
+    knitr::include_graphics("/img/normaliz_data.png")
 
-<img src="/static/img/cce/normaliz_data.png" width="60%" height="10%" style="float:center; padding:20px" />
+<img src="/img/normaliz_data.png" width="65%" style="float:left; padding:20px" />
 
 **¿Puedo usar estas transformaciones en estos datos?**
 
@@ -104,7 +104,9 @@ Normalizacion "geometrica"
 <font size = 3> *mi nueva variable x' es: la linea roja dividida la
 linea azul* </font>
 
-![](/static/img/demo_plot_y.jpeg)
+    knitr::include_graphics("/img/demo_plot_y.jpeg")
+
+<img src="/img/demo_plot_y.jpeg" width="65%" style="float:left; padding:20px" />
 
 Normalizacion "geometrica"
 --------------------------
@@ -114,7 +116,9 @@ Normalizacion "geometrica"
 <font size = 3> *mi nueva variable y' es: la linea roja dividida la
 linea azul* </font>
 
-![](/img/demo_plot_y.jpeg)
+    knitr::include_graphics("/img/demo_plot_y.jpeg")
+
+<img src="/img/demo_plot_y.jpeg" width="65%" style="float:left; padding:20px" />
 
 Normalizacion "geometrica"
 --------------------------
@@ -136,9 +140,9 @@ Normalizacion "geometrica"
 <font size = 3> *mi nueva variable disposicion es: el alto dividido por
 el ancho* </font>
 
-    knitr::include_graphics("rectangular.png")
+    knitr::include_graphics("/img/rectangular.png")
 
-<img src="rectangular.png" width="30%" style="float:center; padding:0% 35%" />
+<img src="/img/rectangular.png" width="30%" style="float:center; padding:0% 35%" />
 
 Resultados
 ----------
