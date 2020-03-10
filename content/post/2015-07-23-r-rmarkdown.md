@@ -1,3 +1,10 @@
+Clustering con Estilo:
+
+HDBSCAN + UMAP
+
+<!--more-->
+
+
 *El problema*: Clusterizar diseños
 
 ¿Como hago para clasificar estilos de banners?
