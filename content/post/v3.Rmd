@@ -1,0 +1,231 @@
+
+---
+title: "Clustering con estilo"
+subtitle: 'umap & hdbscan'
+author: 'Lucas Enrich (lucas.a.enrich@gmail.com)'
+output: md_document
+tags: ["R", "umap", "hdbscan","clustering","no supervised"]
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+##
+_El problema_: Clusterizar diseños
+
+¿Como hago para clasificar estilos de banners?
+
+
+```{r, out.width = "400px"}
+knitr::include_graphics("../../static/img/cce/banner-example.png")
+```
+
+
+##
+ 
+**Input data**
+
+*Se sacan metadatos de un archivo de photoshop*
+
+
+```{r, out.width= "65%", out.extra='style="float:left; padding:20px"'}
+knitr::include_graphics("../../static/img/cce/input_data.png")
+```
+
+
+* <font size = 3> _y_ : Distancia desde arriba </font>
+
+* <font size = 3> _x_ : Distancia desde la  izquierda </font>
+
+* <font size = 3> _w_ : Ancho (width) </font>
+
+* <font size = 3> _h_ : Alto (height) </font>
+
+## 
+
+Estrategia 1: 
+
+
+*  <font size = 3> Reduccion de dimensionalidad  + Clustering  </font>
+
+```{r, eval=F, echo=T, size='tiny'} 
+
+library(umap)
+library(dbscan)
+umap_data<- umap(data)
+cl <-hdbscan(x = umap_data, minPts = 3)
+
+```
+```{r, out.width= "45%", out.extra='style="float:left; padding:20px"'}
+knitr::include_graphics("../../static/img/cce/sin_norm2.png")
+
+```
+
+
+* <font size = 3>
+ Se puede ver un grupo diferenciado, pero los demas no estan tan claros.
+</font>
+
+
+##
+**Validacion** 
+
+
+_En terminos de negocio...¿sirve hacer esto?_
+
+
+
+* <font size = 4>
+ Al separar en diferentes carpetas los archivos de cada cluster generado, los diseñadores no estaban conformes, habia diseños distintos que habian sido clasificados como similares
+
+</font>
+
+```{r, out.width = "400px" , out.extra='style="float:center; padding:20px"'}
+#knitr::include_graphics("preguntas-768x449.jpg")
+```
+
+
+
+##
+
+**Estrategia 2**
+
+<font size = 3> 
+Surge la necesidad de transformar los datos
+
+Opciones
+</font>
+
+* <font size = 2> Estandarizacion (z-score): Representa el numero de desvios estandar arriba o debajo del valor resultante. **Útil para variables normalmente distribuidas** </font>
+
+* <font size = 2> Normalizacion (min-max scaler): Permite llevar los valores entre 0 y 1. **Útil para comparar variables de diferentes ordenes de magnitud** (Precio de una casa y los m2 que ocupa) 
+</font>
+
+```{r, out.height= "10%",out.width= "60%", out.extra='style="float:center; padding:20px"'}
+knitr::include_graphics("../../static/img/cce/normaliz_data.png")
+
+```
+
+
+
+
+## 
+
+
+**¿Puedo usar estas transformaciones en estos datos?**
+
+
+<font size = 4>
+
+* No, como las variables describen dimensiones (alto y ancho), y posicion en el espacio
+no le encontré mucho sentido a la estandarizacion ni la normalizacion.  
+
+
+
+
+</font>
+
+
+
+<font size = 4>
+
+* ¿Que podría hacer? En lugar de ver las posiciones y dimensiones *absolutas*, ver las posiciones y dimensiones *relativas*, lo que voy a llamar "normalizacion geometrica"
+
+
+```{r,out.width= "40%", out.extra='style="float:center; padding:5% 25%"'}
+#knitr::include_graphics("../../static/img/cce/img_rel.jpg")
+
+```
+
+</font>
+
+
+
+
+## Normalizacion "geometrica"
+
+- x' es la proporcion de x respecto al rango total (ancho del canvas)
+
+<font size = 3>
+_mi nueva variable x' es: la linea roja dividida la linea azul_
+</font>
+
+![](x_demo_plot.jpeg)
+
+
+
+
+
+## Normalizacion "geometrica"
+
+
+
+- y' es la proporcion de y respecto al rango total (alto del canvas)
+
+<font size = 3>
+_mi nueva variable y' es: la linea roja dividida la linea azul_
+</font>
+
+
+![](../../static/img/cce/demo_plot_y.jpeg)
+
+
+##  Normalizacion "geometrica"
+
+
+- areaRelativa es la proporcion del area del elemento respecto al total
+
+<font size = 3>
+_mi nueva variable areaRelativa es: el area del cuadrado chiquito dividido la del rectangulo grande_
+</font>
+
+
+![](../../static/img/cce/area_plot.jpeg)
+
+
+## Normalizacion "geometrica"
+
+
+- disposicion (dividiendo alto por acho) es para saber si el elemento es horizontal, vertical, o cuadrado
+
+<font size = 3>
+_mi nueva variable disposicion es: el alto dividido por el ancho_
+</font>
+
+```{r,out.width= "30%", out.extra='style="float:center; padding:0% 35%"'}
+knitr::include_graphics("../../static/img/cce/rectangular.png")
+
+```
+
+
+
+## Resultados
+
+
+
+```{r echo=FALSE,message=FALSE}
+library(png)
+library(grid)
+library(plotly)
+library(tidyverse)
+#img1 <- readPNG("./sin_escalar.png")
+#img2 <- readPNG("./con_escalar.png")
+df_an<-read_csv('../../data/df_an.csv')
+p <- df_an %>%
+  plot_ly(
+    x = ~x, 
+    y = ~y,
+    frame = ~version, 
+    type = 'scatter',
+    mode = 'markers'
+  ) 
+p
+
+#grid.raster(img1)
+#grid.raster(img2)
+```
+
+
