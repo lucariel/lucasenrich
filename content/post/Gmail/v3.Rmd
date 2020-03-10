@@ -20,7 +20,7 @@ _El problema_: Clusterizar diseños
 
 
 ```{r, out.width = "400px"}
-knitr::include_graphics("banner-example.png")
+knitr::include_graphics("../../static/img/cce/banner-example.png")
 ```
 
 
@@ -32,7 +32,7 @@ knitr::include_graphics("banner-example.png")
 
 
 ```{r, out.width= "65%", out.extra='style="float:left; padding:20px"'}
-knitr::include_graphics("input_data.png")
+knitr::include_graphics("../../static/img/cce/input_data.png")
 ```
 
 
@@ -60,7 +60,7 @@ cl <-hdbscan(x = umap_data, minPts = 3)
 
 ```
 ```{r, out.width= "45%", out.extra='style="float:left; padding:20px"'}
-knitr::include_graphics("sin_norm.png")
+knitr::include_graphics("../../static/img/cce/sin_norm2.png")
 
 ```
 
@@ -84,7 +84,7 @@ _En terminos de negocio...¿sirve hacer esto?_
 </font>
 
 ```{r, out.width = "400px" , out.extra='style="float:center; padding:20px"'}
-knitr::include_graphics("preguntas-768x449.jpg")
+#knitr::include_graphics("preguntas-768x449.jpg")
 ```
 
 
@@ -105,7 +105,7 @@ Opciones
 </font>
 
 ```{r, out.height= "10%",out.width= "60%", out.extra='style="float:center; padding:20px"'}
-knitr::include_graphics("normaliz_data.png")
+knitr::include_graphics("../../static/img/cce/normaliz_data.png")
 
 ```
 
@@ -136,7 +136,7 @@ no le encontré mucho sentido a la estandarizacion ni la normalizacion.
 
 
 ```{r,out.width= "40%", out.extra='style="float:center; padding:5% 25%"'}
-knitr::include_graphics("img_rel.jpg")
+#knitr::include_graphics("../../static/img/cce/img_rel.jpg")
 
 ```
 
@@ -170,7 +170,7 @@ _mi nueva variable y' es: la linea roja dividida la linea azul_
 </font>
 
 
-![](demo_plot_y.jpeg)
+![](../../static/img/cce/demo_plot_y.jpeg)
 
 
 ##  Normalizacion "geometrica"
@@ -183,7 +183,7 @@ _mi nueva variable areaRelativa es: el area del cuadrado chiquito dividido la de
 </font>
 
 
-![](area_plot.jpeg)
+![](../../static/img/cce/area_plot.jpeg)
 
 
 ## Normalizacion "geometrica"
@@ -196,7 +196,7 @@ _mi nueva variable disposicion es: el alto dividido por el ancho_
 </font>
 
 ```{r,out.width= "30%", out.extra='style="float:center; padding:0% 35%"'}
-knitr::include_graphics("rectangular.png")
+knitr::include_graphics("../../static/img/cce/rectangular.png")
 
 ```
 
@@ -213,7 +213,7 @@ library(plotly)
 library(tidyverse)
 #img1 <- readPNG("./sin_escalar.png")
 #img2 <- readPNG("./con_escalar.png")
-df_an<-read_csv('df_an.csv')
+df_an<-read_csv('../../data/df_an.csv')
 p <- df_an %>%
   plot_ly(
     x = ~x, 

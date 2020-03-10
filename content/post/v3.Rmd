@@ -55,8 +55,8 @@ Estrategia 1:
 
 library(umap)
 library(dbscan)
-umap_data<- umap(data)
-cl <-hdbscan(x = umap_data, minPts = 3)
+#umap_data<- umap(data)
+#cl <-hdbscan(x = umap_data, minPts = 3)
 
 ```
 ```{r, out.width= "45%", out.extra='style="float:left; padding:20px"'}
