@@ -1,0 +1,13 @@
+layer_name,layer_top,layer_left,layer_width,layer_height,psd_name
+logo_vigilado,201,5,9,129,out1
+rnt,364,235,46,6,out1
+logo_despegar,30,34,181,49,out1
+texto1,116,32,218,16,out1
+texto2,146,33,49,12,out1
+texto3,165,32,222,87,out1
+texto4,269,32,219,13,out1
+logo1,307,49,119,21,out1
+codo1,186,30,364,149,out1
+placa1,300,34,148,35,out1
+legal,362,32,117,11,out1
+background,0,0,300,600,out1

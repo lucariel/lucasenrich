@@ -1,0 +1,10 @@
+layer_name,layer_top,layer_left,layer_width,layer_height,psd_name
+legal,372,31,215,12,out4
+icono1,314,31,36,26,out4
+texto1,197,32,210,17,out4
+texto3,346,31,186,13,out4
+texto2,227,30,166,78,out4
+logo_cmara,418,227,59,43,out4
+logo_cyber,164,29,219,26,out4
+logo_despegar,35,30,94,117,out4
+background,0,0,300,600,out4

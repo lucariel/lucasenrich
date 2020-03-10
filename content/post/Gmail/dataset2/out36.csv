@@ -1,0 +1,10 @@
+layer_name,layer_top,layer_left,layer_width,layer_height,psd_name
+logo_despegar,30,19,106,132,out3
+texto1,177,17,95,12,out3
+texto2,240,17,265,32,out3
+icono3,198,113,29,28,out3
+icono2,199,66,32,28,out3
+icono1,199,21,38,28,out3
+logo1,548,203,80,41,out3
+legal,581,15,166,8,out3
+background,0,0,300,600,out3

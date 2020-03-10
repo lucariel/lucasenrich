@@ -1,0 +1,11 @@
+layer_name,layer_top,layer_left,layer_width,layer_height,psd_name
+icono1,108,36,44,33,out3
+legal,371,40,211,14,out3
+texto3,306,39,121,13,out3
+logo1,336,48,104,16,out3
+placa1,331,33,133,24,out3
+texto2,247,33,114,44,out3
+texto1,151,32,130,76,out3
+logo_despegar,26,34,196,54,out3
+logo_camara,507,187,89,76,out3
+background,0,0,300,600,out3
