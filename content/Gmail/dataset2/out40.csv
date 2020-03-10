@@ -1,0 +1,14 @@
+layer_name,layer_top,layer_left,layer_width,layer_height,psd_name
+logo2,387,51,234,31,out4
+evt,592,263,33,5,out4
+cft,560,40,216,18,out4
+cta,478,43,110,41,out4
+logo_despegar,45,39,210,57,out4
+icono2,326,17,18,16,out4
+texto3,328,42,72,15,out4
+texto2,303,42,51,13,out4
+icono1,303,16,21,16,out4
+placa1,381,37,263,43,out4
+logo1,227,41,50,50,out4
+texto1,159,38,208,50,out4
+background,0,0,300,600,out4

@@ -1,0 +1,11 @@
+layer_name,layer_top,layer_left,layer_width,layer_height,psd_name
+linea,541,84,3,36,out3
+logo1,539,32,42,38,out3
+legal,543,98,82,31,out3
+logo_despegar,34,25,118,147,out3
+cta,464,28,125,44,out3
+icono1,234,27,32,20,out3
+texto1,269,26,111,13,out3
+texto2,296,27,171,81,out3
+texto3,397,27,192,14,out3
+background,0,0,300,600,out3

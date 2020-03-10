@@ -1,0 +1,11 @@
+layer_name,layer_top,layer_left,layer_width,layer_height,psd_name
+icono_llama1,102,32,35,39,out2
+logo_camara,510,43,83,71,out2
+legal,376,31,225,15,out2
+texto3,294,35,188,18,out2
+logo1,327,57,161,25,out2
+placa1,321,34,206,36,out2
+texto2,223,37,205,50,out2
+texto1,156,30,243,49,out2
+logo_despegar,27,31,187,51,out2
+background,0,0,300,600,out2

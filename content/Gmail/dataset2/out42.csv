@@ -1,0 +1,15 @@
+layer_name,layer_top,layer_left,layer_width,layer_height,psd_name
+texto2,346,35,151,34,out4
+icono1,111,38,17,26,out4
+logo_appweek,145,37,122,19,out4
+icono3,310,74,30,26,out4
+icono2,311,37,29,24,out4
+logo1,264,49,56,18,out4
+logo2,257,118,39,28,out4
+codo1_invert,145,-112,300,146,out4
+texto1,184,35,184,51,out4
+logo_horizontal,37,38,186,51,out4
+evt,507,4,6,41,out4
+cft,580,36,195,18,out4
+background1,400,0,300,200,out4
+background_color1,0,0,300,600,out4

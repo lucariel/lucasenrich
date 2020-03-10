@@ -1,0 +1,10 @@
+layer_name,layer_top,layer_left,layer_width,layer_height,psd_name
+logo_cyber,150,24,184,97,out8
+icono1,264,25,19,13,out8
+logo_camara,341,149,131,30,out8
+texto1,113,25,134,27,out8
+texto2,286,25,171,26,out8
+cta,343,24,110,32,out8
+logo_despegar,35,27,175,48,out8
+background1,396,0,300,204,out8
+background_color1,0,0,300,600,out8

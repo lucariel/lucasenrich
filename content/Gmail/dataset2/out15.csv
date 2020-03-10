@@ -1,0 +1,11 @@
+layer_name,layer_top,layer_left,layer_width,layer_height,psd_name
+rnt,553,288,6,39,out1
+logo_despegar,22,26,109,134,out1
+logo_outlet,172,26,235,17,out1
+texto1,197,26,150,28,out1
+texto2,251,55,143,15,out1
+icono1,248,25,26,19,out1
+texto3,275,26,213,90,out1
+legal,583,21,118,11,out1
+background1,385,0,300,215,out1
+background_color1,0,0,300,600,out1

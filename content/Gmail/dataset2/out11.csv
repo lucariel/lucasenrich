@@ -1,0 +1,14 @@
+layer_name,layer_top,layer_left,layer_width,layer_height,psd_name
+rnt,291,288,7,39,out1
+logo_despegar,30,37,181,50,out1
+texto_app,106,41,129,12,out1
+icono1,140,10,24,21,out1
+texto1,141,41,231,24,out1
+texto2,177,42,181,18,out1
+texto3,202,40,209,41,out1
+texto4,252,41,205,18,out1
+linea6,440,202,114,56,out1
+linea5,336,41,50,75,out1
+legal1,291,41,87,9,out1
+legal2,307,37,233,25,out1
+background,0,0,300,600,out1
