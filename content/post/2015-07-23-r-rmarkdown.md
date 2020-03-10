@@ -2,9 +2,9 @@
 
 ¿Como hago para clasificar estilos de banners?
 
-    knitr::include_graphics("/static/img/banner-example.png")
+    knitr::include_graphics("/img/banner-example.png")
 
-<img src="/static/img/banner-example.png" width="400px" />
+<img src="/img/banner-example.png" width="400px" />
 
 **Input data**
 
@@ -114,7 +114,7 @@ Normalizacion "geometrica"
 <font size = 3> *mi nueva variable y' es: la linea roja dividida la
 linea azul* </font>
 
-![](demo_plot_y.jpeg)
+![](/img/demo_plot_y.jpeg)
 
 Normalizacion "geometrica"
 --------------------------
@@ -125,7 +125,7 @@ Normalizacion "geometrica"
 <font size = 3> *mi nueva variable areaRelativa es: el area del cuadrado
 chiquito dividido la del rectangulo grande* </font>
 
-![](/static/img/area_plot.jpeg)
+![](/img/area_plot.jpeg)
 
 Normalizacion "geometrica"
 --------------------------
