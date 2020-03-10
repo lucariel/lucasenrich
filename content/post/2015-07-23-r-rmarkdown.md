@@ -104,7 +104,7 @@ Normalizacion "geometrica"
 <font size = 3> *mi nueva variable x' es: la linea roja dividida la
 linea azul* </font>
 
-![](x_demo_plot.jpeg)
+![](/static/img/demo_plot_y.jpeg)
 
 Normalizacion "geometrica"
 --------------------------

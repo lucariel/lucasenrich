@@ -154,7 +154,7 @@ no le encontré mucho sentido a la estandarizacion ni la normalizacion.
 _mi nueva variable x' es: la linea roja dividida la linea azul_
 </font>
 
-![](x_demo_plot.jpeg)
+![](/static/img/demo_plot_y.jpeg)
 
 
 
