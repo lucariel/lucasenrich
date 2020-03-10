@@ -2,11 +2,15 @@
 
 ¿Como hago para clasificar estilos de banners?
 
+    knitr::include_graphics("banner-example.png")
+
 <img src="banner-example.png" width="400px" />
 
 **Input data**
 
 *Se sacan metadatos de un archivo de photoshop*
+
+    knitr::include_graphics("input_data.png")
 
 <img src="input_data.png" width="65%" style="float:left; padding:20px" />
 
@@ -24,10 +28,13 @@ Estrategia 1:
 
 <!-- -->
 
+
     library(umap)
     library(dbscan)
-    umap_data<- umap(data)
-    cl <-hdbscan(x = umap_data, minPts = 3)
+    #umap_data<- umap(data)
+    #cl <-hdbscan(x = umap_data, minPts = 3)
+
+    knitr::include_graphics("sin_norm2.png")
 
 <img src="sin_norm2.png" width="45%" style="float:left; padding:20px" />
 
@@ -44,6 +51,8 @@ Estrategia 1:
 
 </font>
 
+    #knitr::include_graphics("preguntas-768x449.jpg")
+
 **Estrategia 2**
 
 <font size = 3> Surge la necesidad de transformar los datos
@@ -58,6 +67,10 @@ Opciones </font>
     valores entre 0 y 1. **Útil para comparar variables de diferentes
     ordenes de magnitud** (Precio de una casa y los m2 que ocupa)
     </font>
+
+<!-- -->
+
+    knitr::include_graphics("normaliz_data.png")
 
 <img src="normaliz_data.png" width="60%" height="10%" style="float:center; padding:20px" />
 
@@ -76,6 +89,10 @@ Opciones </font>
 -   ¿Que podría hacer? En lugar de ver las posiciones y dimensiones
     *absolutas*, ver las posiciones y dimensiones *relativas*, lo que
     voy a llamar "normalizacion geometrica"
+
+<!-- -->
+
+    #knitr::include_graphics("img_rel.jpg")
 
 </font>
 
@@ -118,6 +135,8 @@ Normalizacion "geometrica"
 
 <font size = 3> *mi nueva variable disposicion es: el alto dividido por
 el ancho* </font>
+
+    knitr::include_graphics("rectangular.png")
 
 <img src="rectangular.png" width="30%" style="float:center; padding:0% 35%" />
 
