@@ -34,9 +34,9 @@ Estrategia 1:
     #umap_data<- umap(data)
     #cl <-hdbscan(x = umap_data, minPts = 3)
 
-    knitr::include_graphics("../../static/img/cce/sin_norm2.png")
+    knitr::include_graphics("/static/img/cce/sin_norm2.png")
 
-<img src="../../static/img/cce/sin_norm2.png" width="45%" style="float:left; padding:20px" />
+<img src="/static/img/cce/sin_norm2.png" width="45%" style="float:left; padding:20px" />
 
 -   <font size = 3> Se puede ver un grupo diferenciado, pero los demas
     no estan tan claros. </font>
@@ -70,9 +70,9 @@ Opciones </font>
 
 <!-- -->
 
-    knitr::include_graphics("../../static/img/cce/normaliz_data.png")
+    knitr::include_graphics("/static/img/cce/normaliz_data.png")
 
-<img src="../../static/img/cce/normaliz_data.png" width="60%" height="10%" style="float:center; padding:20px" />
+<img src="/static/img/cce/normaliz_data.png" width="60%" height="10%" style="float:center; padding:20px" />
 
 **¿Puedo usar estas transformaciones en estos datos?**
 

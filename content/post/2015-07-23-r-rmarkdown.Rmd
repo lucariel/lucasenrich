@@ -61,7 +61,7 @@ library(dbscan)
 
 ```
 ```{r, out.width= "45%", out.extra='style="float:left; padding:20px"'}
-knitr::include_graphics("../../static/img/cce/sin_norm2.png")
+knitr::include_graphics("/static/img/cce/sin_norm2.png")
 
 ```
 
@@ -106,7 +106,7 @@ Opciones
 </font>
 
 ```{r, out.height= "10%",out.width= "60%", out.extra='style="float:center; padding:20px"'}
-knitr::include_graphics("../../static/img/cce/normaliz_data.png")
+knitr::include_graphics("/static/img/cce/normaliz_data.png")
 
 ```
 
