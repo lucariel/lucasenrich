@@ -2,8 +2,6 @@
 
 ¿Como hago para clasificar estilos de banners?
 
-    knitr::include_graphics("/img/banner-example.png")
-
 <img src="/img/banner-example.png" width="400px" />
 
 Con tantos adds dando vueltas en internet, sigue siendo, muchas veces,
@@ -95,7 +93,7 @@ $$
    id.2 & elem.1.x & elem.1.y & elem.1.h & elem.1.w & ... & elem.k.w \\\\
    \\vdots \\\\
    id.N & elem.1.x & elem.1.y & elem.1.h & elem.1.w & ... & elem.k.w
-   \\end{bmatrix} 
+\\end{bmatrix} 
 $$
 
 -   <font size = 3> Reduccion de dimensionalidad + Clustering </font>

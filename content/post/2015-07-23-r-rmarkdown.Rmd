@@ -20,7 +20,7 @@ _El problema_: Clusterizar diseños
 ¿Como hago para clasificar estilos de banners?
 
 
-```{r, out.width = "400px"}
+```{r, out.width = "400px", echo = F}
 knitr::include_graphics("/img/banner-example.png")
 ```
 
@@ -110,7 +110,7 @@ $$
    id.2 & elem.1.x & elem.1.y & elem.1.h & elem.1.w & ... & elem.k.w \\
    \vdots \\
    id.N & elem.1.x & elem.1.y & elem.1.h & elem.1.w & ... & elem.k.w
-   \end{bmatrix} 
+\end{bmatrix} 
 $$
 
  
