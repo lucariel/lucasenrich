@@ -88,23 +88,11 @@ $$
 $$
  a la forma:
 
-$$
-\\begin{bmatrix} 
-   id.1 & elem.1.x & elem.1.y & elem.1.h & elem.1.w & ... & elem.k.w
-   \\end{bmatrix} 
-$$
- Así se pueden apilar todos elementos de la muestra para quedar una sola
+%
+Así se pueden apilar todos elementos de la muestra para quedar una sola
 base de datos con la forma:
 
-$$
-\\begin{bmatrix} 
-   id.1 & elem.1.x & elem.1.y & elem.1.h & elem.1.w & ... & elem.k.w \\\\
-   id.2 & elem.1.x & elem.1.y & elem.1.h & elem.1.w & ... & elem.k.w \\\\
-   \\vdots \\\\
-   id.N & elem.1.x & elem.1.y & elem.1.h & elem.1.w & ... & elem.k.w
-   \\end{bmatrix} 
-$$
-
+%
 -   <font size = 3> Reduccion de dimensionalidad + Clustering </font>
 
 <!-- -->
