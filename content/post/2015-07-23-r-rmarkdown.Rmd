@@ -1,9 +1,8 @@
 ---
-title: "Hello R Markdown"
-author: "Frida Gomam"
-date: 2015-07-23T21:13:14-05:00
-categories: ["R"]
-tags: ["R Markdown", "plot", "regression"]
+title: "Clustering con Estilo"
+author: "Lucas Enrich"
+categories: ["Clustering","Aprendizaje no supervisado","Non-supervised learning"]
+tags: ["dbscan", "hdbscan", "PCA","umap","R"]
 output: md_document
 
 ---
@@ -15,6 +14,8 @@ library(tidyverse)
 ```
 
 ##
+
+
 _El problema_: Clusterizar diseños
 
 ¿Como hago para clasificar estilos de banners?
@@ -24,18 +25,23 @@ _El problema_: Clusterizar diseños
 knitr::include_graphics("/img/banner-example.png")
 ```
 
+Con tantos adds dando vueltas en internet, sigue siendo, muchas veces, un proceso relativamente manual y poco estandarizado los diseños. Para eso existen diseñadores. 
+
+Pero cuando ya tienen miles realizados, esta bueno mirar atrás e identificar patrones recurrentes. Saber lo que venimos haciendo sirve para mirar hacia adelante.
 
 ##
  
 **Input data**
 
-*Se sacan metadatos de un archivo de photoshop*
+El problema tenia originalmente cientos de diseños, en este ejemplo, dado que tiene que ver con algoritmos de clusterización, se usaran algunos hechos ad hoc, por lo que el ejemplo es con tamaños reducidos y la clasificacion de imagenes, fuentes de texto y demás quedan afuera. Lo que queremos saber es si la ubicación de los elementos en la imagen sigue un patron en particular. 
 
+Los datos venian de la siguiente forma:
 
 ```{r, out.width= "65%", out.extra='style="float:left; padding:20px"'}
 knitr::include_graphics("/img/input_data.png")
 ```
 
+Donde:
 
 * <font size = 3> _y_ : Distancia desde arriba </font>
 
@@ -44,6 +50,49 @@ knitr::include_graphics("/img/input_data.png")
 * <font size = 3> _w_ : Ancho (width) </font>
 
 * <font size = 3> _h_ : Alto (height) </font>
+
+Si tenemos 50 ejemplos, con 3 elementos cada uno, y hay 4 variables por elemento, la forma del input es $50 \times 3 \times 4$, esto, a los algoritmos, no les gusta demasiado. Asique fue necesario achatar la base para obtener una base de datos de $50 \times 12$, para lo cual:
+
+Primero se agarra cada uno (una base de $1\times 3 \times 4$) y se la transforma en una sola fila $1\times 12$ para lo cual se uso el código:
+
+```{r, eval=F, echo=T, size='tiny'} 
+library(tidyverse)
+cols_used = c('element_top', 'element_left', 'element_width', 'element_height')
+spread_file<-function(data, cols_used){
+  cols_used_a = c('element_name',cols_used)
+  y=data[cols_used]
+  h = data[cols_used_a]
+  z=c(1,1,1,1)
+  for(i in 1:nrow(y)) {
+    z = cbind(z,y[i,])
+  }
+  z = z[1,-1] 
+  
+  newcols <- c()
+  for (i in  h['element_name']){
+    newcols<-cbind(newcols,paste(i,cols_used[1], sep = '.'))
+    newcols<-cbind(newcols,paste(i,cols_used[2], sep = '.'))
+    newcols<-cbind(newcols,paste(i,cols_used[3], sep = '.'))
+    newcols<-cbind(newcols,paste(i,cols_used[4], sep = '.'))
+  }
+  newcols2<-c()
+  for(i in 1:nrow(newcols)) {
+    for(j in 1:4){
+      newcols2<-c(newcols2,newcols[i,j])
+    }
+  }
+  colnames(z)<-newcols2
+  n<-as_vector(data['id'])
+  z['id']<-n[1]
+  z
+}
+
+
+
+```
+
+
+
 
 ## 
 
@@ -209,3 +258,17 @@ knitr::include_graphics("/img/rectangular.png")
 
 
 ## Resultados
+
+
+```{r echo=FALSE,message=FALSE}
+library(grid)
+library(tidyverse)
+library(gridExtra)
+df_an<-read_csv('df_an.csv')
+p1<-df_an %>% filter(version==1) %>% ggplot(aes(x,y))+geom_point()+ ggtitle("Con Normalización")+theme_classic()
+p2<-df_an %>% filter(version==0) %>% ggplot(aes(x,y))+geom_point()+ ggtitle("Sin Normalización")+theme_classic()
+grid.arrange(p1,p2, nrow = 1)
+
+```
+
+

@@ -1,10 +1,3 @@
-Clustering con Estilo:
-
-HDBSCAN + UMAP
-
-<!--more-->
-
-
 *El problema*: Clusterizar diseños
 
 ¿Como hago para clasificar estilos de banners?
@@ -13,13 +6,30 @@ HDBSCAN + UMAP
 
 <img src="/img/banner-example.png" width="400px" />
 
+Con tantos adds dando vueltas en internet, sigue siendo, muchas veces,
+un proceso relativamente manual y poco estandarizado los diseños. Para
+eso existen diseñadores.
+
+Pero cuando ya tienen miles realizados, esta bueno mirar atrás e
+identificar patrones recurrentes. Saber lo que venimos haciendo sirve
+para mirar hacia adelante.
+
 **Input data**
 
-*Se sacan metadatos de un archivo de photoshop*
+El problema tenia originalmente cientos de diseños, en este ejemplo,
+dado que tiene que ver con algoritmos de clusterización, se usaran
+algunos hechos ad hoc, por lo que el ejemplo es con tamaños reducidos y
+la clasificacion de imagenes, fuentes de texto y demás quedan afuera. Lo
+que queremos saber es si la ubicación de los elementos en la imagen
+sigue un patron en particular.
+
+Los datos venian de la siguiente forma:
 
     knitr::include_graphics("/img/input_data.png")
 
 <img src="/img/input_data.png" width="65%" style="float:left; padding:20px" />
+
+Donde:
 
 -   <font size = 3> *y* : Distancia desde arriba </font>
 
@@ -28,6 +38,45 @@ HDBSCAN + UMAP
 -   <font size = 3> *w* : Ancho (width) </font>
 
 -   <font size = 3> *h* : Alto (height) </font>
+
+Si tenemos 50 ejemplos, con 3 elementos cada uno, y hay 4 variables por
+elemento, la forma del input es 50 × 3 × 4, esto, a los algoritmos, no
+les gusta demasiado. Asique fue necesario achatar la base para obtener
+una base de datos de 50 × 12, para lo cual:
+
+Primero se agarra cada uno (una base de 1 × 3 × 4) y se la transforma en
+una sola fila 1 × 12 para lo cual se uso el código:
+
+    library(tidyverse)
+    cols_used = c('element_top', 'element_left', 'element_width', 'element_height')
+    spread_file<-function(data, cols_used){
+      cols_used_a = c('element_name',cols_used)
+      y=data[cols_used]
+      h = data[cols_used_a]
+      z=c(1,1,1,1)
+      for(i in 1:nrow(y)) {
+        z = cbind(z,y[i,])
+      }
+      z = z[1,-1] 
+      
+      newcols <- c()
+      for (i in  h['element_name']){
+        newcols<-cbind(newcols,paste(i,cols_used[1], sep = '.'))
+        newcols<-cbind(newcols,paste(i,cols_used[2], sep = '.'))
+        newcols<-cbind(newcols,paste(i,cols_used[3], sep = '.'))
+        newcols<-cbind(newcols,paste(i,cols_used[4], sep = '.'))
+      }
+      newcols2<-c()
+      for(i in 1:nrow(newcols)) {
+        for(j in 1:4){
+          newcols2<-c(newcols2,newcols[i,j])
+        }
+      }
+      colnames(z)<-newcols2
+      n<-as_vector(data['id'])
+      z['id']<-n[1]
+      z
+    }
 
 Estrategia 1:
 
@@ -153,3 +202,5 @@ el ancho* </font>
 
 Resultados
 ----------
+
+![](2015-07-23-r-rmarkdown_files/figure-markdown_strict/unnamed-chunk-12-1.png)
