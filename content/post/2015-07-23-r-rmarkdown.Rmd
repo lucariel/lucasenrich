@@ -92,7 +92,7 @@ spread_file<-function(data, cols_used){
 
 Lo que transforma cada elementos con la forma:
 
-`$$\begin{bmatrix} elem1 & y_1 & x_1 & w_1 & h_1 \\   elem2 & y_2 & x_2 & w_2 & h_2  \\   \vdots \\   elemk & y_2 & x_k & w_k & h_k \end{bmatrix}$$`
+$$\begin{bmatrix} elem1 & y_1 & x_1 & w_1 & h_1 \\   elem2 & y_2 & x_2 & w_2 & h_2  \\   \vdots \\   elemk & y_2 & x_k & w_k & h_k \end{bmatrix}$$
 a la forma:
 
 
