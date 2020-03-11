@@ -78,21 +78,26 @@ una sola fila 1 × 12 para lo cual se uso el código:
 
 Lo que transforma cada elementos con la forma:
 
+$\\begin{bmatrix} elem1 & y\_1 & x\_1 & w\_1 & h\_1 \\\\ elem2 & y\_2 & x\_2 & w\_2 & h\_2 \\\\ \\vdots \\\\ elemk & y\_2 & x\_k & w\_k & h\_k \\\\ \\end{bmatrix}$
+a la forma:
+
 $$
 \\begin{bmatrix} 
-   elem1 & y\_1 & x\_1 & w\_1 & h\_1 \\\\
-   elem2 & y\_2 & x\_2 & w\_2 & h\_2  \\\\
-   \\vdots \\\\
-   elemk & y\_2 & x\_k & w\_k & h\_k  \\\\
+   id.1 & elem.1.x & elem.1.y & elem.1.h & elem.1.w & ... & elem.k.w
    \\end{bmatrix} 
 $$
- a la forma:
-
-%
-Así se pueden apilar todos elementos de la muestra para quedar una sola
+ Así se pueden apilar todos elementos de la muestra para quedar una sola
 base de datos con la forma:
 
-%
+$$
+\\begin{bmatrix} 
+   id.1 & elem.1.x & elem.1.y & elem.1.h & elem.1.w & ... & elem.k.w \\\\
+   id.2 & elem.1.x & elem.1.y & elem.1.h & elem.1.w & ... & elem.k.w \\\\
+   \\vdots \\\\
+   id.N & elem.1.x & elem.1.y & elem.1.h & elem.1.w & ... & elem.k.w
+   \\end{bmatrix} 
+$$
+
 -   <font size = 3> Reduccion de dimensionalidad + Clustering </font>
 
 <!-- -->
