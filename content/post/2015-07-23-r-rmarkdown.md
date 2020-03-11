@@ -80,6 +80,16 @@ Lo que transforma cada elementos con la forma:
 
 $\[elem1 & y\_1 & x\_1 & w\_1 & h\_1 \\\\ elem2 & y\_2 & x\_2 & w\_2 & h\_2 \\\\ \\vdots \\\\ elemk & y\_2 & x\_k & w\_k & h\_k\]$
 a la forma:
+$$
+\\begin{equation\*}
+B = 
+\\begin{bmatrix}
+a & b & c \\\\
+d & e & f \\\\
+g & h & i
+\\end{bmatrix}
+\\end{equation\*}
+$$
 
 $$
 \\begin{bmatrix} 
