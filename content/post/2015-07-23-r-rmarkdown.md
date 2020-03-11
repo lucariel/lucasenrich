@@ -1,3 +1,8 @@
+<script src="//yihui.name/js/math-code.js"></script>
+<script async
+src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
 *El problema*: Clusterizar diseños
 
 ¿Como hago para clasificar estilos de banners?
@@ -78,13 +83,13 @@ una sola fila 1 × 12 para lo cual se uso el código:
 
 Lo que transforma cada elementos con la forma:
 
-$\[elem1 & y\_1 & x\_1 & w\_1 & h\_1 \\\\ elem2 & y\_2 & x\_2 & w\_2 & h\_2 \\\\ \\vdots \\\\ elemk & y\_2 & x\_k & w\_k & h\_k\]$
-a la forma: `$$ \frac{1}{2} $$`
+`$$\begin{bmatrix} elem1 & y_1 & x_1 & w_1 & h_1 \\   elem2 & y_2 & x_2 & w_2 & h_2  \\   \vdots \\   elemk & y_2 & x_k & w_k & h_k \end{bmatrix}$$`
+a la forma:
 
 $$
 \\begin{bmatrix} 
    id.1 & elem.1.x & elem.1.y & elem.1.h & elem.1.w & ... & elem.k.w
-   \\end{bmatrix} 
+\\end{bmatrix} 
 $$
  Así se pueden apilar todos elementos de la muestra para quedar una sola
 base de datos con la forma:
