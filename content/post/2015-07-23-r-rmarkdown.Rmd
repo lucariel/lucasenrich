@@ -4,6 +4,7 @@ author: "Lucas Enrich"
 categories: ["Clustering","Aprendizaje no supervisado","Non-supervised learning"]
 tags: ["dbscan", "hdbscan", "PCA","umap","R"]
 output: md_document
+katex: true
 
 ---
 
