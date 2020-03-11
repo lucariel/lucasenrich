@@ -78,7 +78,7 @@ una sola fila 1 × 12 para lo cual se uso el código:
 
 Lo que transforma cada elementos con la forma:
 
-$\\begin{bmatrix} elem1 & y\_1 & x\_1 & w\_1 & h\_1 \\\\ elem2 & y\_2 & x\_2 & w\_2 & h\_2 \\\\ \\vdots \\\\ elemk & y\_2 & x\_k & w\_k & h\_k \\\\ \\end{bmatrix}$
+$\[elem1 & y\_1 & x\_1 & w\_1 & h\_1 \\\\ elem2 & y\_2 & x\_2 & w\_2 & h\_2 \\\\ \\vdots \\\\ elemk & y\_2 & x\_k & w\_k & h\_k\]$
 a la forma:
 
 $$
