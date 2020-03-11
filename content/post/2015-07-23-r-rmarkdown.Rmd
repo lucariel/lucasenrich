@@ -94,16 +94,7 @@ Lo que transforma cada elementos con la forma:
 
 $[elem1 & y_1 & x_1 & w_1 & h_1 \\   elem2 & y_2 & x_2 & w_2 & h_2  \\   \vdots \\   elemk & y_2 & x_k & w_k & h_k]$
 a la forma:
-$$
-\begin{equation*}
-B = 
-\begin{bmatrix}
-a & b & c \\
-d & e & f \\
-g & h & i
-\end{bmatrix}
-\end{equation*}
-$$
+`$$ \frac{1}{2} $$`
 
 
 $$
