@@ -25,8 +25,6 @@ sigue un patron en particular.
 
 Los datos venian de la siguiente forma:
 
-    knitr::include_graphics("/img/input_data.png")
-
 <img src="/img/input_data.png" width="65%" style="float:left; padding:20px" />
 
 Donde:

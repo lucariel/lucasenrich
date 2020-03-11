@@ -37,7 +37,7 @@ El problema tenia originalmente cientos de diseños, en este ejemplo, dado que t
 
 Los datos venian de la siguiente forma:
 
-```{r, out.width= "65%", out.extra='style="float:left; padding:20px"'}
+```{r, out.width= "65%", out.extra='style="float:left; padding:20px"', echo = F}
 knitr::include_graphics("/img/input_data.png")
 ```
 
