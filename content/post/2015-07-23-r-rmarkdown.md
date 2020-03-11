@@ -76,7 +76,34 @@ una sola fila 1 × 12 para lo cual se uso el código:
       z
     }
 
-Estrategia 1:
+Lo que transforma cada elementos con la forma:
+
+$$
+\\begin{bmatrix} 
+   elem1 & y\_1 & x\_1 & w\_1 & h\_1 \\\\
+   elem2 & y\_2 & x\_2 & w\_2 & h\_2  \\\\
+   \\vdots \\\\
+   elemk & y\_2 & x\_k & w\_k & h\_k  \\\\
+   \\end{bmatrix} 
+$$
+ a la forma:
+
+$$
+\\begin{bmatrix} 
+   id.1 & elem.1.x & elem.1.y & elem.1.h & elem.1.w & ... & elem.k.w
+   \\end{bmatrix} 
+$$
+ Así se pueden apilar todos elementos de la muestra para quedar una sola
+base de datos con la forma:
+
+$$
+\\begin{bmatrix} 
+   id.1 & elem.1.x & elem.1.y & elem.1.h & elem.1.w & ... & elem.k.w \\\\
+   id.2 & elem.1.x & elem.1.y & elem.1.h & elem.1.w & ... & elem.k.w \\\\
+   \\vdots \\\\
+   id.N & elem.1.x & elem.1.y & elem.1.h & elem.1.w & ... & elem.k.w
+   \\end{bmatrix} 
+$$
 
 -   <font size = 3> Reduccion de dimensionalidad + Clustering </font>
 
@@ -97,7 +124,7 @@ Estrategia 1:
 
 **Validacion**
 
-*En terminos de negocio...¿sirve hacer esto?*
+*En terminos de negocio…¿sirve hacer esto?*
 
 -   <font size = 4> Al separar en diferentes carpetas los archivos de
     cada cluster generado, los diseñadores no estaban conformes, habia
@@ -142,7 +169,7 @@ Opciones </font>
 
 -   ¿Que podría hacer? En lugar de ver las posiciones y dimensiones
     *absolutas*, ver las posiciones y dimensiones *relativas*, lo que
-    voy a llamar "normalizacion geometrica"
+    voy a llamar “normalizacion geometrica”
 
 <!-- -->
 
@@ -150,31 +177,31 @@ Opciones </font>
 
 </font>
 
-Normalizacion "geometrica"
+Normalizacion “geometrica”
 --------------------------
 
--   x' es la proporcion de x respecto al rango total (ancho del canvas)
+-   x’ es la proporcion de x respecto al rango total (ancho del canvas)
 
-<font size = 3> *mi nueva variable x' es: la linea roja dividida la
+<font size = 3> *mi nueva variable x’ es: la linea roja dividida la
 linea azul* </font>
 
     knitr::include_graphics("/img/demo_plot_y.jpeg")
 
 <img src="/img/demo_plot_y.jpeg" width="65%" style="float:left; padding:20px" />
 
-Normalizacion "geometrica"
+Normalizacion “geometrica”
 --------------------------
 
--   y' es la proporcion de y respecto al rango total (alto del canvas)
+-   y’ es la proporcion de y respecto al rango total (alto del canvas)
 
-<font size = 3> *mi nueva variable y' es: la linea roja dividida la
+<font size = 3> *mi nueva variable y’ es: la linea roja dividida la
 linea azul* </font>
 
     knitr::include_graphics("/img/demo_plot_y.jpeg")
 
 <img src="/img/demo_plot_y.jpeg" width="65%" style="float:left; padding:20px" />
 
-Normalizacion "geometrica"
+Normalizacion “geometrica”
 --------------------------
 
 -   areaRelativa es la proporcion del area del elemento respecto al
@@ -185,7 +212,7 @@ chiquito dividido la del rectangulo grande* </font>
 
 ![](/img/area_plot.jpeg)
 
-Normalizacion "geometrica"
+Normalizacion “geometrica”
 --------------------------
 
 -   disposicion (dividiendo alto por acho) es para saber si el elemento
