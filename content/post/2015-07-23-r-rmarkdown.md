@@ -12,6 +12,8 @@ para mirar hacia adelante.
 
 <img src="/img/unnamed-chunk-12-1.png" width="0%" style="float:center; padding:0% 0%" />
 
+<!--more-->
+
 <img src="/img/banner-example.png" width="400px" />
 
 **Input data**
