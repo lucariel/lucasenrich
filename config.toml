@@ -39,7 +39,7 @@ canonifyurls = true
   gravatarEmail = "lucas.a.enrich@gmail.com"
   # Your profile picture
   # Overwritten by your gravatar image if `author.gravatarEmail` is filled
-  picture = "https://media-exp1.licdn.com/dms/image/C4E03AQGSVyUaqalFEQ/profile-displayphoto-shrink_200_200/0?e=1589414400&v=beta&t=fD1n_bqIl7WsJgxG5DjE8t63VCDXf2iJ6zAvLcaxTWk"
+  picture = "/img/index.png"
   # Your Twitter username without the @. E.g : thibaudlepretre
    twitter = "lucariel1"
   # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
@@ -88,7 +88,7 @@ canonifyurls = true
   weight = 1
   identifier = "linkedin"
   name = "LinkedIn"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-github\"></i>"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-linkedin\"></i>"
   url = "https://www.linkedin.com/in/lucas-ariel-enrich-a7320a93/"
 
 #[[menu.links]]
