@@ -12,6 +12,7 @@ library(tidyverse)
 
 ```
 
+##
 
 
 _El problema_: Clusterizar diseños
@@ -22,18 +23,12 @@ Con tantos adds dando vueltas en internet, sigue siendo, muchas veces, un proces
 
 Pero cuando ya tienen miles realizados, esta bueno mirar atrás e identificar patrones recurrentes. Saber lo que venimos haciendo sirve para mirar hacia adelante.
 
-
-
-```{r,out.width= "0%", out.extra='style="float:center; padding:0% 0%"', echo = F}
-knitr::include_graphics("/img/unnamed-chunk-12-1.png")
-
-```
-
-
+<!--more-->
 
 ```{r, out.width = "400px", echo = F}
 knitr::include_graphics("/img/banner-example.png")
 ```
+
 
 ##
  
@@ -240,7 +235,7 @@ knitr::include_graphics("/img/area_plot.jpeg")
 _mi nueva variable disposicion es: el alto dividido por el ancho_
 </font>
 
-```{r,out.width= "30%", out.extra='style="float:center; padding:0% 35%"', echo = F}
+```{r,out.width= "30%", out.extra='style="float:center; padding:0% 35%"',echo=F}
 knitr::include_graphics("/img/rectangular.png")
 
 ```
@@ -301,7 +296,7 @@ Y finalmente, un par de ejemplos por grupo:
 
 Primer cluster:
 
-```{r,out.width= "0%", out.extra='style="float:center; padding:0% 0%"', echo = F}
+```{r,out.width= "30%", out.extra='style="float:center; padding:0% 35%"', echo = F}
 knitr::include_graphics("/img/c1img.jpeg")
 
 ```
