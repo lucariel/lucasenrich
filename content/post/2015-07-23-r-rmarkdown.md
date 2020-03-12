@@ -2,8 +2,6 @@
 
 ¿Como hago para clasificar estilos de banners?
 
-<img src="/img/banner-example.png" width="400px" />
-
 Con tantos adds dando vueltas en internet, sigue siendo, muchas veces,
 un proceso relativamente manual y poco estandarizado los diseños. Para
 eso existen diseñadores.
@@ -11,6 +9,12 @@ eso existen diseñadores.
 Pero cuando ya tienen miles realizados, esta bueno mirar atrás e
 identificar patrones recurrentes. Saber lo que venimos haciendo sirve
 para mirar hacia adelante.
+
+<img src="/img/unnamed-chunk-12-1.png" width="30%" style="float:center; padding:0% 35%" />
+
+<!--more-->
+
+<img src="/img/banner-example.png" width="400px" />
 
 **Input data**
 

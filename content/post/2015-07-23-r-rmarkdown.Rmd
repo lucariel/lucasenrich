@@ -12,21 +12,28 @@ library(tidyverse)
 
 ```
 
-##
 
 
 _El problema_: Clusterizar diseños
 
 ¿Como hago para clasificar estilos de banners?
 
+Con tantos adds dando vueltas en internet, sigue siendo, muchas veces, un proceso relativamente manual y poco estandarizado los diseños. Para eso existen diseñadores. 
+
+Pero cuando ya tienen miles realizados, esta bueno mirar atrás e identificar patrones recurrentes. Saber lo que venimos haciendo sirve para mirar hacia adelante.
+
+
+
+```{r,out.width= "30%", out.extra='style="float:center; padding:0% 35%"', echo = F}
+knitr::include_graphics("/img/unnamed-chunk-12-1.png")
+
+```
+
+
 
 ```{r, out.width = "400px", echo = F}
 knitr::include_graphics("/img/banner-example.png")
 ```
-
-Con tantos adds dando vueltas en internet, sigue siendo, muchas veces, un proceso relativamente manual y poco estandarizado los diseños. Para eso existen diseñadores. 
-
-Pero cuando ya tienen miles realizados, esta bueno mirar atrás e identificar patrones recurrentes. Saber lo que venimos haciendo sirve para mirar hacia adelante.
 
 ##
  
