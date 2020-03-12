@@ -222,7 +222,7 @@ _mi nueva variable areaRelativa es: el area del cuadrado chiquito dividido la de
 
 
 ```{r, out.width= "65%", out.extra='style="float:left; padding:20px"'}
-knitr::include_graphics("/img/area_plot.jpeg.jpeg")
+knitr::include_graphics("/img/area_plot.jpeg")
 ```
 
 
@@ -300,7 +300,7 @@ Y finalmente, un par de ejemplos por grupo:
 Primer cluster:
 
 ```{r,out.width= "30%", out.extra='style="float:center; padding:0% 35%"'}
-knitr::include_graphics("/img/c1img.png")
+knitr::include_graphics("/img/c1img.jpeg")
 
 ```
 
@@ -308,7 +308,7 @@ knitr::include_graphics("/img/c1img.png")
 Segundo cluster:
 
 ```{r,out.width= "30%", out.extra='style="float:center; padding:0% 35%"'}
-knitr::include_graphics("/img/cl2img.png")
+knitr::include_graphics("/img/cl2img.jpeg")
 
 ```
 
@@ -317,6 +317,6 @@ Tercero:
 
 
 ```{r,out.width= "30%", out.extra='style="float:center; padding:0% 35%"'}
-knitr::include_graphics("/img/cl3img.png")
+knitr::include_graphics("/img/cl3img.jpeg")
 
 ```

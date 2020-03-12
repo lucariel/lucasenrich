@@ -190,9 +190,9 @@ linea azul* </font>
 <font size = 3> *mi nueva variable areaRelativa es: el area del cuadrado
 chiquito dividido la del rectangulo grande* </font>
 
-    knitr::include_graphics("/img/area_plot.jpeg.jpeg")
+    knitr::include_graphics("/img/area_plot.jpeg")
 
-<img src="/img/area_plot.jpeg.jpeg" width="65%" style="float:left; padding:20px" />
+<img src="/img/area_plot.jpeg" width="65%" style="float:left; padding:20px" />
 
 -   disposicion (dividiendo alto por acho) es para saber si el elemento
     es horizontal, vertical, o cuadrado
@@ -252,18 +252,18 @@ Y finalmente, un par de ejemplos por grupo:
 
 Primer cluster:
 
-    knitr::include_graphics("/img/c1img.png")
+    knitr::include_graphics("/img/c1img.jpeg")
 
-<img src="/img/c1img.png" width="30%" style="float:center; padding:0% 35%" />
+<img src="/img/c1img.jpeg" width="30%" style="float:center; padding:0% 35%" />
 
 Segundo cluster:
 
-    knitr::include_graphics("/img/cl2img.png")
+    knitr::include_graphics("/img/cl2img.jpeg")
 
-<img src="/img/cl2img.png" width="30%" style="float:center; padding:0% 35%" />
+<img src="/img/cl2img.jpeg" width="30%" style="float:center; padding:0% 35%" />
 
 Tercero:
 
-    knitr::include_graphics("/img/cl3img.png")
+    knitr::include_graphics("/img/cl3img.jpeg")
 
-<img src="/img/cl3img.png" width="30%" style="float:center; padding:0% 35%" />
+<img src="/img/cl3img.jpeg" width="30%" style="float:center; padding:0% 35%" />
