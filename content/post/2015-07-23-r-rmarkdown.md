@@ -246,7 +246,9 @@ Para empezar a evaluar los resultados, todo "spread" tiene que tener su
 En principio veamos como quedaron los grupos sin normalizar y con la
 normalización
 
-![](2015-07-23-r-rmarkdown_files/figure-markdown_strict/unnamed-chunk-12-1.png)
+    knitr::include_graphics("/img/000003.png")
+
+<img src="/img/000003.png" width="30%" style="float:center; padding:0% 35%" />
 
 Y finalmente, un par de ejemplos por grupo:
 

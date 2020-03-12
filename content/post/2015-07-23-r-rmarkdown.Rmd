@@ -283,14 +283,8 @@ gather_file<-function(gdf){
 
 En principio veamos como quedaron los grupos sin normalizar y con la normalización
 
-```{r echo=FALSE,message=FALSE}
-library(grid)
-library(tidyverse)
-library(gridExtra)
-df_an<-read_csv('df_an.csv')
-p1<-df_an %>% filter(version==1) %>% ggplot(aes(x,y))+geom_point()+ ggtitle("Con Normalización")+theme_classic()
-p2<-df_an %>% filter(version==0) %>% ggplot(aes(x,y))+geom_point()+ ggtitle("Sin Normalización")+theme_classic()
-grid.arrange(p1,p2, nrow = 1)
+```{r,out.width= "30%", out.extra='style="float:center; padding:0% 35%"'}
+knitr::include_graphics("/img/000003.png")
 
 ```
 
