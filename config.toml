@@ -36,7 +36,7 @@ canonifyurls = true
   #job = "Your job title"
   location = "Buenos Aires, Argentina"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
-  gravatarEmail = "lucas.a.enrich@gmail.com"
+  #gravatarEmail = "lucas.a.enrich@gmail.com"
   # Your profile picture
   # Overwritten by your gravatar image if `author.gravatarEmail` is filled
   picture = "/img/index.png"
@@ -90,6 +90,13 @@ canonifyurls = true
   name = "LinkedIn"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-linkedin\"></i>"
   url = "https://www.linkedin.com/in/lucas-ariel-enrich-a7320a93/"
+
+[[menu.links]]
+  weight = 1
+  identifier = "youtube"
+  name = "YouTube"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-youtube\"></i>"
+  url = "https://www.youtube.com/channel/UCpq1UzLu2s4vSbghkN3mIHw?view_as=subscriber"
 
 #[[menu.links]]
 #  weight = 2
