@@ -23,6 +23,12 @@ Con tantos adds dando vueltas en internet, sigue siendo, muchas veces, un proces
 
 Pero cuando ya tienen miles realizados, esta bueno mirar atrás e identificar patrones recurrentes. Saber lo que venimos haciendo sirve para mirar hacia adelante.
 
+```{r,out.width= "0%", out.extra='style="float:center; padding:0% 0%"', echo = F}
+knitr::include_graphics("/img/unnamed-chunk-12-1.png")
+
+```
+
+
 <!--more-->
 
 ```{r, out.width = "400px", echo = F}
