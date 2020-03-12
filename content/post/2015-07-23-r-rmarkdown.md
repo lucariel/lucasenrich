@@ -89,34 +89,29 @@ $$\\begin{bmatrix} id.1 & elem.1.x & elem.1.y & elem.1.h & elem.1.w & ... & elem
 
 -   <font size = 3> Reduccion de dimensionalidad + Clustering </font>
 
-<!-- -->
+La forma más directa para realizar la tarea de clusterización es
+simplemente usando el paquete **dbscan** y correrlo sobre nuestra base
+transformada. Pero no funcionó del todo. Asique lo siguiente fue reducir
+la dimensionalidad de los objetos, en este caso se uso el algoritmo UMAP
+y luego se hizo la clusterización.
+
+PCA (componentes principales), es el algoritmo más popular para reducir
+la dimensionalidad. Luego esta t-SNE.
+
+En pocas palabras, UMAP fue la mejor opción porque utiliza un algoritmo
+rapido que preserva mejor la estructura global.
+
+Y finalmente:
 
 
     library(umap)
     library(dbscan)
-    #umap_data<- umap(data)
-    #cl <-hdbscan(x = umap_data, minPts = 3)
+    umap_data<- umap(data)
+    cl <-hdbscan(x = umap_data, minPts = 3)
 
-    knitr::include_graphics("/img/sin_norm2.png")
-
-<img src="/img/sin_norm2.png" width="65%" style="float:left; padding:20px" />
-
--   <font size = 3> Se puede ver un grupo diferenciado, pero los demas
-    no estan tan claros. </font>
-
-**Validacion**
-
-*En terminos de negocio…¿sirve hacer esto?*
-
--   <font size = 4> Al separar en diferentes carpetas los archivos de
-    cada cluster generado, los diseñadores no estaban conformes, habia
-    diseños distintos que habian sido clasificados como similares
-
-</font>
-
-    #knitr::include_graphics("preguntas-768x449.jpg")
-
-**Estrategia 2**
+Pero también habia un tema de escala, quiza el diseño era parecido pero
+un banner era dos veces mas grande, por lo que el resultado no era
+adecuado.
 
 <font size = 3> Surge la necesidad de transformar los datos
 
@@ -151,40 +146,43 @@ Opciones </font>
 
 -   ¿Que podría hacer? En lugar de ver las posiciones y dimensiones
     *absolutas*, ver las posiciones y dimensiones *relativas*, lo que
-    voy a llamar “normalizacion geometrica”
+    voy a llamar "normalizacion geometrica"
 
 <!-- -->
 
-    #knitr::include_graphics("img_rel.jpg")
+    normalize_geometric<-function(df){
+      df['total_area']<-max(df['element_height'])*max(df['element_width'])
+
+      df['rel_area']<-df['element_height']*df['element_width']/df['total_area']
+      
+      df['orientation']<-df['element_height']/df['element_width']
+      
+      df['element_top_relative']<-df['element_top']/max(df['element_height'])
+      
+      df['element_left_relative']<-df['element_left']/max(df['element_width'])
+      
+      df
+    }
 
 </font>
 
-Normalizacion “geometrica”
---------------------------
+-   x' es la proporcion de x respecto al rango total (ancho del canvas)
 
--   x’ es la proporcion de x respecto al rango total (ancho del canvas)
+<font size = 3> *mi nueva variable x' es: la linea roja dividida la
+linea azul* </font>
 
-<font size = 3> *mi nueva variable x’ es: la linea roja dividida la
+    knitr::include_graphics("/img/x_demo_plot.jpeg")
+
+<img src="/img/x_demo_plot.jpeg" width="65%" style="float:left; padding:20px" />
+
+-   y' es la proporcion de y respecto al rango total (alto del canvas)
+
+<font size = 3> *mi nueva variable y' es: la linea roja dividida la
 linea azul* </font>
 
     knitr::include_graphics("/img/demo_plot_y.jpeg")
 
 <img src="/img/demo_plot_y.jpeg" width="65%" style="float:left; padding:20px" />
-
-Normalizacion “geometrica”
---------------------------
-
--   y’ es la proporcion de y respecto al rango total (alto del canvas)
-
-<font size = 3> *mi nueva variable y’ es: la linea roja dividida la
-linea azul* </font>
-
-    knitr::include_graphics("/img/demo_plot_y.jpeg")
-
-<img src="/img/demo_plot_y.jpeg" width="65%" style="float:left; padding:20px" />
-
-Normalizacion “geometrica”
---------------------------
 
 -   areaRelativa es la proporcion del area del elemento respecto al
     total
@@ -192,10 +190,9 @@ Normalizacion “geometrica”
 <font size = 3> *mi nueva variable areaRelativa es: el area del cuadrado
 chiquito dividido la del rectangulo grande* </font>
 
-![](/img/area_plot.jpeg)
+    knitr::include_graphics("/img/area_plot.jpeg.jpeg")
 
-Normalizacion “geometrica”
---------------------------
+<img src="/img/area_plot.jpeg.jpeg" width="65%" style="float:left; padding:20px" />
 
 -   disposicion (dividiendo alto por acho) es para saber si el elemento
     es horizontal, vertical, o cuadrado
@@ -210,4 +207,63 @@ el ancho* </font>
 Resultados
 ----------
 
+Para empezar a evaluar los resultados, todo "spread" tiene que tener su
+"gather":
+
+
+    gather_file<-function(gdf){
+      x<-strsplit(colnames(gdf), '\\.')
+      
+      element_name=unique(unlist(map(x, 1)))
+      original_cols=unique(unlist(map(x, 2)))
+      gdf1<-data.frame(element_name)
+      gdf1[original_cols[1]]<-0
+      gdf1[original_cols[2]]<-0
+      gdf1[original_cols[3]]<-0
+      gdf1[original_cols[4]]<-0
+      
+      
+      
+      rel_area<-c()
+      orientation<-c()
+      element_top_relative<-c()
+      element_left_relative<-c()
+      
+      for(i in seq(from=1, to=length(gdf), by=4)){
+        #  stuff, such as
+        rel_area=c(rel_area,gdf[i])
+        orientation=c(orientation,gdf[i+1])
+        element_top_relative = c(element_top_relative,gdf[i+2])
+        element_left_relative = c(element_left_relative,gdf[i+3])
+      }
+      
+      gdf1['rel_area']=as_vector(unlist(rel_area))
+      gdf1['orientation']=as_vector(unlist(orientation))
+      gdf1['element_top_relative']=as_vector(unlist(element_top_relative))
+      gdf1['element_left_relative']=as_vector(unlist(element_left_relative))
+      gdf1}
+
+En principio veamos como quedaron los grupos sin normalizar y con la
+normalización
+
 ![](2015-07-23-r-rmarkdown_files/figure-markdown_strict/unnamed-chunk-12-1.png)
+
+Y finalmente, un par de ejemplos por grupo:
+
+Primer cluster:
+
+    knitr::include_graphics("/img/c1img.png")
+
+<img src="/img/c1img.png" width="30%" style="float:center; padding:0% 35%" />
+
+Segundo cluster:
+
+    knitr::include_graphics("/img/cl2img.png")
+
+<img src="/img/cl2img.png" width="30%" style="float:center; padding:0% 35%" />
+
+Tercero:
+
+    knitr::include_graphics("/img/cl3img.png")
+
+<img src="/img/cl3img.png" width="30%" style="float:center; padding:0% 35%" />

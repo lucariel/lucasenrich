@@ -87,7 +87,6 @@ spread_file<-function(data, cols_used){
 }
 
 
-
 ```
 
 Lo que transforma cada elementos con la forma:
@@ -109,46 +108,25 @@ $$\begin{bmatrix} id.1 & elem.1.x & elem.1.y & elem.1.h & elem.1.w & ... & elem.
 
 *  <font size = 3> Reduccion de dimensionalidad  + Clustering  </font>
 
+La forma más directa para realizar la tarea de clusterización es simplemente usando el paquete __dbscan__ y correrlo sobre nuestra base transformada. Pero no funcionó del todo. Asique lo siguiente fue reducir la dimensionalidad de los objetos, en este caso se uso el algoritmo UMAP y luego se hizo la clusterización.
+
+PCA (componentes principales), es el algoritmo más popular para reducir la dimensionalidad. Luego esta t-SNE. 
+
+En pocas palabras, UMAP fue la mejor opción porque utiliza un algoritmo rapido que preserva mejor la estructura global.
+
+Y finalmente:
+
 ```{r, eval=F, echo=T, size='tiny'} 
 
 library(umap)
 library(dbscan)
-#umap_data<- umap(data)
-#cl <-hdbscan(x = umap_data, minPts = 3)
+umap_data<- umap(data)
+cl <-hdbscan(x = umap_data, minPts = 3)
 
 ```
-```{r, out.width= "65%", out.extra='style="float:left; padding:20px"'}
-knitr::include_graphics("/img/sin_norm2.png")
-```
 
+Pero también habia un tema de escala, quiza el diseño era parecido pero un banner era dos veces mas grande, por lo que el resultado no era adecuado.
 
-* <font size = 3>
- Se puede ver un grupo diferenciado, pero los demas no estan tan claros.
-</font>
-
-
-##
-**Validacion** 
-
-
-_En terminos de negocio...¿sirve hacer esto?_
-
-
-
-* <font size = 4>
- Al separar en diferentes carpetas los archivos de cada cluster generado, los diseñadores no estaban conformes, habia diseños distintos que habian sido clasificados como similares
-
-</font>
-
-```{r, out.width = "400px" , out.extra='style="float:center; padding:20px"'}
-#knitr::include_graphics("preguntas-768x449.jpg")
-```
-
-
-
-##
-
-**Estrategia 2**
 
 <font size = 3> 
 Surge la necesidad de transformar los datos
@@ -165,9 +143,6 @@ Opciones
 knitr::include_graphics("/img/normaliz_data.png")
 ```
 
-
-
-## 
 
 
 **¿Puedo usar estas transformaciones en estos datos?**
@@ -189,18 +164,26 @@ no le encontré mucho sentido a la estandarizacion ni la normalizacion.
 
 * ¿Que podría hacer? En lugar de ver las posiciones y dimensiones *absolutas*, ver las posiciones y dimensiones *relativas*, lo que voy a llamar "normalizacion geometrica"
 
+```{r, eval=F, echo=T, size='tiny'} 
+normalize_geometric<-function(df){
+  df['total_area']<-max(df['element_height'])*max(df['element_width'])
 
-```{r,out.width= "40%", out.extra='style="float:center; padding:5% 25%"'}
-#knitr::include_graphics("img_rel.jpg")
+  df['rel_area']<-df['element_height']*df['element_width']/df['total_area']
+  
+  df['orientation']<-df['element_height']/df['element_width']
+  
+  df['element_top_relative']<-df['element_top']/max(df['element_height'])
+  
+  df['element_left_relative']<-df['element_left']/max(df['element_width'])
+  
+  df
+}
+
 
 ```
 
 </font>
 
-
-
-
-## Normalizacion "geometrica"
 
 - x' es la proporcion de x respecto al rango total (ancho del canvas)
 
@@ -210,14 +193,8 @@ _mi nueva variable x' es: la linea roja dividida la linea azul_
 
 
 ```{r, out.width= "65%", out.extra='style="float:left; padding:20px"'}
-knitr::include_graphics("/img/demo_plot_y.jpeg")
+knitr::include_graphics("/img/x_demo_plot.jpeg")
 ```
-
-
-
-
-
-## Normalizacion "geometrica"
 
 
 
@@ -236,8 +213,6 @@ knitr::include_graphics("/img/demo_plot_y.jpeg")
 
 
 
-##  Normalizacion "geometrica"
-
 
 - areaRelativa es la proporcion del area del elemento respecto al total
 
@@ -246,10 +221,10 @@ _mi nueva variable areaRelativa es: el area del cuadrado chiquito dividido la de
 </font>
 
 
-![](/img/area_plot.jpeg)
+```{r, out.width= "65%", out.extra='style="float:left; padding:20px"'}
+knitr::include_graphics("/img/area_plot.jpeg.jpeg")
+```
 
-
-## Normalizacion "geometrica"
 
 
 - disposicion (dividiendo alto por acho) es para saber si el elemento es horizontal, vertical, o cuadrado
@@ -267,6 +242,46 @@ knitr::include_graphics("/img/rectangular.png")
 
 ## Resultados
 
+Para empezar a evaluar los resultados, todo "spread" tiene que tener su "gather":
+
+```{r, eval=F, echo=T, size='tiny'} 
+
+gather_file<-function(gdf){
+  x<-strsplit(colnames(gdf), '\\.')
+  
+  element_name=unique(unlist(map(x, 1)))
+  original_cols=unique(unlist(map(x, 2)))
+  gdf1<-data.frame(element_name)
+  gdf1[original_cols[1]]<-0
+  gdf1[original_cols[2]]<-0
+  gdf1[original_cols[3]]<-0
+  gdf1[original_cols[4]]<-0
+  
+  
+  
+  rel_area<-c()
+  orientation<-c()
+  element_top_relative<-c()
+  element_left_relative<-c()
+  
+  for(i in seq(from=1, to=length(gdf), by=4)){
+    #  stuff, such as
+    rel_area=c(rel_area,gdf[i])
+    orientation=c(orientation,gdf[i+1])
+    element_top_relative = c(element_top_relative,gdf[i+2])
+    element_left_relative = c(element_left_relative,gdf[i+3])
+  }
+  
+  gdf1['rel_area']=as_vector(unlist(rel_area))
+  gdf1['orientation']=as_vector(unlist(orientation))
+  gdf1['element_top_relative']=as_vector(unlist(element_top_relative))
+  gdf1['element_left_relative']=as_vector(unlist(element_left_relative))
+  gdf1}
+
+
+```
+
+En principio veamos como quedaron los grupos sin normalizar y con la normalización
 
 ```{r echo=FALSE,message=FALSE}
 library(grid)
@@ -279,4 +294,29 @@ grid.arrange(p1,p2, nrow = 1)
 
 ```
 
+Y finalmente, un par de ejemplos por grupo:
 
+
+Primer cluster:
+
+```{r,out.width= "30%", out.extra='style="float:center; padding:0% 35%"'}
+knitr::include_graphics("/img/c1img.png")
+
+```
+
+
+Segundo cluster:
+
+```{r,out.width= "30%", out.extra='style="float:center; padding:0% 35%"'}
+knitr::include_graphics("/img/cl2img.png")
+
+```
+
+
+Tercero:
+
+
+```{r,out.width= "30%", out.extra='style="float:center; padding:0% 35%"'}
+knitr::include_graphics("/img/cl3img.png")
+
+```
