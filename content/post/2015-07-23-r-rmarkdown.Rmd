@@ -139,7 +139,7 @@ Opciones
 * <font size = 2> Normalizacion (min-max scaler): Permite llevar los valores entre 0 y 1. **Útil para comparar variables de diferentes ordenes de magnitud** (Precio de una casa y los m2 que ocupa) 
 </font>
 
-```{r, out.width= "65%", out.extra='style="float:left; padding:20px"'}
+```{r, out.width= "65%", out.extra='style="float:left; padding:20px"', echo = F}
 knitr::include_graphics("/img/normaliz_data.png")
 ```
 
@@ -192,7 +192,7 @@ _mi nueva variable x' es: la linea roja dividida la linea azul_
 </font>
 
 
-```{r, out.width= "65%", out.extra='style="float:left; padding:20px"'}
+```{r, out.width= "65%", out.extra='style="float:left; padding:20px"', echo = F}
 knitr::include_graphics("/img/x_demo_plot.jpeg")
 ```
 
@@ -207,7 +207,7 @@ _mi nueva variable y' es: la linea roja dividida la linea azul_
 
 
 
-```{r, out.width= "65%", out.extra='style="float:left; padding:20px"'}
+```{r, out.width= "65%", out.extra='style="float:left; padding:20px"', echo = F}
 knitr::include_graphics("/img/demo_plot_y.jpeg")
 ```
 
@@ -221,7 +221,7 @@ _mi nueva variable areaRelativa es: el area del cuadrado chiquito dividido la de
 </font>
 
 
-```{r, out.width= "65%", out.extra='style="float:left; padding:20px"'}
+```{r, out.width= "65%", out.extra='style="float:left; padding:20px"', echo = F}
 knitr::include_graphics("/img/area_plot.jpeg")
 ```
 
@@ -233,7 +233,7 @@ knitr::include_graphics("/img/area_plot.jpeg")
 _mi nueva variable disposicion es: el alto dividido por el ancho_
 </font>
 
-```{r,out.width= "30%", out.extra='style="float:center; padding:0% 35%"'}
+```{r,out.width= "30%", out.extra='style="float:center; padding:0% 35%"', echo = F}
 knitr::include_graphics("/img/rectangular.png")
 
 ```
@@ -284,7 +284,7 @@ gather_file<-function(gdf){
 En principio veamos como quedaron los grupos sin normalizar y con la normalización
 
 
-```{r,out.width= "30%", out.extra='style="float:center; padding:0% 35%"'}
+```{r,out.width= "30%", out.extra='style="float:center; padding:0% 35%"', echo = F}
 knitr::include_graphics("/img/unnamed-chunk-12-1.png")
 
 ```
@@ -294,7 +294,7 @@ Y finalmente, un par de ejemplos por grupo:
 
 Primer cluster:
 
-```{r,out.width= "30%", out.extra='style="float:center; padding:0% 35%"'}
+```{r,out.width= "30%", out.extra='style="float:center; padding:0% 35%"', echo = F}
 knitr::include_graphics("/img/c1img.jpeg")
 
 ```
@@ -302,7 +302,7 @@ knitr::include_graphics("/img/c1img.jpeg")
 
 Segundo cluster:
 
-```{r,out.width= "30%", out.extra='style="float:center; padding:0% 35%"'}
+```{r,out.width= "30%", out.extra='style="float:center; padding:0% 35%"', echo = F}
 knitr::include_graphics("/img/cl2img.jpeg")
 
 ```
@@ -311,7 +311,7 @@ knitr::include_graphics("/img/cl2img.jpeg")
 Tercero:
 
 
-```{r,out.width= "30%", out.extra='style="float:center; padding:0% 35%"'}
+```{r,out.width= "30%", out.extra='style="float:center; padding:0% 35%"', echo = F}
 knitr::include_graphics("/img/cl3img.jpeg")
 
 ```

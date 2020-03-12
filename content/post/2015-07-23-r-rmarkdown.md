@@ -126,10 +126,6 @@ Opciones </font>
     ordenes de magnitud** (Precio de una casa y los m2 que ocupa)
     </font>
 
-<!-- -->
-
-    knitr::include_graphics("/img/normaliz_data.png")
-
 <img src="/img/normaliz_data.png" width="65%" style="float:left; padding:20px" />
 
 **¿Puedo usar estas transformaciones en estos datos?**
@@ -171,16 +167,12 @@ Opciones </font>
 <font size = 3> *mi nueva variable x' es: la linea roja dividida la
 linea azul* </font>
 
-    knitr::include_graphics("/img/x_demo_plot.jpeg")
-
 <img src="/img/x_demo_plot.jpeg" width="65%" style="float:left; padding:20px" />
 
 -   y' es la proporcion de y respecto al rango total (alto del canvas)
 
 <font size = 3> *mi nueva variable y' es: la linea roja dividida la
 linea azul* </font>
-
-    knitr::include_graphics("/img/demo_plot_y.jpeg")
 
 <img src="/img/demo_plot_y.jpeg" width="65%" style="float:left; padding:20px" />
 
@@ -190,8 +182,6 @@ linea azul* </font>
 <font size = 3> *mi nueva variable areaRelativa es: el area del cuadrado
 chiquito dividido la del rectangulo grande* </font>
 
-    knitr::include_graphics("/img/area_plot.jpeg")
-
 <img src="/img/area_plot.jpeg" width="65%" style="float:left; padding:20px" />
 
 -   disposicion (dividiendo alto por acho) es para saber si el elemento
@@ -199,8 +189,6 @@ chiquito dividido la del rectangulo grande* </font>
 
 <font size = 3> *mi nueva variable disposicion es: el alto dividido por
 el ancho* </font>
-
-    knitr::include_graphics("/img/rectangular.png")
 
 <img src="/img/rectangular.png" width="30%" style="float:center; padding:0% 35%" />
 
@@ -246,26 +234,19 @@ Para empezar a evaluar los resultados, todo "spread" tiene que tener su
 En principio veamos como quedaron los grupos sin normalizar y con la
 normalización
 
-    knitr::include_graphics("/img/000003.png")
-
-<img src="/img/000003.png" width="30%" style="float:center; padding:0% 35%" />
+<img src="/img/unnamed-chunk-12-1.png" width="30%" style="float:center; padding:0% 35%" />
 
 Y finalmente, un par de ejemplos por grupo:
 
 Primer cluster:
 
-    knitr::include_graphics("/img/c1img.jpeg")
-
 <img src="/img/c1img.jpeg" width="30%" style="float:center; padding:0% 35%" />
+000003.png
 
 Segundo cluster:
-
-    knitr::include_graphics("/img/cl2img.jpeg")
 
 <img src="/img/cl2img.jpeg" width="30%" style="float:center; padding:0% 35%" />
 
 Tercero:
-
-    knitr::include_graphics("/img/cl3img.jpeg")
 
 <img src="/img/cl3img.jpeg" width="30%" style="float:center; padding:0% 35%" />
