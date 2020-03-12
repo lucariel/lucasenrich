@@ -10,9 +10,7 @@ Pero cuando ya tienen miles realizados, esta bueno mirar atrás e
 identificar patrones recurrentes. Saber lo que venimos haciendo sirve
 para mirar hacia adelante.
 
-<img src="/img/unnamed-chunk-12-1.png" width="30%" style="float:center; padding:0% 35%" />
-
-<!--more-->
+<img src="/img/unnamed-chunk-12-1.png" width="0%" style="float:center; padding:0% 0%" />
 
 <img src="/img/banner-example.png" width="400px" />
 
@@ -244,7 +242,7 @@ Y finalmente, un par de ejemplos por grupo:
 
 Primer cluster:
 
-<img src="/img/c1img.jpeg" width="30%" style="float:center; padding:0% 35%" />
+<img src="/img/c1img.jpeg" width="0%" style="float:center; padding:0% 0%" />
 000003.png
 
 Segundo cluster:

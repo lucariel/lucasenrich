@@ -24,7 +24,7 @@ Pero cuando ya tienen miles realizados, esta bueno mirar atrás e identificar pa
 
 
 
-```{r,out.width= "30%", out.extra='style="float:center; padding:0% 35%"', echo = F}
+```{r,out.width= "0%", out.extra='style="float:center; padding:0% 0%"', echo = F}
 knitr::include_graphics("/img/unnamed-chunk-12-1.png")
 
 ```
@@ -301,7 +301,7 @@ Y finalmente, un par de ejemplos por grupo:
 
 Primer cluster:
 
-```{r,out.width= "30%", out.extra='style="float:center; padding:0% 35%"', echo = F}
+```{r,out.width= "0%", out.extra='style="float:center; padding:0% 0%"', echo = F}
 knitr::include_graphics("/img/c1img.jpeg")
 
 ```
