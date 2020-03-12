@@ -31,17 +31,17 @@ canonifyurls = true
   archive = "archives"
 
 [author]
-  name = "Firstname Lastname"
-  bio = "Super bio with markdown support **COOL**"
-  job = "Your job title"
-  location = "France"
+  name = "Lucas Ariel Enrich"
+  bio = "Economista, Data Scientist, Musico"
+  #job = "Your job title"
+  location = "Buenos Aires, Argentina"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
-  gravatarEmail = "thibaud.lepretre@gmail.com"
+  gravatarEmail = "lucas.a.enrich@gmail.com"
   # Your profile picture
   # Overwritten by your gravatar image if `author.gravatarEmail` is filled
-  picture = "https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
+  picture = "/img/index.png"
   # Your Twitter username without the @. E.g : thibaudlepretre
-  # twitter = "thibaudlepretre"
+   twitter = "lucariel1"
   # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
   # googlePlus = "+ThibaudLepretre"
 
@@ -82,20 +82,20 @@ canonifyurls = true
   identifier = "github"
   name = "GitHub"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-github\"></i>"
-  url = "https://github.com/kakawait"
-[[menu.links]]
-  weight = 2
-  identifier = "stackoverflow"
-  name = "Stack Overflow"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-stack-overflow\"></i>"
-  url = "https://stackoverflow.com/users/636472/kakawait"
+  url = "https://github.com/lucariel/"
+#[[menu.links]]
+#  weight = 2
+#  identifier = "stackoverflow"
+#  name = "Stack Overflow"
+#  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-stack-overflow\"></i>"
+#  url = "https://stackoverflow.com/users/636472/kakawait"
 
-[[menu.misc]]
-  weight = 1
-  identifier = "rss"
-  name = "RSS"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-rss\"></i>"
-  url = "/index.xml"
+#[[menu.misc]]
+ # weight = 1
+ # identifier = "rss"
+ # name = "RSS"
+ # pre = "<i class=\"sidebar-button-icon fa fa-lg fa-rss\"></i>"
+ # url = "/index.xml"
 
 [params]
   # Customize date format use to render blog post date, categories and other
