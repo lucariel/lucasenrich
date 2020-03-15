@@ -19,8 +19,24 @@ title = "Lucas Enrich"
 theme = "hugo-tranquilpeak-theme"
 disqusShortname = "hugo-tranquilpeak-theme"
 # googleAnalytics = "UA-123-45"
+
 paginate = 7
 canonifyurls = true
+
+
+DefaultContentLanguage = "es"
+
+[languages]
+  [languages.en]
+    [languages.en.params]
+      [languages.en.params.author]
+        name = "Lucas Ariel Enrich"
+        bio = "Economist, Data Sciencits and Musician"
+        gravatarEmail = "lucas.a.enrich@gmail.com"
+        twitter = "@lucariel1"
+
+
+
 
 [permalinks]
   post = "/:year/:month/:slug/"
