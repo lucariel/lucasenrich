@@ -13,8 +13,8 @@
 # use grunt task `build` to synchronize assets
 
 baseURL = "https://lucasenrich.netlify.com/"
-languageCode = "en-us"
-defaultContentLanguage = "en-us"
+languageCode = "es"
+defaultContentLanguage = "es"
 title = "Lucas Enrich"
 theme = "hugo-tranquilpeak-theme"
 disqusShortname = "hugo-tranquilpeak-theme"
@@ -24,10 +24,8 @@ paginate = 7
 canonifyurls = true
 
 
-DefaultContentLanguage = "es"
 
 [languages]
-  [languages.en]
     [languages.en.params]
       [languages.en.params.author]
         name = "Lucas Ariel Enrich"
