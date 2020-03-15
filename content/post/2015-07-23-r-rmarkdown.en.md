@@ -1,6 +1,6 @@
 *El problema*: Clusterizar diseños
 
-¿Como hago para clasificar estilos de banners? ENGLISH
+¿Como hago para clasificar estilos de banners?
 
 Con tantos adds dando vueltas en internet, sigue siendo, muchas veces,
 un proceso relativamente manual y poco estandarizado los diseños. Para
@@ -10,8 +10,9 @@ Pero cuando ya tienen miles realizados, esta bueno mirar atrás e
 identificar patrones recurrentes. Saber lo que venimos haciendo sirve
 para mirar hacia adelante.
 
-<!--more--> 
+<img src="/img/unnamed-chunk-12-1.png" width="0%" style="float:center; padding:0% 0%" />
 
+<!--more-->
 <img src="/img/banner-example.png" width="400px" />
 
 **Input data**
