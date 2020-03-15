@@ -30,14 +30,14 @@ canonifyurls = true
       [languages.en.params.author]
         name = "Lucas Ariel Enrich"
         bio = "Economist, Data Sciencits and Musician"
-        gravatarEmail = "lucas.a.enrich@gmail.com"
+        email = "lucas.a.enrich@gmail.com"
         picture = "/img/index.png"
         twitter = "@lucariel1"
     [languages.es.params]
       [languages.es.params.author]
         name = "Lucas Ariel Enrich"
         bio = "Economista, Data Sciencits y Musico"
-        gravatarEmail = "lucas.a.enrich@gmail.com"
+        email = "lucas.a.enrich@gmail.com"
         picture = "/img/index.png"
         twitter = "@lucariel1"
 
