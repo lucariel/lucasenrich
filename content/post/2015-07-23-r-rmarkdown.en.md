@@ -11,7 +11,7 @@ identificar patrones recurrentes. Saber lo que venimos haciendo sirve
 para mirar hacia adelante.
 
 
-
+.RelPermalink
 
 <img src="/img/banner-example.png" width="400px" />
 
