@@ -25,21 +25,21 @@ canonifyurls = true
 
 
 
-[languages]
-    [languages.en.params]
-      [languages.en.params.author]
-        name = "Lucas Ariel Enrich"
-        bio = "Economist, Data Sciencits and Musician"
-        email = "lucas.a.enrich@gmail.com"
-        picture = "/img/0.jpeg"
-        twitter = "@lucariel1"
-    [languages.es.params]
-      [languages.es.params.author]
-        name = "Lucas Ariel Enrich"
-        bio = "Economista, Data Sciencits y Musico"
-        Email = "lucas.a.enrich@gmail.com"
-        picture = "/static/img/0.jpeg"
-        twitter = "@lucariel1"
+#[languages]
+#    [languages.en.params]
+#      [languages.en.params.author]
+#        name = "Lucas Ariel Enrich"
+#        bio = "Economist, Data Sciencits and Musician"
+#        email = "lucas.a.enrich@gmail.com"
+#        picture = "/img/0.jpeg"
+#        twitter = "@lucariel1"
+#    [languages.es.params]
+#      [languages.es.params.author]
+#        name = "Lucas Ariel Enrich"
+#        bio = "Economista, Data Sciencits y Musico"
+#        Email = "lucas.a.enrich@gmail.com"
+#        picture = "/static/img/0.jpeg"
+#        twitter = "@lucariel1"
 
 
 

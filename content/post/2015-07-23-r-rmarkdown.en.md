@@ -10,9 +10,9 @@ Pero cuando ya tienen miles realizados, esta bueno mirar atrás e
 identificar patrones recurrentes. Saber lo que venimos haciendo sirve
 para mirar hacia adelante.
 
-<img src="/img/unnamed-chunk-12-1.png" width="0%" style="float:center; padding:0% 0%" />
 
-<!--more-->
+
+
 <img src="/img/banner-example.png" width="400px" />
 
 **Input data**
