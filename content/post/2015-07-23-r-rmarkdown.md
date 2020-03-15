@@ -11,6 +11,9 @@ identificar patrones recurrentes. Saber lo que venimos haciendo sirve
 para mirar hacia adelante.
 
 <!--more--> 
+{{ if .Truncated }}
+<a href="">Read more </a>
+{{ end }}
 
 <img src="/img/banner-example.png" width="400px" />
 
