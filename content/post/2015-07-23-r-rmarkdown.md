@@ -10,10 +10,11 @@ Pero cuando ya tienen miles realizados, esta bueno mirar atrás e
 identificar patrones recurrentes. Saber lo que venimos haciendo sirve
 para mirar hacia adelante.
 
-<!--more--> 
 {{ if .Truncated }}
 <a href="">Read more </a>
 {{ end }}
+
+<!--more--> 
 
 <img src="/img/banner-example.png" width="400px" />
 
