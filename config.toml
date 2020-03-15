@@ -25,13 +25,13 @@ canonifyurls = true
 
 
 
-[languages]
-    [languages.en.params]
-      [languages.en.params.author]
-        name = "Lucas Ariel Enrich"
-        bio = "Economist, Data Sciencits and Musician"
-        gravatarEmail = "lucas.a.enrich@gmail.com"
-        twitter = "@lucariel1"
+#[languages]
+#    [languages.en.params]
+#      [languages.en.params.author]
+#        name = "Lucas Ariel Enrich"
+#        bio = "Economist, Data Sciencits and Musician"
+#        gravatarEmail = "lucas.a.enrich@gmail.com"
+#        twitter = "@lucariel1"
 
 
 
