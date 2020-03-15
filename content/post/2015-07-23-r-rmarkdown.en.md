@@ -1,6 +1,6 @@
 *El problema*: Clusterizar diseños
 
-¿Como hago para clasificar estilos de banners?
+¿Como hago para clasificar estilos de banners? ENGLISH
 
 Con tantos adds dando vueltas en internet, sigue siendo, muchas veces,
 un proceso relativamente manual y poco estandarizado los diseños. Para
