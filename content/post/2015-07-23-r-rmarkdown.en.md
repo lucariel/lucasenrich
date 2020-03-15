@@ -10,9 +10,8 @@ Pero cuando ya tienen miles realizados, esta bueno mirar atrás e
 identificar patrones recurrentes. Saber lo que venimos haciendo sirve
 para mirar hacia adelante.
 
-{{ if .Truncated }}
-<a href="">Read more </a>
-{{ end }}
+<a href="https://lucasenrich.netlify.com/1/01/">Read more </a>
+
 <!--more--> 
 
 
