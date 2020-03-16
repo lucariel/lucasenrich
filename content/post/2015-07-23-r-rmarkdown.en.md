@@ -1,16 +1,17 @@
-*El problema*: Clusterizar diseños
+*The problem*: Clusterize design patterns
 
-¿Como hago para clasificar estilos de banners? ENGLISH
+¿How can I find patterns in design?
 
-Con tantos adds dando vueltas en internet, sigue siendo, muchas veces,
-un proceso relativamente manual y poco estandarizado los diseños. Para
-eso existen diseñadores.
+With so many adds around, one would think that that process is quite standarized
+but it remains, in many cases, a quite manual labor. This is, I believe mostly 
+because of how competitive that market is. To stand out, graphic designers have 
+still a lot of work
 
-Pero cuando ya tienen miles realizados, esta bueno mirar atrás e
-identificar patrones recurrentes. Saber lo que venimos haciendo sirve
-para mirar hacia adelante.
+But that doesn't mean that we can't find design patterns, after all, after
+a few thousend design even the best designer tend to have trends
 
-<a href="https://lucasenrich.netlify.com/1/01/">Read more </a>
+
+<a href="https://lucasenrich.netlify.com/en/1/01/">Read more </a>
 
 <!--more--> 
 
@@ -19,34 +20,36 @@ para mirar hacia adelante.
 
 **Input data**
 
-El problema tenia originalmente cientos de diseños, en este ejemplo,
-dado que tiene que ver con algoritmos de clusterización, se usaran
-algunos hechos ad hoc, por lo que el ejemplo es con tamaños reducidos y
-la clasificacion de imagenes, fuentes de texto y demás quedan afuera. Lo
-que queremos saber es si la ubicación de los elementos en la imagen
-sigue un patron en particular.
+This problem had, orinally, many houndres of designs, in this example
+I'm going to use just a few made ad hoc for this porpuses because
+in the end, clustering algorithms doesn't need that many data to 
+be efective.
 
-Los datos venian de la siguiente forma:
+Given these are manual examples, it's all about sizes and shapes. I 
+left behind fonts, content of the images and other. What I look for is
+pattern in the layout of the elements in the banner
+
+
+Once extracted, data came in this form:
 
 <img src="/img/input_data.png" width="65%" style="float:left; padding:20px" />
 
-Donde:
+Where:
 
--   <font size = 3> *y* : Distancia desde arriba </font>
+-   <font size = 3> *y* : Distance from the top </font>
 
--   <font size = 3> *x* : Distancia desde la izquierda </font>
+-   <font size = 3> *x* : Distance from the left </font>
 
--   <font size = 3> *w* : Ancho (width) </font>
+-   <font size = 3> *w* : Width </font>
 
--   <font size = 3> *h* : Alto (height) </font>
+-   <font size = 3> *h* : Height </font>
 
-Si tenemos 50 ejemplos, con 3 elementos cada uno, y hay 4 variables por
-elemento, la forma del input es 50 × 3 × 4, esto, a los algoritmos, no
-les gusta demasiado. Asique fue necesario achatar la base para obtener
-una base de datos de 50 × 12, para lo cual:
+If we have 50 exameples, with 3 elements each, and 4 variables per element
+the shape of the input file is 50 × 3 × 4. Algorithms like I used like
+2D data better, so I spread them to 50 × 12 for which:
 
-Primero se agarra cada uno (una base de 1 × 3 × 4) y se la transforma en
-una sola fila 1 × 12 para lo cual se uso el código:
+First, iterate file by file and transform each from 1 × 3 × 4 to
+1 × 12. In R code:
 
     library(tidyverse)
     cols_used = c('element_top', 'element_left', 'element_width', 'element_height')
@@ -79,34 +82,34 @@ una sola fila 1 × 12 para lo cual se uso el código:
       z
     }
 
-Lo que transforma cada elementos con la forma:
+And then iterate to transform this
 
 $$\\begin{bmatrix} elem1 & y\_1 & x\_1 & w\_1 & h\_1 \\\\   elem2 & y\_2 & x\_2 & w\_2 & h\_2  \\\\   \\vdots \\\\   elemk & y\_2 & x\_k & w\_k & h\_k \\end{bmatrix}$$
- a la forma:
+ in this:
 
 $$\\begin{bmatrix} 
    id.1 & elem.1.x & elem.1.y & elem.1.h & elem.1.w & ... & elem.k.w
 \\end{bmatrix}$$
- Así se pueden apilar todos elementos de la muestra para quedar una sola
-base de datos con la forma:
+ This way, you can stack them into:
 
 $$\\begin{bmatrix} id.1 & elem.1.x & elem.1.y & elem.1.h & elem.1.w & ... & elem.k.w \\\\ id.2 & elem.1.x & elem.1.y & elem.1.h & elem.1.w & ... & elem.k.w \\\\ \\vdots \\\\ id.N & elem.1.x & elem.1.y & elem.1.h & elem.1.w & ... & elem.k.w \\end{bmatrix}$$
 
--   <font size = 3> Reduccion de dimensionalidad + Clustering </font>
+-   <font size = 3> Dimentionality reduction + Clustering </font>
 
-La forma más directa para realizar la tarea de clusterización es
-simplemente usando el paquete **dbscan** y correrlo sobre nuestra base
-transformada. Pero no funcionó del todo. Asique lo siguiente fue reducir
-la dimensionalidad de los objetos, en este caso se uso el algoritmo UMAP
-y luego se hizo la clusterización.
+This most direct form of clusterization for this porpuses is **dbscan** and
+run it on our transform base. This didn't worked as expected so first I 
+used a technique to reduce dimentionality and then do the clustering. 
 
-PCA (componentes principales), es el algoritmo más popular para reducir
-la dimensionalidad. Luego esta t-SNE.
+PCA and t-SNE are the most popular algorithms in dimentionality reduction
+but UMAP is the new kid in the block (well it has almos 2 years now) 
+with some fancy math behind it, it preservs global and local structures
+and works faster using graphs. One thing to keep in mind when using it is that at one
+point uses a random procedure which makes it that each time you run it 
+the mapping into 2D is going to look slighty different, but every point is 
+similary close to others in each iteration. To prevent this, set.seed() 
+is the way to go. 
 
-En pocas palabras, UMAP fue la mejor opción porque utiliza un algoritmo
-rapido que preserva mejor la estructura global.
-
-Y finalmente:
+And finally:
 
 
     library(umap)
@@ -114,40 +117,37 @@ Y finalmente:
     umap_data<- umap(data)
     cl <-hdbscan(x = umap_data, minPts = 3)
 
-Pero también habia un tema de escala, quiza el diseño era parecido pero
-un banner era dos veces mas grande, por lo que el resultado no era
-adecuado.
+This worked better than with the full dimentions, but not quite as needed. Its time to...
 
-<font size = 3> Surge la necesidad de transformar los datos
+<font size = 3> Transform and normalice
 
-Opciones </font>
+Most common option </font>
 
--   <font size = 2> Estandarizacion (z-score): Representa el numero de
-    desvios estandar arriba o debajo del valor resultante. **Útil para
-    variables normalmente distribuidas** </font>
+-   <font size = 2> Standarization (z-score): Represents the number of standard
+    deviations up or down of resulting value. **Usefull for normaly distributed
+    variables**
+    </font>
 
--   <font size = 2> Normalizacion (min-max scaler): Permite llevar los
-    valores entre 0 y 1. **Útil para comparar variables de diferentes
-    ordenes de magnitud** (Precio de una casa y los m2 que ocupa)
+-   <font size = 2> Normalization (min-max scaler): It allows to transform the data
+    into values between 0 and 1. **Usefull when working with variables with different
+    orders of magnitude** 
     </font>
 
 <img src="/img/normaliz_data.png" width="65%" style="float:left; padding:20px" />
 
-**¿Puedo usar estas transformaciones en estos datos?**
+**Can I use this transformations in this data?**
 
 <font size = 4>
 
--   No, como las variables describen dimensiones (alto y ancho), y
-    posicion en el espacio no le encontré mucho sentido a la
-    estandarizacion ni la normalizacion.
+-   Not really,what this variables describe are absolute positions in space
+    and are quite linked to one-another.  
 
 </font>
 
 <font size = 4>
 
--   ¿Que podría hacer? En lugar de ver las posiciones y dimensiones
-    *absolutas*, ver las posiciones y dimensiones *relativas*, lo que
-    voy a llamar "normalizacion geometrica"
+-   What can I do? Instead of using absolute positions and dimentions, 
+    lets use its *relative*, what I'll call "geometric normalization"
 
 <!-- -->
 
@@ -167,41 +167,37 @@ Opciones </font>
 
 </font>
 
--   x' es la proporcion de x respecto al rango total (ancho del canvas)
+-   x' is now the proportion of x in respecto the total width of the canvas
 
-<font size = 3> *mi nueva variable x' es: la linea roja dividida la
-linea azul* </font>
+<font size = 3> *My new variable is x', red line divided the blue one* </font>
 
 <img src="/img/x_demo_plot.jpeg" width="65%" style="float:left; padding:20px" />
 
--   y' es la proporcion de y respecto al rango total (alto del canvas)
+-   y' is now the proportion of x in respecto the total height of the canvas
 
-<font size = 3> *mi nueva variable y' es: la linea roja dividida la
-linea azul* </font>
+<font size = 3> *My new variable is y', red line divided the blue one* </font>
 
 <img src="/img/demo_plot_y.jpeg" width="65%" style="float:left; padding:20px" />
 
--   areaRelativa es la proporcion del area del elemento respecto al
-    total
+-   areaRelativa is the proportion of the canvas the element occupies 
 
-<font size = 3> *mi nueva variable areaRelativa es: el area del cuadrado
-chiquito dividido la del rectangulo grande* </font>
+
+<font size = 3> *My new variable areaRelativa is: the are of the small rectangle divided
+divided the area of the big one* </font>
 
 <img src="/img/area_plot.jpeg" width="65%" style="float:left; padding:20px" />
 
--   disposicion (dividiendo alto por acho) es para saber si el elemento
-    es horizontal, vertical, o cuadrado
+-   disposition is to know if the elmenet in horizontal position, vertical or if
+it is a square
 
-<font size = 3> *mi nueva variable disposicion es: el alto dividido por
-el ancho* </font>
+<font size = 3> *My new variable disposicion es: heigth/width* </font>
 
 <img src="/img/rectangular.png" width="30%" style="float:center; padding:0% 35%" />
 
-Resultados
+Results
 ----------
+To begin to analize the results, every "spread" has to have a "gather"
 
-Para empezar a evaluar los resultados, todo "spread" tiene que tener su
-"gather":
 
 
     gather_file<-function(gdf){
@@ -236,22 +232,21 @@ Para empezar a evaluar los resultados, todo "spread" tiene que tener su
       gdf1['element_left_relative']=as_vector(unlist(element_left_relative))
       gdf1}
 
-En principio veamos como quedaron los grupos sin normalizar y con la
-normalización
+Let's first see how the clustering works with and without geometric normalization
 
 <img src="/img/unnamed-chunk-12-1.png" width="30%" style="float:center; padding:0% 35%" />
 
-Y finalmente, un par de ejemplos por grupo:
+And finally, examples of each group:
 
-Primer cluster:
+First cluster:
 
 <img src="/img/c1img.jpeg" width="30%" style="float:center; padding:0% 35%" />
 000003.png
 
-Segundo cluster:
+Second cluster:
 
 <img src="/img/cl2img.jpeg" width="30%" style="float:center; padding:0% 35%" />
 
-Tercero:
+Third:
 
 <img src="/img/cl3img.jpeg" width="30%" style="float:center; padding:0% 35%" />
