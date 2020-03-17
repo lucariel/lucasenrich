@@ -2,13 +2,13 @@
 
 ¿How can I find patterns in design?
 
-With so many adds around, one would think that that process is quite standarized
-but it remains, in many cases, a quite manual labor. This is, I believe mostly 
-because of how competitive that market is. To stand out, graphic designers have 
+With so many adds around, one would think that that process is quite standardized
+but it remains, most times, a manual labor. This is, I believe mostly,
+because of how competitive that market is. To stand out, graphic designers have
 still a lot of work
 
 But that doesn't mean that we can't find design patterns, after all, after
-a few thousend design even the best designer tend to have trends
+a few thousend design even the best designer tend to have trends.
 
 
 <a href="https://lucasenrich.netlify.com/en/1/01/">Read more </a>
@@ -20,14 +20,16 @@ a few thousend design even the best designer tend to have trends
 
 **Input data**
 
-This problem had, orinally, many houndres of designs, in this example
-I'm going to use just a few made ad hoc for this porpuses because
-in the end, clustering algorithms doesn't need that many data to 
-be efective.
+This problem had, originally, many houndred of designs, in this example
+I will use just a few made ad hoc for this purposes because
+in the end, clustering algorithms doesn't need that many data to
+be effective.
 
-Given these are manual examples, it's all about sizes and shapes. I 
+Given these are manual examples, it's all about sizes and shapes. I
 left behind fonts, content of the images and other. What I look for is
 pattern in the layout of the elements in the banner
+
+
 
 
 Once extracted, data came in this form:
@@ -97,16 +99,16 @@ $$\\begin{bmatrix} id.1 & elem.1.x & elem.1.y & elem.1.h & elem.1.w & ... & elem
 -   <font size = 3> Dimentionality reduction + Clustering </font>
 
 This most direct form of clusterization for this porpuses is **dbscan** and
-run it on our transform base. This didn't worked as expected so first I 
-used a technique to reduce dimentionality and then do the clustering. 
+run it on our transform base. This didn't work as expected so first I
+used a technique to reduce dimensionality and then do the clustering.
 
-PCA and t-SNE are the most popular algorithms in dimentionality reduction
-but UMAP is the new kid in the block (well it has almos 2 years now) 
-with some fancy math behind it, it preservs global and local structures
+PCA and t-SNE are the most popular algorithms in dimensionality reduction
+but UMAP is the new kid in the block (well it has almost 2 years now)
+with some fancy math behind it, it preserves global and local structures.
 and works faster using graphs. One thing to keep in mind when using it is that at one
-point uses a random procedure which makes it that each time you run it 
-the mapping into 2D is going to look slighty different, but every point is 
-similary close to others in each iteration. To prevent this, set.seed() 
+point uses a random procedure which makes it that each time you run it
+the mapping into 2D will look slightly different, but every point is
+similary close to others in each iteration. To prevent this, set.seed()
 is the way to go. 
 
 And finally:
@@ -124,12 +126,12 @@ This worked better than with the full dimentions, but not quite as needed. Its t
 Most common option </font>
 
 -   <font size = 2> Standarization (z-score): Represents the number of standard
-    deviations up or down of resulting value. **Usefull for normaly distributed
+    deviations up or down of resulting value. **Useful for normally distributed
     variables**
     </font>
 
 -   <font size = 2> Normalization (min-max scaler): It allows to transform the data
-    into values between 0 and 1. **Usefull when working with variables with different
+    into values between 0 and 1. **Useful when working with variables with different
     orders of magnitude** 
     </font>
 
@@ -139,7 +141,7 @@ Most common option </font>
 
 <font size = 4>
 
--   Not really,what this variables describe are absolute positions in space
+-   Not really, what this variables describe are absolute positions in space
     and are quite linked to one-another.  
 
 </font>
