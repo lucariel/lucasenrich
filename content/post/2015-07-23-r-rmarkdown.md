@@ -1,3 +1,8 @@
+---
+aliases:
+    - /es/posts/clusterizar-disenos/
+---
+
 *El problema*: Clusterizar diseños
 
 ¿Como hago para clasificar estilos de banners?
