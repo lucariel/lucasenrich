@@ -4,6 +4,7 @@ author: "Lucas Enrich"
 categories: ["NLP"]
 tags: ["Sentiment Analysis","twpy","NLP","Polarizacion"]
 output: md_document
+date: 2019-08-12 00:00:00
 ---
 
 ```{r setup, include=FALSE}
