@@ -16,7 +16,7 @@ identificar patrones recurrentes. Saber lo que venimos haciendo sirve
 para mirar hacia adelante.
 
 
-<a href="https://lucasenrich.netlify.com/es/posts/clusterizar-disenos/">Read more </a>
+<a href="https://lucasenrich.netlify.com/post/clusterizar-disenos/">Read more </a>
 
 
 <!--more--> 
