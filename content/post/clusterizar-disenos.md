@@ -1,5 +1,5 @@
-
-<h1>Clusterizar diseños</h1>
+Clusterizar diseños
+==================
 
 ¿Como hago para clasificar estilos de banners?
 
