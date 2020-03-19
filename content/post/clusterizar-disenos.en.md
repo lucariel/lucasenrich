@@ -11,7 +11,7 @@ But that doesn't mean that we can't find design patterns, after all, after
 a few thousend design even the best designer tend to have trends.
 
 
-<a href="https://lucasenrich.netlify.com/en/1/01/">Read more </a>
+<a href="https://lucasenrich.netlify.com/en/posts/clusterizar-disenos/">Read more </a>
 
 <!--more--> 
 
