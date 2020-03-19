@@ -51,7 +51,7 @@ canonifyurls = true
   archive = "archives"
 
 [permalinks]
-  post = "/:year/:month/:title/"
+  posts = "/:year/:month/:title/"
 
 [author]
 #  name = "Lucas Ariel Enrich"
