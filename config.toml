@@ -25,7 +25,7 @@ canonifyurls = true
 
 
 [permalinks]
-  post = "/:year/:month/:slug/"
+  post = "/:year/:month/"
 
 [languages]
     [languages.en.params]
