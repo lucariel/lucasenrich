@@ -24,6 +24,8 @@ paginate = 7
 canonifyurls = true
 
 
+[permalinks]
+  post = "/:year/:month/:slug/"
 
 [languages]
     [languages.en.params]
@@ -48,8 +50,6 @@ canonifyurls = true
 
 
 
-#[permalinks]
-#  post = "/:year/:month/:slug/"
 
 [taxonomies]
   tag = "tags"
