@@ -33,6 +33,8 @@ canonifyurls = true
         email = "lucas.a.enrich@gmail.com"
         picture = "/img/0.jpeg"
         twitter = "@lucariel1"
+      [languages.en.params.permalinks]
+        post = "/:year/:month/:slug/"
     [languages.es.params]
       [languages.es.params.author]
         name = "Lucas Ariel Enrich"
@@ -40,19 +42,20 @@ canonifyurls = true
         Email = "lucas.a.enrich@gmail.com"
         picture = "/static/img/0.jpeg"
         twitter = "@lucariel1"
+      [languages.es.params.permalinks]
+        post = "/:year/:month/:slug/"
 
 
 
 
-[permalinks]
-  post = "/:year/:month/:slug/"
+#[permalinks]
+#  post = "/:year/:month/:slug/"
 
 [taxonomies]
   tag = "tags"
   category = "categories"
   archive = "archives"
-[permalinks]
-  post = "/:year/:month/:slug/"
+
 [author]
 #  name = "Lucas Ariel Enrich"
 #  bio = "Economista, Data Scientist, Musico"
