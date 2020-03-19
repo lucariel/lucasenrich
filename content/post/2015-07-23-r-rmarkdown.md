@@ -15,7 +15,7 @@ Pero cuando ya tienen miles realizados, esta bueno mirar atrás e
 identificar patrones recurrentes. Saber lo que venimos haciendo sirve
 para mirar hacia adelante.
 
-<a href="https://lucasenrich.netlify.com/en/1/01/">Read more </a>
+<a href="https://lucasenrich.netlify.com/es/1/01/">Read more </a>
 
 <!--more--> 
 <img src="/img/banner-example.png" width="400px" />
