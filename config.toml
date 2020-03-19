@@ -51,7 +51,8 @@ canonifyurls = true
   tag = "tags"
   category = "categories"
   archive = "archives"
-
+[permalinks]
+  post = "/:year/:month/:slug/"
 [author]
 #  name = "Lucas Ariel Enrich"
 #  bio = "Economista, Data Scientist, Musico"
