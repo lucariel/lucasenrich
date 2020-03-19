@@ -24,9 +24,6 @@ paginate = 7
 canonifyurls = true
 
 
-[permalinks]
-  post = "/:year/:month/"
-
 [languages]
     [languages.en.params]
       [languages.en.params.author]
@@ -52,6 +49,9 @@ canonifyurls = true
   tag = "tags"
   category = "categories"
   archive = "archives"
+
+[permalinks]
+  post = "/:year/:month/:slug/"
 
 [author]
 #  name = "Lucas Ariel Enrich"
