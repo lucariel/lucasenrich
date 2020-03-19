@@ -1,4 +1,4 @@
-<h1>Clusterize design patterns<\h1>
+<h1>Clusterize design patterns</h1>
 
 ¿How can I find patterns in design?
 
