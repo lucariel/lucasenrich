@@ -14,10 +14,8 @@ library(tidyverse)
 
 ```
 
-##
+## Clusterizar diseños
 
-
-_El problema_: Clusterizar diseños
 
 ¿Como hago para clasificar estilos de banners?
 
