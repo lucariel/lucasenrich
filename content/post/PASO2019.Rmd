@@ -14,7 +14,7 @@ library(tidyverse)
 ```
 
 
-# Twitter y las Paso
+# Twitter and Argentinean Primaries 
 
 Esta fue mi primera aproximacion a minar datos de redes sociales, amigarme con las APIs, y algún analysis rudimentario. Siguiendo metodologias propuestas por otros.
 
