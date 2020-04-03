@@ -222,9 +222,9 @@ the density of the real state supply. As expected, the major density are
 near the center of town, near the bus terminal and near the cost; given
 that Mar del Plata is a major tourist center
 
-<iframe seamless src="/img/index.html" width="100%" height="100%"></iframe>
+<iframe seamless src="/static/img/index.html" width="100%" height="500"></iframe>
 
-#<img src="/img/unnamed-chunk-7-1.png" />
+<img src="/img/unnamed-chunk-7-1.png" />
 
 
 A further anlysis of each zone can be made, so we can describe them
