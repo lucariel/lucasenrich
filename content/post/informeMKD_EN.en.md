@@ -222,23 +222,23 @@ the density of the real state supply. As expected, the major density are
 near the center of town, near the bus terminal and near the cost; given
 that Mar del Plata is a major tourist center
 
-![](informeMKD_EN_files/figure-markdown_strict/unnamed-chunk-7-1.png)
+<iframe seamless src="/img/index.html" width="100%" height="100%"></iframe>
 
-<img src="/img/unnamed-chunk-7-1.png" />
+#<img src="/img/unnamed-chunk-7-1.png" />
 
 
 A further anlysis of each zone can be made, so we can describe them
 
 <img src="/img/unnamed-chunk-8-1.png" />
 
-![](informeMKD_EN_files/figure-markdown_strict/unnamed-chunk-8-1.png)
+
 
 Overall, how is the supply distributed in each zone?
 
 <img src="/img/unnamed-chunk-9-1.png" />
 
 
-![](informeMKD_EN_files/figure-markdown_strict/unnamed-chunk-9-1.png)
+
 
 Esto nos dice que si bien la zona 6 ocupa el 10% de los m² ofrecidos,
 constituye el 26% de las publicaciones. Y, conjuntamente con la zona 5,
@@ -263,7 +263,9 @@ first place, the land are no longer offered, the apartments takes over
 as the main type and in the center of town also appears comercial shops
 and garages
 
-![](informeMKD_EN_files/figure-markdown_strict/unnamed-chunk-10-1.png)
+
+<img src="/img/unnamed-chunk-10-1.png" />
+
 
 This is exactly what one would expect, if the housing unit is smaller,
 more units fit in a given space
@@ -273,7 +275,8 @@ more units fit in a given space
 The sizes of each unit play a fundamental role in the geographical
 concentration of the supply
 
-![](informeMKD_EN_files/figure-markdown_strict/unnamed-chunk-11-1.png)
+
+<img src="/img/unnamed-chunk-11-1.png" />
 
 As we saw in the "Type" section, we can quantify how the types which are
 traditionaly the largest (houses, land) affect the concentration
@@ -284,7 +287,9 @@ The prices in each area are more homogeneous than the sizes or any other
 variable previously analyse. There is still a tendency that more supply
 means less prices. For example, the least average price is in zone 6
 
-![](informeMKD_EN_files/figure-markdown_strict/unnamed-chunk-12-1.png)
+
+<img src="/img/unnamed-chunk-12-2.png" />
+
 
 This information, doesn't reflect how the prices varies in each zone.
 Prices in zone 6 may be the least, in average, but this prices hide a
@@ -300,14 +305,16 @@ units gets larger in less concentrated areas, and the total prices
 doesn't change that much. This means that the prices by squared meter
 will be higher there where there is a major supply concentration
 
-![](informeMKD_EN_files/figure-markdown_strict/unnamed-chunk-13-1.png)
+
+<img src="/img/unnamed-chunk-13-1.png" />
 
 ### As price zones...
 
 The same methology can be used to extract different zones, Prices,
 number of rooms, etc which can be made ad hoc
 
-![](informeMKD_EN_files/figure-markdown_strict/unnamed-chunk-14-1.png)
+<img src="/img/unnamed-chunk-14-1.png" />
+
 
 Some of the alternative maps can be seen in: [mapa
 interactivo](https://lucariel.shinyapps.io/mapa_inmobiliario/)
