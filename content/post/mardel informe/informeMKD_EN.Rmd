@@ -1,0 +1,350 @@
+---
+title: "Mercado Inmobiliario Mar del Plata"
+author: "Lucas Enrich"
+categories: ["Geospatial Analysis, Real State"]
+tags: 
+output: md_document
+date: 2019-08-12 00:00:00
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+## ANALYSIS OF SUPPLY AND EVOLUTION OF THE REAL STATE MARKET 
+
+The real state market is composed of a series of goods and sevices that are heterogeneous in their characteristics and in their localization
+
+The features of each of the housing units in supply are, together, the features of the market in general in a given timeframe
+
+Usually, what is obvserved is the supply stock and it is assumed that the price is in equilibrium, in this sense, the supply is fixing a price which will allow them to sell or rent at a price in the least amount of time. Nevertheless, the flux of actual sales is not observable in this sample, but it might be yet possible to determine by analysing the changes in supply over time
+
+The scrapping methods takes the data monthly in order to get the necessary data to perform such analysis.
+
+In this presentation, we'll give a view of the supply. Leaving the demand analysis for future oportunity
+
+
+## Study of supply 
+
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+library(knitr)
+source('pre-proc.R')
+library(tidyverse)
+mardel_oct = read_csv('octubre_mardel.csv')
+mardel_nov = read_csv('mardel_limpio.csv')
+mardel_dec = read_csv('mardel_dec_limpio.csv')
+
+mardel = rbind(mardel_oct, mardel_nov %>% dplyr::select(colnames(mardel_oct)),mardel_dec %>% select(colnames(mardel_oct))) %>% distinct(id, .keep_all = T)
+
+
+mardel_summary = function(mardel){
+  mardel %>% group_by(Tipo) %>% 
+    summarise(
+      Cantidad = n(),
+      Precio_M2 = mean(p.x.m2, na.rm = T) %>% round(),
+      Tamaño = mean(Metros, na.rm = T)%>% round(),
+      Precio = mean(Prices, na.rm = T)%>% round()
+      
+      ) %>% arrange(-Cantidad) %>% head(10)
+  
+  
+}
+
+
+mardeltalbe1 = mardel_summary(mardel)
+```
+
+The total amount of registers we have for the third trimester of 2019 in our scrapping, once deleted repeated adds, is roughly `r nrow(mardel)`; of which  `r mardeltalbe1$Cantidad[mardeltalbe1$Tipo == 'Departamento']` are apartments and `r mardeltalbe1$Cantidad[mardeltalbe1$Tipo == 'Casa']` to houses.
+
+The next table is a summary of total and average squared meters, and their values in US Dollars for Mar del Plata
+
+__references__
+Departamento = Apartment
+Casa = House
+PH = Horizontal Property, a building with housing units much bigger that apartments but has less than 3 floors
+Terreno = Land
+Local Comercial = Comerce shop
+Local Comercial = Comerce office
+Garage = Garage
+Fondo de Comercio = On-going business in sale
+Bodega-Galpon = shed (as big as a block usually)
+Edificio = Building
+
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+kable(mardeltalbe1, caption = "Features of Sales dataset")
+
+top1prop = round((mardeltalbe1$Cantidad[1]/sum(mardeltalbe1$Cantidad))*100,2)
+top2prop = round((mardeltalbe1$Cantidad[2]/sum(mardeltalbe1$Cantidad))*100,2)
+topprop = top1prop+top2prop
+
+
+```
+
+
+From this table it came out that `r topprop`% of the supply is composed by `r mardeltalbe1$Tipo[1]` (`r top1prop`%) y `r mardeltalbe1$Tipo[2]` (`r top2prop`%) and that the apartments have the highest prices by squared meter and the least change in supply
+
+
+
+
+Likewise the data reveal the variation in quantities, prices and sizes of each type of housing unit
+
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+library(scales)
+
+library(ggpubr)
+
+library(lubridate)
+summ_oct = mardel_summary(mardel_oct)
+summ_nov = mardel_summary(mardel_nov)
+summ_dec = mardel_summary(mardel_dec)
+summ_dec['Mes'] = ymd("2019-12-01")
+summ_nov['Mes'] = ymd("2019-11-01")
+summ_oct['Mes'] = ymd("2019-10-01")
+summ_all = rbind(summ_oct,summ_nov,summ_dec)
+
+
+
+p1<-summ_all %>% filter(Cantidad>500) %>% ggplot(aes(x = Mes, y = Tamaño))+
+  geom_line(aes(color = Tipo, group = Tipo),size = 1)+labs(title="Tamaño del Inmueble")+
+  geom_point(aes(color = Tipo))+theme_bw()+ theme(legend.position = "none")+
+  scale_x_date(date_breaks = "1 month",labels = date_format("%b"))+ theme(plot.title = element_text(size=10))
+
+
+
+p2<-summ_all %>% filter(Cantidad>500) %>% ggplot(aes(x = Mes, y = Precio))+
+  geom_line(aes(color = Tipo, group = Tipo),size = 1)+labs(title="Precio del Inmueble")+
+  geom_point(aes(color = Tipo))+theme_bw()+ theme(legend.position = "bottom")+
+  scale_x_date(date_breaks = "1 month",labels = date_format("%b"))+ theme(plot.title = element_text(size=10))
+
+
+
+
+p3<-summ_all %>% filter(Cantidad>500) %>% ggplot(aes(x = Mes, y = Precio_M2))+
+  geom_line(aes(color = Tipo, group = Tipo),size = 1)+labs(title="Precio por M² del Inmueble")+
+  geom_point(aes(color = Tipo))+theme_bw()+scale_x_date(date_breaks = "1 month",labels = date_format("%b"))+ theme(legend.position = "none")+ theme(plot.title = element_text(size=10))
+
+
+
+ggarrange(p1, p2, p3, ncol=3, nrow=1, common.legend = TRUE, legend="bottom")
+
+```
+
+
+In this case we can see, for example, that, for apartments, the rise in size (total squared meters) causes that, even though the total price risses, the price by squared meters falls.  The oposite occurs for the PH's 
+
+The dataset also provides housing units that have activaly reduce it's prices in the last three months
+
+
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+bajaron_table = read_csv('bajaron_table.csv')
+kable(bajaron_table, caption = "Bajaron de Precio")
+```
+
+
+In the table we can see that the average price of apartments drop 8.63%, meanwhile the prices of the PHs dropped even more, an average of 9.8%.
+
+The housing units that lowered the price also present a series of features we can exam. 
+
+The prices for squared meter that lowered the price are 13.5% cheaper than the overall average, meaning that those which lower the price were already cheaper than the overall sample. The same for sizes
+
+The PH's have a peculiar feature. Even though, those which lowered the price are smaller than the general sample, the price by squared meter is higher. This is because the difference between the average size si higher than the difference between the price of the housing unit
+
+
+
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+source('informe_data.R')
+
+```
+
+## Real State brokers
+
+
+The dataset provides as well, the real state broker since november 2019. This allows us to evaluate better who is offering. 
+
+To begin with, we can see that the majority of the brokers have a few publications, 77% have less than 22 in this trimester. But there is also brokers with a lot of publications; 1% of the brokers have between 276 and 419 publications
+
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+pie_inmobiliaria
+```
+
+
+This data can also be used to track the market-share of each broker, and analyse the evolution
+
+## Zones of Supply Density
+
+The data is geolocated in 97%, which permits us to map it and visualize the density of the real state supply. 
+As expected, the major density are near the center of town, near the bus terminal and near the cost; given that Mar del Plata is a major tourist center
+
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+library(leaflet)
+library("KernSmooth")
+library("raster")
+library(data.table)
+#trimestr =rbind(mardel_oct, mardel_nov %>% select(colnames(mardel_oct)),mardel_dec %>% #select(colnames(mardel_oct))) %>% distinct(id, .keep_all = T)
+
+plot_mardel = function(mardel){
+  library(leaflet)
+  library("KernSmooth")
+  library("raster")
+  library(data.table)
+  mardelat = mean(mardel$Latitud, na.rm = T)
+  mardelong = mean(mardel$Longitud, na.rm = T)
+  colnames(mardel)[colnames(mardel)=='Latitud']  = 'latitude'
+  colnames(mardel)[colnames(mardel)=='Longitud']  = 'longitude'
+  
+  
+  dat <- data.table(mardel)
+  setnames(dat, tolower(colnames(dat)))
+  setnames(dat, gsub(" ", "_", colnames(dat)))
+  dat <- dat[!is.na(longitude)]
+  ## Create kernel density output
+  kde <- bkde2D(dat[, list(longitude, latitude)],
+                bandwidth = c(.0045, .0068),
+                gridsize = c(2500, 2500))
+  KernelDensityRaster <-
+    raster(list(
+      x = kde$x1 ,
+      y = kde$x2 ,
+      z = kde$fhat
+    ))
+  KernelDensityRaster@data@values[which(KernelDensityRaster@data@values < 1)] <-
+    NA
+  kernel_density_values <- KernelDensityRaster@data@values
+  KernelDensityRaster@data@values=log(KernelDensityRaster@data@values,10)
+  
+  #create pal function for coloring the raster
+  palRaster <-colorNumeric("Spectral",domain = KernelDensityRaster@data@values,na.color = "transparent")
+  
+  ## Redraw the map 
+  #palRaster <- colorBin("Spectral",domain = KernelDensityRaster@data@values, na.color = "transparent")
+  palRaster1 <- colorBin("Spectral",domain = 10^KernelDensityRaster@data@values, na.color = "transparent")
+  
+  leaflet() %>% setView(lng = mean(mardel$longitude,na.rm = T), lat = mean(mardel$latitude,na.rm = T), zoom = 10)%>% addTiles() %>%
+    addLegend(pal = palRaster1,
+              values = 10^KernelDensityRaster@data@values,
+              title = "Densidad de Oferta Inmobiliaria") %>% 
+    addRasterImage(KernelDensityRaster,
+                   colors = palRaster,
+                   opacity = .65)
+    
+}
+
+## Redraw the map
+if(knitr::is_html_output()) {
+  plot_mardel(mardel)
+} else {
+  library("png")
+  pp <- readPNG("mapamardel.png")
+  plot.new()
+  rasterImage(pp, 0, 0, 1, 1)
+}
+
+```
+
+A further anlysis of each zone can be made, so we can describe them
+
+
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+zonas_plot
+```
+
+
+Overall, how is the supply distributed in each zone?
+
+
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+zonas_plot2
+```
+
+Esto nos dice que si bien la zona 6 ocupa el 10% de los m² ofrecidos, constituye el 26% de las publicaciones. Y, conjuntamente con la zona 5, son el 25% de los m² ofrecidos, pero superan el 52% del total de publicaciones.
+This tell us that, even though zone 6 occupies 10% the m² offered, is 26% of the publications. And, toghether with zone 5, they are more than 52% of the publications 
+
+The variables than will be described for each zone are:
+
+
+
++ Type of housing unit
++ Size in squared meters
++ Price by squared meter
++ Total price
+
+
+
+### Type 
+
+Below, we can see that the zone of least density (zone 0), the market is composed mainly with land and houses. And as we advance to the zone of major density (zone 6) the composition of the supply varies. In the first place, the land are no longer offered, the apartments takes over as the main type and in the center of town also appears comercial shops and garages
+
+
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+zona_tipo_plot 
+```
+
+
+This is exactly what one would expect, if the housing unit is smaller, more units fit in a given space
+
+
+
+
+### Sizes
+
+The sizes of each unit play a fundamental role in the geographical concentration of the supply
+
+
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+Tamaño_zona_plot 
+```
+
+As we saw in the "Type" section, we can quantify how the types which are traditionaly the largest (houses, land) affect the concentration
+
+
+
+
+### Prices
+
+The prices in each area are more homogeneous than the sizes or any other variable previously analyse. There is still a tendency that more supply means less prices. For example, the least average price is in zone 6
+
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+prices_zona_plot 
+```
+
+This information, doesn't reflect how the prices varies in each zone. Prices in zone 6 may be the least, in average, but this prices hide a major variabilty. Prices in zone 6 have 50% variation than in zone 0. Meaning that, even though the prices are lower, in average, there are a lot with higher prices, and with lower prices. And in zones where houses are the main unit, the prices are more steady
+
+
+
+### Price by squared meter
+
+This a sort of conclution of the two previous parts. We saw that the units gets larger in less concentrated areas, and the total prices doesn't change that much. This means that the prices by squared meter will be higher there where there is a major supply concentration
+
+
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+pm2_zona_plot 
+```
+
+
+
+### As price zones...
+
+
+The same methology can be used to extract different zones, Prices, number of rooms, etc which can be made ad hoc
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+zona_precio_heatmap 
+```
+
+
+Some of the alternative maps can be seen in: [mapa interactivo](https://lucariel.shinyapps.io/mapa_inmobiliario/)
+

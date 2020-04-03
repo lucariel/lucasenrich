@@ -1,0 +1,324 @@
+---
+title: "Mercado Inmobiliario Mar del Plata"
+output:
+  word_document: default
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+## ANALYSIS OF SUPPLY AND EVOLUTION OF THE REAL STATE MARKET 
+
+The real state market is composed of a series of goods and sevices that are heterogeneous in their characteristics and in their localization
+
+Estas características de cada uno de los inmuebles que se encuentran en el mercado constituyen, en su conjunto, las características de la oferta de inmuebles en un determinado período de tiempo. 
+Habitualmente, lo que se observa del mercado inmobiliario es un stock de la oferta y se asume que el precio es el de equilibrio, en el sentido que los oferentes intentarían obtener el mayor precio que le posibilite la venta o el alquiler, en el menor tiempo posible. Sin embargo, el flujo de inmuebles que se han vendido no es un conjunto observable y tal vez sea el conjunto más importante por determinar.
+Este flujo que se ha vendido o alquilado representa a aquellos inmuebles que hoy no se encuentran en el stock disponible a la venta o en alquiler, pero que en algún momento lo estuvieron; por lo que es necesario conformar una base de datos con los inmuebles que están disponibles actualmente en stock, pero también aquellos que en un lapso han salido y aquellos nuevos que ingresan a conformarlo.
+Para ello se desarrolló una rutina a través de un software, que permite relevar los datos de compra y venta de inmuebles disponibles en la web, para analizar su evolución en el tiempo, para poder construir distintos indicadores que sirvan como herramientas para los desarrolladores inmobiliarios, a la hora de decidir las características y el emplazamiento de sus proyectos.
+
+## Estudio de la base 
+
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+library(knitr)
+source('pre-proc.R')
+mardel_oct = read_csv('octubre_mardel.csv')
+mardel_nov = read_csv('mardel_limpio.csv')
+mardel_dec = read_csv('mardel_dec_limpio.csv')
+
+mardel = rbind(mardel_oct, mardel_nov %>% select(colnames(mardel_oct)),mardel_dec %>% select(colnames(mardel_oct))) %>% distinct(id, .keep_all = T)
+
+
+mardel_summary = function(mardel){
+  mardel %>% group_by(Tipo) %>% 
+    summarise(
+      Cantidad = n(),
+      Precio_M2 = mean(p.x.m2, na.rm = T) %>% round(),
+      Tamaño = mean(Metros, na.rm = T)%>% round(),
+      Precio = mean(Prices, na.rm = T)%>% round()
+      
+      ) %>% arrange(-Cantidad) %>% head(10)
+  
+  
+}
+
+
+mardeltalbe1 = mardel_summary(mardel)
+```
+
+El total de registro de ventas con los que contamos en para el tercer trimestre de 2019 de nuestra búsqueda de datos en la web, una vez que se han eliminado los datos repetidos, es de aproximadamente `r nrow(mardel)` casos, de los cuales, `r mardeltalbe1$Cantidad[mardeltalbe1$Tipo == 'Departamento']` corresponden a departamentos y `r mardeltalbe1$Cantidad[mardeltalbe1$Tipo == 'Casa']` corresponden a casas. En el cuadro resumen de la base de ventas se tuvieron en cuenta algunas características como la cantidad de m2 ofertados, m2 promedio y valor en dólares promedio para Mar del Plata.
+
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+kable(mardeltalbe1, caption = "Caracteristicas de la Base de Ventas")
+
+top1prop = round((mardeltalbe1$Cantidad[1]/sum(mardeltalbe1$Cantidad))*100,2)
+top2prop = round((mardeltalbe1$Cantidad[2]/sum(mardeltalbe1$Cantidad))*100,2)
+topprop = top1prop+top2prop
+
+
+```
+
+
+
+De la tabla, se desprende que el `r topprop`% de oferta inmobiliaria de Mar del Plata esta compuesta por `r mardeltalbe1$Tipo[1]` (`r top1prop`%) y `r mardeltalbe1$Tipo[2]` (`r top2prop`%) y que los departamentos tienen el mayor precio por metro cuadrado, por el menor tamaño de las ofertas.
+
+
+
+
+
+
+
+Asimismo, los datos del trimestre revelan la variación de las cantidades, los precios y tamaños de cada tipo de inmueble.
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+library(scales)
+
+library(ggpubr)
+
+library(lubridate)
+summ_oct = mardel_summary(mardel_oct)
+summ_nov = mardel_summary(mardel_nov)
+summ_dec = mardel_summary(mardel_dec)
+summ_dec['Mes'] = ymd("2019-12-01")
+summ_nov['Mes'] = ymd("2019-11-01")
+summ_oct['Mes'] = ymd("2019-10-01")
+summ_all = rbind(summ_oct,summ_nov,summ_dec)
+
+
+
+p1<-summ_all %>% filter(Cantidad>500) %>% ggplot(aes(x = Mes, y = Tamaño))+
+  geom_line(aes(color = Tipo, group = Tipo),size = 1)+labs(title="Tamaño del Inmueble")+
+  geom_point(aes(color = Tipo))+theme_bw()+ theme(legend.position = "none")+
+  scale_x_date(date_breaks = "1 month",labels = date_format("%b"))+ theme(plot.title = element_text(size=10))
+
+
+
+p2<-summ_all %>% filter(Cantidad>500) %>% ggplot(aes(x = Mes, y = Precio))+
+  geom_line(aes(color = Tipo, group = Tipo),size = 1)+labs(title="Precio del Inmueble")+
+  geom_point(aes(color = Tipo))+theme_bw()+ theme(legend.position = "bottom")+
+  scale_x_date(date_breaks = "1 month",labels = date_format("%b"))+ theme(plot.title = element_text(size=10))
+
+
+
+
+p3<-summ_all %>% filter(Cantidad>500) %>% ggplot(aes(x = Mes, y = Precio_M2))+
+  geom_line(aes(color = Tipo, group = Tipo),size = 1)+labs(title="Precio por M² del Inmueble")+
+  geom_point(aes(color = Tipo))+theme_bw()+scale_x_date(date_breaks = "1 month",labels = date_format("%b"))+ theme(legend.position = "none")+ theme(plot.title = element_text(size=10))
+
+
+
+ggarrange(p1, p2, p3, ncol=3, nrow=1, common.legend = TRUE, legend="bottom")
+
+```
+
+
+En este caso, podemos ver, por ejemplo, que el aumento del tamaño promedio de los inmuebles, causa que, a pesar de un aumento del precio, el precio por metro cuadrado tenga una ligera caida. Lo contrario ocurre con los PHs. Lo cual en el caso de los terrenos (una mejora metodologica en Octubre nos permite obtener mejores datos de Terrenos y Locales Comerciales), las variaciones se compensan y se mantiene estabe el precio por metro cuadrado
+
+
+
+La base de datos cuenta también con inmuebles que han reducido su precio en los últimos 3 meses.
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+bajaron_table = read_csv('bajaron_table.csv')
+kable(bajaron_table, caption = "Bajaron de Precio")
+```
+
+
+En el cuadro podemos ver que el precio promedio que bajaron los departamentos es del 8.63% mientras que los PHs bajaron más, un promedio de 9.8%.
+
+Los inmuebles que bajaron de precio también tienen una serie de caracteristicas particulares. Los precios por metro cuadrado de los departamentos que bajaron son 13.5% más baratos que el precio promedio, es decir, que los que bajan son aquellos que de por sí, ya están por debajo del precio promedio. Lo mismo ocurre respecto al tamaño, los que bajan son 33% más pequeños que la muestra general. 
+
+Los PH's tienen una caracteristica particular que tiene que ver con que a pesar de ser más pequeños, tienen un precio por metro cuadrado mayor que el general de PH en la muestra. Esto se debe a que la diferencia respecto al promedio en el tamaño es más chica que la diferencia en el precio del inmueble.
+
+
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+source('informe_data.R')
+
+```
+
+## Inmobiliarias
+
+
+La base de datos cuenta también con las inmobiliarias, extraídas desde noviembre 2019. Lo cual permite evaluar mejor la oferta disponible. En principio, podemos ver que la gran mayoría de las inmobiliarias tienen pocas publicaciones, el 77% tiene menos de 22 publicaciones en el trimestre analizado. Mientras que si éxisten inmobiliarias que tienen muchas más publicaciones, el 1% de las inmobiliarias tienen entre 276 y 419 publicaciones activas en el trimestre.
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+pie_inmobiliaria
+```
+
+Estos datos también pueden ser utilizados para hacer un seguimiento del market-share de cada una de ellas y eventualmente hacer una valuación de los inmuebles que tienen a la venta.
+
+
+## Zonas de Densidad de oferta
+
+
+La infomación obtenida esta geolocalizada en un 97%, lo cual nos permite ubicar en un mapa los inmuebles a la venta, y poder visualizar la densidad de la oferta de inmuebles. La mayor densida, de acuerdo a los datos, se encuentra en los barrios de La Perla, donde una hay una desproporcionada densidad de inmuebles. 
+
+En el norte, cerca de Parque Peña, hay un foco de oferta; al sur, este foco está en Los Acantilados 
+
+Por lo general, estos focos de oferta se encuentran en la costa (salvo Los Acantilados). Aquellos que se encuentran fuera, se caracterizan por ser los barrios cerrados Rumencó y Arenas del Sur
+
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+library(leaflet)
+library("KernSmooth")
+library("raster")
+library(data.table)
+#trimestr =rbind(mardel_oct, mardel_nov %>% select(colnames(mardel_oct)),mardel_dec %>% #select(colnames(mardel_oct))) %>% distinct(id, .keep_all = T)
+
+plot_mardel = function(mardel){
+  library(leaflet)
+  library("KernSmooth")
+  library("raster")
+  library(data.table)
+  mardelat = mean(mardel$Latitud, na.rm = T)
+  mardelong = mean(mardel$Longitud, na.rm = T)
+  colnames(mardel)[colnames(mardel)=='Latitud']  = 'latitude'
+  colnames(mardel)[colnames(mardel)=='Longitud']  = 'longitude'
+  
+  
+  dat <- data.table(mardel)
+  setnames(dat, tolower(colnames(dat)))
+  setnames(dat, gsub(" ", "_", colnames(dat)))
+  dat <- dat[!is.na(longitude)]
+  ## Create kernel density output
+  kde <- bkde2D(dat[, list(longitude, latitude)],
+                bandwidth = c(.0045, .0068),
+                gridsize = c(2500, 2500))
+  KernelDensityRaster <-
+    raster(list(
+      x = kde$x1 ,
+      y = kde$x2 ,
+      z = kde$fhat
+    ))
+  KernelDensityRaster@data@values[which(KernelDensityRaster@data@values < 1)] <-
+    NA
+  kernel_density_values <- KernelDensityRaster@data@values
+  KernelDensityRaster@data@values=log(KernelDensityRaster@data@values,10)
+  
+  #create pal function for coloring the raster
+  palRaster <-colorNumeric("Spectral",domain = KernelDensityRaster@data@values,na.color = "transparent")
+  
+  ## Redraw the map 
+  #palRaster <- colorBin("Spectral",domain = KernelDensityRaster@data@values, na.color = "transparent")
+  palRaster1 <- colorBin("Spectral",domain = 10^KernelDensityRaster@data@values, na.color = "transparent")
+  
+  leaflet() %>% setView(lng = mean(mardel$longitude,na.rm = T), lat = mean(mardel$latitude,na.rm = T), zoom = 10)%>% addTiles() %>%
+    addLegend(pal = palRaster1,
+              values = 10^KernelDensityRaster@data@values,
+              title = "Densidad de Oferta Inmobiliaria") %>% 
+    addRasterImage(KernelDensityRaster,
+                   colors = palRaster,
+                   opacity = .65)
+    
+}
+
+## Redraw the map
+if(knitr::is_html_output()) {
+  plot_mardel(mardel)
+} else {
+  library("png")
+  pp <- readPNG("mapamardel.png")
+  plot.new()
+  rasterImage(pp, 0, 0, 1, 1)
+}
+
+```
+
+
+De esta información se puede extraer las zonas y obtener descripciones de cada una de ellas.
+
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+zonas_plot
+```
+
+
+A nivel general, se puede ver como esta distribuida la oferta por cada zona
+
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+zonas_plot2
+```
+
+Esto nos dice que si bien la zona 6 ocupa el 10% de los m² ofrecidos, constituye el 26% de las publicaciones. Y, conjuntamente con la zona 5, son el 25% de los m² ofrecidos, pero superan el 52% del total de publicaciones.
+
+
+
+Las variables que puede ser descriptas en este sentido son, para cada zona:
+
+
++ Tipo de Inmueble
++ Tamaño de los inmuebles
++ Precio por metro cuadrado
++ Precio 
+
+
+
+### Tipo 
+
+Debajo se puede ver que en la zona de menor densidad de oferta (zona 0), el mercado consiste predominantemente en terrenos y casas. Y a medida que nos vamos acercando a la zona de mayor concentración de oferta (zona 6) ocurren varias cosas. En primer lugar los terrenos dejan de estar disponibles; luego, se incorporan casas, los departamentos van ocupando la mayor parte de la oferta y en el centro comercial, donde mayor oferta hay, se incorporan los locales comerciales y garages, desplazando a los PH's.
+
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+zona_tipo_plot 
+```
+
+
+
+Este tipo de distribución es entendible desde el punto de vista que, las unidades de menor tamaño permiten que haya más oferta por unidad de terreno. 
+
+
+### Tamaño de los inmuebles
+
+Los tamaños de los inmuebles juegan un rol fundamental en la concentración geográfica de la oferta. Porque inmuebles de menor tamaño permiten una mayor cantidad de inmuebles por unidad de terreno.
+
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+Tamaño_zona_plot 
+```
+
+
+Como se vió en la sección de tipos de inmuebles se corrobora que, a menor densidad de oferta, mayor son los tamaños de los inmuebles a la venta. Por ejemplo, en la zona 0, donde predominan terrenos y casas, el tamaño promedio es de 1163m², lo cual se reduce exponencialmente a medida que se acerca a la zona 0.
+
+
+
+### Precio de los inmuebles
+
+Los precios de los inmuebles en cada zona son más homogeneos que las variables previamente analizadas. Aunque cierta tendencia sigue existiendo. En la zona 6, donde mayor inmuebles hay, es donde se encuentran los menores precios. 
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+prices_zona_plot 
+```
+
+Esta información, sin embargo, no refleja la variabilidad de los precios. Ya que si bien los precios en la zona 6 son más baratos, en promedio, la variabilidad de los precios en esa zona es 50% mayor a la variabilidad de los precios en la zona 0. Esto quiere decir que si bien hay más con precios más bajos, también los hay con precios mucho mayores. Es decir, en las zonas donde predominan los departamentos los precios son mucho menos consistentes que los precios donde dominan los terrenos y las casas.
+
+### Precio por metro cuadrado
+
+
+Si a medida que hay mayor concentración de oferta, las unidades son de mayor tamaño y los precios promedios son más homogéneos transversalmente a las zonas se concluye que los precios por metro cuadrado serán mayores allí donde haya mayor concentración de oferta
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+pm2_zona_plot 
+```
+
+
+
+### Determinación de zonas de precios
+
+De la misma manera que se determinaron las zonas de mayor y menor concentración de oferta puede determinarse las zonas de mayor o menor precios por metro cuadrado.
+
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+zona_precio_heatmap 
+```
+
+Así también como de cualquier variable númerica disponible. Y esta información se puede tener filtrada por tipo de inmueble, inmobiliaria, barrio, mes, etc según sea necesario. 
+
+Alguno de los mapas alternativos pueden visualizarse en este [mapa interactivo](https://lucariel.shinyapps.io/mapa_inmobiliario/)
+
