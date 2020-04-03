@@ -224,7 +224,7 @@ that Mar del Plata is a major tourist center
 
 <iframe seamless src="/img/densidad.html" width="100%" height="500"></iframe>
 
-<img src="/img/unnamed-chunk-7-1.png" />
+
 
 
 A further anlysis of each zone can be made, so we can describe them
@@ -313,7 +313,8 @@ will be higher there where there is a major supply concentration
 The same methology can be used to extract different zones, Prices,
 number of rooms, etc which can be made ad hoc
 
-<img src="/img/unnamed-chunk-14-1.png" />
+<iframe seamless src="/img/pm2_d.html" width="100%" height="500"></iframe>
+
 
 
 Some of the alternative maps can be seen in: [mapa
