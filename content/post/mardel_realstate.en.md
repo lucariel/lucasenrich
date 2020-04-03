@@ -1,5 +1,5 @@
 ANALYSIS OF SUPPLY AND EVOLUTION OF THE REAL STATE MARKET
----------------------------------------------------------
+==================
 
 The real state market is composed of a series of goods and sevices that
 are heterogeneous in their characteristics and in their localization

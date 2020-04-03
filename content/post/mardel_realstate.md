@@ -1,5 +1,5 @@
 ANALISIS DE LA OFERTA INMOBILIARIA EN MAR DEL PLATA
----------------------------------------------------------
+==================
 
 Entender el mercado inmobiliario, nos permite detectar las necesidades y deseos de la porción de la población
 que compran, o que invierten en la generación de servicios de vivienda (ya sea para consumo propio o para
