@@ -3,9 +3,14 @@ ANALISIS DE LA OFERTA INMOBILIARIA EN MAR DEL PLATA
 
 Entender el mercado inmobiliario, nos permite detectar las necesidades y deseos de la porción de la población
 que compran, o que invierten en la generación de servicios de vivienda (ya sea para consumo propio o para
-terceros).
+terceros). Los datos se extrajeron de scrappear ZonaProp de manera exhaustiva, los datos estan geolocalizados
+por lo cual se pueden hacer analisis espaciales.
+
+<a href="https://lucasenrich.netlify.com/post/mardel_realstate/">Read more </a>
+
 El mercado inmobiliario, está compuesto por un conjunto de bienes y servicios heterogéneos, no sólo en sus
 características, sino también en su localización.
+
 Estas características de cada uno de los inmuebles que se encuentran en el mercado constituyen, en su
 conjunto, las características de la oferta de inmuebles en un determinado período de tiempo. Habitualmente,
 lo que se observa del mercado inmobiliario es un stock de la oferta y se asume que el precio es el de equilibrio,
