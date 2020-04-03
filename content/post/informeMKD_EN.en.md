@@ -129,7 +129,9 @@ highest prices by squared meter and the least change in supply
 Likewise the data reveal the variation in quantities, prices and sizes
 of each type of housing unit
 
-![](informeMKD_EN_files/figure-markdown_strict/unnamed-chunk-3-1.png)
+
+<img src="/img/unnamed-chunk-3-1.png" />
+
 
 In this case we can see, for example, that, for apartments, the rise in
 size (total squared meters) causes that, even though the total price
@@ -206,7 +208,8 @@ publications, 77% have less than 22 in this trimester. But there is also
 brokers with a lot of publications; 1% of the brokers have between 276
 and 419 publications
 
-![](informeMKD_EN_files/figure-markdown_strict/unnamed-chunk-6-1.png)
+<img src="/img/unnamed-chunk-6-1.png" />
+
 
 This data can also be used to track the market-share of each broker, and
 analyse the evolution
@@ -221,11 +224,19 @@ that Mar del Plata is a major tourist center
 
 ![](informeMKD_EN_files/figure-markdown_strict/unnamed-chunk-7-1.png)
 
+<img src="/img/unnamed-chunk-7-1.png" />
+
+
 A further anlysis of each zone can be made, so we can describe them
+
+<img src="/img/unnamed-chunk-8-1.png" />
 
 ![](informeMKD_EN_files/figure-markdown_strict/unnamed-chunk-8-1.png)
 
 Overall, how is the supply distributed in each zone?
+
+<img src="/img/unnamed-chunk-9-1.png" />
+
 
 ![](informeMKD_EN_files/figure-markdown_strict/unnamed-chunk-9-1.png)
 
