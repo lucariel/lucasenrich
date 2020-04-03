@@ -21,6 +21,7 @@ In this presentation, we'll give a view of the supply. Leaving the
 demand analysis for future oportunity
 
 <a href="https://lucasenrich.netlify.com/en/post/mardel_realstate/">Read more </a>
+<!--more-->
 
 Study of supply
 ---------------

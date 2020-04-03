@@ -7,6 +7,7 @@ terceros). Los datos se extrajeron de scrappear ZonaProp de manera exhaustiva, l
 por lo cual se pueden hacer analisis espaciales.
 
 <a href="https://lucasenrich.netlify.com/post/mardel_realstate/">Read more </a>
+<!--more-->
 
 El mercado inmobiliario, está compuesto por un conjunto de bienes y servicios heterogéneos, no sólo en sus
 características, sino también en su localización.
