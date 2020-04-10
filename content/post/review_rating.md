@@ -138,3 +138,51 @@ se encarge de hacer estas dos cosas, puede llamarse *normalize(text)*:
         lexical_tokens = [t.lower() for t in lemmas if (len(t) > 3 or t =="no") and t.isalpha()]
         lexical_tokens = [porter.stem(t) for t in lexical_tokens]
         return lexical_tokens
+
+Esta funcion tiene como input una frace y escupe objeto tipo list()
+asique lo que haré es aplicarla a cada texto y despues volverla a unir
+para que cada fila tenga un texto y no un array
+
+    norm_token = []
+    for i in range(len(cc.comentarios)):
+        try:
+            a = normalize(cc.comentarios[i])
+        except:
+            a = ''
+        norm_token.append(a)
+    norm_text = [' '.join(x) for x in norm_token]
+    cc['norm_text'] = norm_text
+
+¿Porque no tratar directo con los tokens? Por la sencilla razón hay un
+paquete que permite aplicar Doc2Vec, asociando un texto a una clase,
+*gensim* nos va a venir bien para esto:
+
+    from gensim.models.doc2vec import Doc2Vec, TaggedDocument
+    #Primera la separacion entre test y train
+    train, test = train_test_split(cc, test_size=0.2, random_state=42)
+
+    train_tagged = train.apply(
+        lambda r: TaggedDocument(words=word_tokenize(r.norm_text), tags=[r.calificacion]), axis=1)
+    test_tagged = test.apply(
+        lambda r: TaggedDocument(words=word_tokenize(r.norm_text), tags=[r.calificacion]), axis=1)
+
+Una vez que tenemos los elementos de train y test, hay que entrenar el
+Doc2Vec, para, así pasar el texto a un vector númerico que pueda ser el
+input del algoritmo de clasificación
+
+    for epoch in range(30):
+
+        model_dbow.train(utils.shuffle([x for x in tqdm(train_tagged.values)]), total_examples=len(train_tagged.values), epochs=1)
+        model_dbow.alpha -= 0.002
+        model_dbow.min_alpha = model_dbow.alpha
+
+Con el modelo Doc2Vec entrenado, podemos darle pasar los textos y
+obtener el vector numerico deseado. Ahora bien, para facilitar la
+implementación del modelo después, generemos una función con dos ouputs,
+el vector numerico por un lado, y el rating asociado a ese vector
+numérico
+
+    def vec_for_learning(model, tagged_docs):
+        sents = tagged_docs.values
+        targets, regressors = zip(*[(doc.tags[0], model.infer_vector(doc.words, steps=20)) for doc in sents])
+        return targets, regressors
