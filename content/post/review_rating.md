@@ -1,12 +1,7 @@
 Review Rating
 ==================
 
-Este proyecto, en principio, emula bastante el realizado para un
-cliente, quien necesitaba calificar las reviews que generaban los
-callcenter, las cuales una parte estaba calificada y otra parte no.
-
-Por razones obvias, se usa un dataset de reviews de hoteles para lograr
-el mismo objetivo.
+¿Cómo generar un puntaje númerico en base a un texto?
 
 En principio, lo que se va a ver es las calificaciones haciendo uso de
 Doc2Vec para convertir el texto en un vector numerico y poder, con esos
@@ -473,3 +468,5 @@ neuronal se entrena:
               validation_data=(x_val, y_val))
 
 Este fit, obtiene un accuracy que supera el 90%. Un gran paso adelante.
+
+
