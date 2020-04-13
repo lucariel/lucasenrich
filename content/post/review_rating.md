@@ -3,6 +3,14 @@ Review Rating
 
 ¿Cómo generar un puntaje númerico en base a un texto?
 
+Mucho de lo expuesto es en realidad distintas formas de pensar el
+problema y quedarse con la mejor solución. 
+
+Paseo por Doc2Vec, Regresiones lineales, randomForests y redes convolutivas
+con GloVe
+
+<a href="https://lucasenrich.netlify.com/post/review_rating/">Read more </a>
+
 En principio, lo que se va a ver es las calificaciones haciendo uso de
 Doc2Vec para convertir el texto en un vector numerico y poder, con esos
 vectores numericos como input, realizar la predicción de cual sería la
@@ -14,10 +22,8 @@ construcción del vector numerico a partir de los textos, se hará uso de
 un "word embedding" ya entrenado y posteriormente se verá como mejora el
 poder predictivo.
 
-Mucho de lo expuesto es en realidad distintas formas de pensar el
-problema y quedarse con la mejor solución
 
-<a href="https://lucasenrich.netlify.com/post/review_rating/">Read more </a>
+
 
 ### Los datos y la limpieza
 
