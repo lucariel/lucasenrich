@@ -10,6 +10,7 @@ Paseo por Doc2Vec, Regresiones lineales, randomForests y redes convolutivas
 con GloVe
 
 <a href="https://lucasenrich.netlify.com/post/review_rating/">Read more </a>
+<!--more-->
 
 En principio, lo que se va a ver es las calificaciones haciendo uso de
 Doc2Vec para convertir el texto en un vector numerico y poder, con esos
