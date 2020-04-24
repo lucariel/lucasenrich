@@ -92,7 +92,10 @@ los valores de la matriz de confusión.
 En analisis bayesiano hay distribuciones que van de la mano, que son
 como amigas. Es decir, si mis variables tienen una funcion de
 distribución determinada, los parametros tienen tal otra, se llaman
-conjugados. El amigo de la distribución multinomial, es la Dirichlet.
+conjugados (en rigor el conjugado es que la posterior y la likelihood 
+pertenecen a la misma distribución)
+
+El amigo de la distribución multinomial, es la Dirichlet.
 
 En nuestro caso, *v* sigue una distribución multinomial, y *θ* una
 distribución Dirichlet.
