@@ -230,7 +230,9 @@ que las palabras que son menos frecuentes a cada descripción, como "a
 tres cuadras de la estacion Primera Junta".
 
 Este score esta definido por
-$$TFIDF\_{xy} = TF\_{xy}\*log\\frac{N}{df}$$
+$$
+TFIDF\_{xy} = TF\_{xy}\*log\\frac{N}{df} 
+$$
  donde:
 
 -   *T**F*<sub>*x**y*</sub> es la frecuencia de la palabra *x* en la
