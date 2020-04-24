@@ -38,7 +38,9 @@ escrito como: $h: x y $, pero a veces se le pifia, y a veces no.
 
 El diagrama que implica la matriz de confusión es:
 
-<Diagrama>
+<img src="/img/mc.png" width="400px" />
+
+
 
 Pero podemos pensar en la matriz de confusión como un vector de valores:
 
@@ -156,14 +158,9 @@ haciendo es comparar dos modelos, es decir que *α* en ambos casos, será
 
     library(DirichletReg)
 
-    ## Loading required package: Formula
-
-    ## Loading required package: rgl
 
     library(extraDistr)
 
-    ## 
-    ## Attaching package: 'extraDistr'
 
     ## The following objects are masked from 'package:DirichletReg':
     ## 
@@ -199,19 +196,9 @@ haciendo es comparar dos modelos, es decir que *α* en ambos casos, será
 Ahora se pueden visualizar las distribuciones resultantesde estas
 simulación
 
-    ## ── Attaching packages ────────────────────────────────────────── tidyverse 1.2.1 ──
+<img src="/img/bayes_result.png" width="400px" />
 
-    ## ✔ ggplot2 3.2.1     ✔ purrr   0.3.2
-    ## ✔ tibble  2.1.3     ✔ dplyr   0.8.3
-    ## ✔ tidyr   0.8.3     ✔ stringr 1.4.0
-    ## ✔ readr   1.3.1     ✔ forcats 0.4.0
 
-    ## ── Conflicts ───────────────────────────────────────────── tidyverse_conflicts() ──
-    ## ✖ dplyr::filter() masks stats::filter()
-    ## ✖ dplyr::lag()    masks stats::lag()
-    ## ✖ purrr::rdunif() masks extraDistr::rdunif()
-
-![](bayes_cm_files/figure-markdown_strict/unnamed-chunk-2-1.png)
 
 En este caso, puede verse que el mejor modelo es el randomForest (R), ya
 que su distribución está más a la derecha.
