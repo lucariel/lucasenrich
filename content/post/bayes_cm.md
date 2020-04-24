@@ -11,7 +11,7 @@ traducción/interpretación/resumen de aquel.
 <a href="https://lucasenrich.netlify.com/post/bayes_cm/">Read more </a>
 
 <!--more--> 
-
+Puedes leer ese articulo aqui: http://www.oliviercaelen.be/doc/confMatrixBayes_AMAI.pdf
 
 La matriz de confusión puede ser a veces muy confusa, falsos positivos,
 falsos negativos, verdaderos positivos, verdaderos negativos; y todas
