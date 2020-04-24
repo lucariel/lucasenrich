@@ -8,7 +8,7 @@ Olivier Caelen (2000).Pero es una interesante forma de entender la
 matriz de confusión, por lo que esto será una
 traducción/interpretación/resumen de aquel.
 
-<a href="https://lucasenrich.netlify.com/en/post/bayes_cm/">Read more </a>
+<a href="https://lucasenrich.netlify.com/post/bayes_cm/">Read more </a>
 
 <!--more--> 
 
