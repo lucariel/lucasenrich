@@ -26,20 +26,9 @@ canonifyurls = true
 
 [languages]
     [languages.en.params]
-      [languages.en.params.author]
-        name = "Lucas Ariel Enrich"
-        bio = "Economist, Data Sciencits and Musician"
-        email = "lucas.a.enrich@gmail.com"
-        picture = "/img/0.jpeg"
-        twitter = "@lucariel1"
+
 
     [languages.es.params]
-      [languages.es.params.author]
-        name = "Lucas Ariel Enrich"
-        bio = "Economista, Data Sciencits y Musico"
-        Email = "lucas.a.enrich@gmail.com"
-        picture = "/static/img/0.jpeg"
-        twitter = "@lucariel1"
 
 
 
@@ -54,10 +43,11 @@ canonifyurls = true
   posts = "/:year/:month/:title/"
 
 [author]
-#  name = "Lucas Ariel Enrich"
-#  bio = "Economista, Data Scientist, Musico"
+  name = "Lucas Ariel Enrich"
+  bio = "Economist, Data Scientist"
+  email = "lucas.a.enrich@gmail.com"
 #  #job = "Your job title"
-#  location = "Buenos Aires, Argentina"
+  location = "Buenos Aires, Argentina"
 #  # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
   gravatarEmail = "lucas.a.enrich@gmail.com"
 #  # Your profile picture
