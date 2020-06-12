@@ -105,3 +105,13 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   [[related.indices]]
     name = "authors"
     weight = 20.0
+
+
+
+languages:
+  en:
+	languageName: English
+	weight: 1
+  es:
+	languageName: Spanish
+	weight: 3
