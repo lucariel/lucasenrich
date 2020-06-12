@@ -16,7 +16,7 @@ baseURL = "https://lucasenrich.netlify.com"
 languageCode = "es"
 defaultContentLanguage = "es"
 title = "Lucas Enrich"
-theme = "hugo-academic"
+theme = "hugo-tranquilpeak-theme"
 disqusShortname = "tranquilpeak"
 # googleAnalytics = "UA-123-45"
 
