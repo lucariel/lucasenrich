@@ -1,48 +1,36 @@
 ---
 authors:
 - admin
-bio: My research interests include distributed robotics, mobile computing and programmable
-  matter.
-education:
-  courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
-email: ""
+bio: Mis intereses incluyen la inteligencia artificial, las ciencias sociales, la visualización de datos y la música
+ 
+email: "lucas.a.enrich@gmail.com"
 interests:
-- Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
 organizations:
-- name: Stanford University
+- name: Universidad de La Matanza
   url: ""
-role: Professor of Artificial Intelligence
+role: Economia- UNLaM
 social:
 - icon: envelope
   icon_pack: fas
   link: '#contact'
 - icon: twitter
   icon_pack: fab
-  link: https://twitter.com/GeorgeCushen
-- icon: google-scholar
-  icon_pack: ai
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  link: https://twitter.com/lucasenrich
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://github.com/lucariel/
+- icon: linkedin
+  icon_lab: fab
+  link: https://www.linkedin.com/in/lucas-ariel-enrich-a7320a93/
+- icon: youtube
+  icon_lab: fab
+  link: https://www.youtube.com/channel/UCpq1UzLu2s4vSbghkN3mIHw
+
 superuser: true
-title: Nelson Bighetti
+title: Lucas Enrich
 user_groups:
 - Researchers
 - Visitors
 ---
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+Estudie Economia en la Universidad Nacional de la Matanza, luego de haber realizado varios cursos de forma online y presencial comencé a trabajar como consultor freelance en ciencia de datos, desempeñandome en el area de diseño, real state, NLP para clientes 
