@@ -7,7 +7,7 @@
 
 # Title of your site
 title = "Lucas Enrich"
-DefaultContentLanguage = "es"
+DefaultContentLanguage = "spanish"
 # The URL of your site.
 # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
 baseurl = "/"
@@ -106,12 +106,3 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
     name = "authors"
     weight = 20.0
 
-
-
-languages:
-  en:
-	languageName: English
-	weight: 1
-  es:
-	languageName: Spanish
-	weight: 3
