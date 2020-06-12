@@ -1,0 +1,1179 @@
+<!DOCTYPE html><html lang="es" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Lucas Enrich">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Interpretación bayesiana de la matriz de confusión
+¿Cómo evaluar modelos si solo tenemos la matriz de confusión?
+Esta interpretación pertenece originalmente a un paper homónimo de
+Olivier Caelen (2000).Pero es una interesante forma de entender la
+matriz de confusión, por lo que esto será una
+traducción/interpretación/resumen de aquel.
+Read more ">
+
+  
+  <link rel="alternate" hreflang="es" href="/post/bayes/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/post/bayes/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Lucas Enrich">
+  <meta property="og:url" content="/post/bayes/">
+  <meta property="og:title" content=" | Lucas Enrich">
+  <meta property="og:description" content="Interpretación bayesiana de la matriz de confusión
+¿Cómo evaluar modelos si solo tenemos la matriz de confusión?
+Esta interpretación pertenece originalmente a un paper homónimo de
+Olivier Caelen (2000).Pero es una interesante forma de entender la
+matriz de confusión, por lo que esto será una
+traducción/interpretación/resumen de aquel.
+Read more "><meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="es">
+  
+    
+    
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/post/bayes/"
+  },
+  "headline": "",
+  
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Lucas Enrich"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lucas Enrich",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "\u003ch1 id=\"interpretación-bayesiana-de-la-matriz-de-confusión\"\u003eInterpretación bayesiana de la matriz de confusión\u003c/h1\u003e\n\u003cp\u003e¿Cómo evaluar modelos si solo tenemos la matriz de confusión?\u003c/p\u003e\n\u003cp\u003eEsta interpretación pertenece originalmente a un paper homónimo de\nOlivier Caelen (2000).Pero es una interesante forma de entender la\nmatriz de confusión, por lo que esto será una\ntraducción/interpretación/resumen de aquel.\u003c/p\u003e\n\u003cp\u003e\u003ca href=\"https://lucasenrich.netlify.com/post/bayes_cm/\"\u003eRead more \u003c/a\u003e\u003c/p\u003e"
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title> | Lucas Enrich</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Buscar</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Buscar..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Lucas Enrich</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Barra de navegación">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Lucas Enrich</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Buscar"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1></h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jan 1, 0001
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    6 min de lectura
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h1 id="interpretación-bayesiana-de-la-matriz-de-confusión">Interpretación bayesiana de la matriz de confusión</h1>
+<p>¿Cómo evaluar modelos si solo tenemos la matriz de confusión?</p>
+<p>Esta interpretación pertenece originalmente a un paper homónimo de
+Olivier Caelen (2000).Pero es una interesante forma de entender la
+matriz de confusión, por lo que esto será una
+traducción/interpretación/resumen de aquel.</p>
+<p><a href="https://lucasenrich.netlify.com/post/bayes_cm/">Read more </a></p>
+<p>Puedes leer ese articulo aqui: <a href="http://www.oliviercaelen.be/doc/confMatrixBayes_AMAI.pdf">http://www.oliviercaelen.be/doc/confMatrixBayes_AMAI.pdf</a></p>
+<p>La matriz de confusión puede ser a veces muy confusa, falsos positivos,
+falsos negativos, verdaderos positivos, verdaderos negativos; y todas
+las métricas que salen de ahi, el recall, el accuracy, el F-score.</p>
+<p>Todas ellas se basan en la evidencia concreta de los set testeados, pero
+no indican cuanta incertidumbre hay en tal o cual indicador.</p>
+<p>Supongamos que comparamos dos modelos, uno tiene 72% de precisión y el
+otro 70%. Dado que se trabaja con datos muestreados aleatoriamente (ya
+sea por el muestreo de dataset usado para hacer el modelo, ya sea por
+train-test split), los valores que terminan en la matriz de confusión
+también son fruto de un proceso aleatorio.</p>
+<p>Para las tecnicas bayesianas, cualquier estimación es contingente a los
+datos obtenidos y a las creencias que tiene quien investiga. Asimismo,
+todo lo estimado tiene una distribución especifica que puede ser
+investigada.</p>
+<h4 id="la-matriz-de-confusión"><em>La matriz de Confusión</em></h4>
+<p>Dado un dataset, se genera un modelo que mapea <em>X</em> a <em>Y</em>, esto puede ser
+escrito como: $h: x y $, pero a veces se le pifia, y a veces no.</p>
+<p>El diagrama que implica la matriz de confusión es:</p>
+<p><img src="/img/mc.png" width="400px" /></p>
+<p>Pero podemos pensar en la matriz de confusión como un vector de valores:</p>
+<p><em>V</em> = (<em>n</em>°<em>T**P</em>, <em>n</em>°<em>T**N</em>, <em>n</em>°<em>F**P</em>, <em>n</em>°<em>F**N</em>)</p>
+<h4 id="el-planteo-bayesiano"><em>El planteo Bayesiano</em></h4>
+<p>Este vector númerico, <em>V</em>, puede ser entendido como que vino de una
+función de distribución multinomial, la cual es una generalización de la
+binomial, solo que en lugar de tener dos valores posibles los cuales
+tienen una probabilidad cada uno, hay cuatro los cuales dependen de los
+parametros de la distribución binomial.</p>
+<p><em>V</em> − <em>M<strong>u</strong>l**t</em>(<em>N</em><sub><em>T</em></sub>, <em>θ</em>)</p>
+<p>Donde:</p>
+<p><em>θ</em> = (<em>θ</em><sub><em>t**p</em></sub>, <em>θ</em><sub><em>t**n</em></sub>, <em>θ</em><sub><em>f**p</em></sub>, <em>θ</em><sub><em>f**n</em></sub>)</p>
+<p>Son los parametros que determinan la realización de los valores dentro
+de <em>V</em>, es decir <em>v</em> depende de <em>θ</em>.</p>
+<p>Entonces, si los valores de la matriz de confusión son aleatorios con
+una función de distribución de probabilidad dada, la probabilidad de
+obtener un set de valores <em>v</em> que llene el vector que contiene los
+valores de la matriz de confusión <em>V</em> puede escribirse como
+<em>P</em>(<em>V</em> = <em>v</em>), en este caso, se considera que <em>θ</em> es fijo.</p>
+<p>Pero si <em>θ</em> proviene de una variable aleatoria, esto es, no es fijo,
+<em>P</em>(<em>V</em> = <em>v</em>) se vuelve contingente a los valores que pueda tomar <em>θ</em>,
+por lo que se podria escribirse:</p>
+<p><em>P</em>(<em>V</em> = <em>v</em>|<em>Θ</em> = <em>θ</em>)</p>
+<p>Y de acá proviene el planteo bayesiano, yo quiero conocer <em>Θ</em>, pero solo
+veo las realizaciones de la matriz de confusión <em>v</em>, por lo que no
+quiero <em>P</em>(<em>V</em> = <em>v</em>|<em>Θ</em> = <em>θ</em>), sino <em>P</em>(<em>Θ</em> = <em>θ</em>|<em>V</em> = <em>v</em>), lo cual
+se puede escribir según la regla de bayes:</p>
+<p>$$
+f_{\Theta|V}(\theta|v) = \frac{P(V=v|\Theta=\theta)*f_{\Theta}(\theta)}{P(V=v)}
+$$</p>
+<p>Este planteo permite comparar distintos modelos sin otra necesidad que
+los valores de la matriz de confusión.</p>
+<h3 id="el-prior"><em>El prior</em></h3>
+<p>En analisis bayesiano hay distribuciones que van de la mano, que son
+como amigas. Es decir, si mis variables tienen una funcion de
+distribución determinada, los parametros tienen tal otra, se llaman
+conjugados (en rigor el conjugado es que la posterior y la likelihood
+pertenecen a la misma distribución)</p>
+<p>El amigo de la distribución multinomial, es la Dirichlet.</p>
+<p>En nuestro caso, <em>v</em> sigue una distribución multinomial, y <em>θ</em> una
+distribución Dirichlet.</p>
+<p><em>V</em> − <em>M<strong>u</strong>l**t</em>(<em>N</em><sub><em>T</em></sub>, <em>θ</em>)
+<em>Θ</em> − <em>D<strong>i</strong>r</em>(<em>α</em>)=<em>D<strong>i</strong>r</em>((<em>α</em><sub>1</sub>, <em>α</em><sub>2</sub>, <em>α</em><sub>3</sub>, <em>α</em><sub>4</sub>))</p>
+<p>Ahora bien, ¿Que es <em>α</em>? Bueno, <em>α</em> no es mas ni menos que el lugar
+donde se mete el prior, porque dado mi matriz de confusión <em>v</em>, la
+posterior de <em>Θ</em> esta dada por:</p>
+<p><em>Θ</em>|<em>ω</em> = <em>D<strong>i</strong>r</em>((<em>v</em><sub>1</sub> + <em>α</em><sub>1</sub>, <em>v</em><sub>2</sub> + <em>α</em><sub>2</sub>, <em>v</em><sub>3</sub> + <em>α</em><sub>3</sub>, <em>v</em><sub>4</sub> + <em>α</em><sub>4</sub>)) = <em>D<strong>i</strong>r</em>(<em>ω</em>)</p>
+<p>Entonces, habiendo visto los datos <em>v</em>, y habiendo metido nuestro
+conocimiento previo <em>α</em> (que puede ser la matriz de confusión de otro
+modelo, o del mismo modelo con nuevos datos, o el prior relevante al
+caso concreto), y la posterior <em>D<strong>i</strong>r</em>(<em>ω</em>) nos va a dar los
+parametros que correspondan darle a la multinomial que nos da las
+distribuciones de cada uno de los elementos de la matriz de confusión.</p>
+<p>¿Como se vuelve operativo esto?</p>
+<p>Simulando, si tenemos los parametros de <em>D<strong>i</strong>r</em>(<em>ω</em>) como resultado de
+nuestro analisis, no vamos a tener los <em>θ</em>, sino que podemos extraer los
+parametros de <em>θ</em> con una frecuencia que refleje la distribución de
+<em>D<strong>i</strong>r</em>(<em>ω</em>).</p>
+<p>Para simplificar podemos elegir una métrica a evaluar, en este caso, el
+accuracy, que depende de matriz de confusión <em>A</em>(<em>v</em>)</p>
+<p>Esto es un algoritmo Monte Carlo</p>
+<p><em>for i in 1:M:</em></p>
+<ul>
+<li>
+<p><em>Vamos a la caja <em>D<strong>i</strong>r</em>(<em>ω</em>) y sacamos los <em>θ</em><sub></em>i<em></sub></em></p>
+</li>
+<li>
+<p><em>Ponemos los <em>θ</em><sub></em>i<em></sub> en <em>P</em>(<em>V</em> = <em>v</em>|</em>Θ* = *θ*) y sacamos
+los *v*<sub>*i*</sub>*</p>
+</li>
+<li>
+<p><em>Sacamos <em>A</em>(<em>v</em><sub></em>i<em></sub>) y lo guardamos en una lista</em></p>
+</li>
+</ul>
+<p>Esto va a dar una lista de un montón (M) de A(v), este listado tiene sus
+propios estadisticos, su media y su varianza.</p>
+<p>¿Confuso? Seguro, no te culpo, yo también lo estoy y eso que estoy
+ecribiendo esto, pero veamos concretamente como se puede aplicar esto en
+la práctica</p>
+<h4 id="ejemplo-1comparando-dos-modelos">*Ejemplo 1:*Comparando dos modelos</h4>
+<p>Supongamos que, de un mismo dataset, hicimos, ponele, un randomForest
+(R) y un NaiveBayes (N) y la matriz de confusión de c/u es:</p>
+<p>$$
+v^R=\begin{bmatrix}65 &amp; 15 \\ 35 &amp; 30\end{bmatrix} = (65,30,35,15)
+$$
+$$
+v^N=\begin{bmatrix}50 &amp; 30 \\ 30 &amp; 35\end{bmatrix} = (50,35,30,30)
+$$
+Vamos a decir, que no tenemos información previa, porque lo que estamos
+haciendo es comparar dos modelos, es decir que <em>α</em> en ambos casos, será
+(0, 0, 0, 0)</p>
+<pre><code>library(DirichletReg)
+
+
+library(extraDistr)
+
+
+## The following objects are masked from 'package:DirichletReg':
+## 
+##     ddirichlet, rdirichlet
+
+M = 1000
+alpha = c(0,0,0,0)
+
+#Para v_R
+v_R = c(65,30,35,15)
+omega_R = alpha + v_R
+A_R = c()
+
+for(i in 1:1000){
+  theta_i = t(rdirichlet(1,omega_R))
+  v_i = rmnom(1, sum(v_R), as.vector(theta_i))
+  A_i = (v_i[1]+v_i[2])/sum(v_i)
+  A_R = c(A_R,A_i)
+}
+
+#Para v_N
+v_N = c(50,35,30,30)
+omega_N = alpha + v_N
+A_N = c()
+
+for(i in 1:1000){
+  theta_i = t(rdirichlet(1,omega_N))
+  v_i = rmnom(1, sum(v_N), as.vector(theta_i))
+  A_i = (v_i[1]+v_i[2])/sum(v_i)
+  A_N = c(A_N,A_i)
+}
+</code></pre>
+<p>Ahora se pueden visualizar las distribuciones resultantesde estas
+simulación</p>
+<p><img src="/img/bayes_result.png" width="400px" /></p>
+<p>En este caso, puede verse que el mejor modelo es el randomForest (R), ya
+que su distribución está más a la derecha.</p>
+<p>De aquí puede extraerse también los intervalos de confianza y (de
+credibilidad para el marco bayesiano) y otras cuestiones.</p>
+<p>Otra cosa para lo cual se puede usar este método es para evaluar de
+forma muy barata cuan vigente es un model en funcionamiento a nueva
+información.</p>
+<p>Si nos matamos haciendo un modelo que llego a un accuracy del 97% en el
+set de test y un día con información nueva, llega a un accuracy del 90%,
+es posible saber que tan probable sería encontrar tal resultado o si el
+modelo necesita ser re-entrenado, es solo cuestión de que
+<em>α</em> = (<em>M**C</em><sub>0</sub>) donde <em>M**C</em><sub>0</sub> es la matriz de
+confusión al momento 0.</p>
+    </div>
+
+    
+
+
+
+
+
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/post/bayes/&amp;text=" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/post/bayes/&amp;t=" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=&amp;body=/post/bayes/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/post/bayes/&amp;title=" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=%20/post/bayes/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/post/bayes/&amp;title=" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+    
+    
+    
+      
+    
+    
+    
+    <div class="media author-card content-widget-hr">
+      
+        
+        <img class="avatar mr-3 avatar-circle" src="/author/lucas-enrich/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_270x270_fill_q90_lanczos_center.jpg" alt="Lucas Enrich">
+      
+
+      <div class="media-body">
+        <h5 class="card-title"><a href="/">Lucas Enrich</a></h5>
+        <h6 class="card-subtitle">Economia- UNLaM</h6>
+        <p class="card-text">Mis intereses incluyen la inteligencia artificial, las ciencias sociales, la visualización de datos y la música</p>
+        <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/lucasenrich" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/lucariel/" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/lucas-ariel-enrich-a7320a93/" target="_blank" rel="noopener">
+        <i class="fas fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.youtube.com/channel/UCpq1UzLu2s4vSbghkN3mIHw" target="_blank" rel="noopener">
+        <i class="fas fa-youtube"></i>
+      </a>
+    </li>
+  
+</ul>
+
+      </div>
+    </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No se encontraron resultados","placeholder":"Buscar...","results":"resultados encontrados"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Proyectos",
+        'publication' : "Publicaciones",
+        'talk' : "Charlas",
+        'slides' : "Diapositivas"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.37431be2d92d7fb0160054761ab79602.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+  <p class="powered-by">
+    
+      <a href="/privacy/">Privacy Policy</a>
+    
+    
+       &middot; 
+      <a href="/terms/">Terms</a>
+    
+  </p>
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Citar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copiar
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Descargar
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
