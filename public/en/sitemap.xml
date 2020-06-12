@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/en/en/post/clusterizar-disenos/</loc>
+  </url>
+  
+  <url>
+    <loc>/en/post/clusterizar-disenos/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/post/clusterizar-disenos/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/post/clusterizar-disenos/"
+                />
+  </url>
+  
+  <url>
+    <loc>/en/en/post/mardel_realstate/</loc>
+  </url>
+  
+  <url>
+    <loc>/en/post/mardel_realstate/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/post/mardel_realstate/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/post/mardel_realstate/"
+                />
+  </url>
+  
+  <url>
+    <loc>/en/authors/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/authors/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/authors/"
+                />
+  </url>
+  
+  <url>
+    <loc>/en/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>/en/en/</loc>
+  </url>
+  
+  <url>
+    <loc>/en/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/"
+                />
+  </url>
+  
+  <url>
+    <loc>/en/post/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/post/"
+                />
+  </url>
+  
+  <url>
+    <loc>/en/publication_types/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/publication_types/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/publication_types/"
+                />
+  </url>
+  
+  <url>
+    <loc>/en/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/tags/"
+                />
+  </url>
+  
+</urlset>
