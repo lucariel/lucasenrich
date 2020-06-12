@@ -17,7 +17,6 @@ languageCode = "es"
 defaultContentLanguage = "es"
 title = "Lucas Enrich"
 theme = "soho"
-#"hugo-tranquilpeak-theme"
 disqusShortname = "hugo-tranquilpeak-theme"
 # googleAnalytics = "UA-123-45"
 
