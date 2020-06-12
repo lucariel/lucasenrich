@@ -7,7 +7,9 @@
 
 # Title of your site
 title = "Lucas Enrich"
-DefaultContentLanguage = "spanish"
+languageCode = "es-es"
+defaultContentLanguage = "es-es"
+
 # The URL of your site.
 # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
 baseurl = "/"
