@@ -74,9 +74,9 @@
     
     <item>
       <title></title>
-      <link>/post/bayes/</link>
+      <link>/post/bayes_cm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/post/bayes/</guid>
+      <guid>/post/bayes_cm/</guid>
       <description>&lt;h1 id=&#34;interpretación-bayesiana-de-la-matriz-de-confusión&#34;&gt;Interpretación bayesiana de la matriz de confusión&lt;/h1&gt;
 &lt;p&gt;¿Cómo evaluar modelos si solo tenemos la matriz de confusión?&lt;/p&gt;
 &lt;p&gt;Esta interpretación pertenece originalmente a un paper homónimo de
