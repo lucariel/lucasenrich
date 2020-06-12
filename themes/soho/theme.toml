@@ -1,17 +1,16 @@
-name = "Tranquilpeak"
-license = "GNU General Public License v3.0"
-licenselink = "https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/LICENSE"
-description = "A gorgeous responsive theme for Hugo blog framework"
-homepage = "https://github.com/kakawait/hugo-tranquilpeak-theme"
-tags = ["blog", "minimal", "responsive", "personal", "customizable", "creative", "fontawesome", "highlight.js"]
-features = ["blog", "themes", "disqus", "minimal", "responsive", "font awesome", "highlight.js"]
-min_version = 0.53
+name = "Soho"
+license = "MIT"
+licenselink = "https://github.com/alexandrevicenzi/soho/blob/master/LICENSE.md"
+description = "A minimalist and mobile first theme for Hugo"
+tags = ["blog", "responsive", "clean", "minimalist"]
+features = ["blog", "seo", "responsive", "mobile", "disqus", "analytics"]
+min_version = "0.54.0"
 
 [author]
-  name = "Thibaud Leprêtre"
-  homepage = "https://github.com/kakawait"
+    name = "alexandrevicenzi"
+    homepage = "http://alexandrevicenzi.com"
 
 [original]
-  name = "Tranquilpeak"
-  homepage = "https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak"
-  repo = "https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak.git"
+    author = "spf13"
+    homepage = "http://spf13.com"
+    repo = "https://github.com/spf13/hyde"
