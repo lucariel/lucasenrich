@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Academic</title>
+    <title>Lucas Enrich</title>
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    <description>Academic</description>
+    <description>Lucas Enrich</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
-      <title>Academic</title>
+      <title>Lucas Enrich</title>
       <link>/</link>
     </image>
     
@@ -78,9 +78,9 @@
     
     <item>
       <title>Writing technical content in Academic</title>
-      <link>/post/writing-technical-content/</link>
+      <link>/post/prev/writing-technical-content/</link>
       <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>/post/writing-technical-content/</guid>
+      <guid>/post/prev/writing-technical-content/</guid>
       <description>&lt;p&gt;Academic is designed to give technical content creators a seamless experience. You can focus on the content and Academic handles the rest.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Highlight your code snippets, take notes on math classes, and draw diagrams from textual representation.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;On this page, you&amp;rsquo;ll find some examples of the types of technical content that can be rendered with Academic.&lt;/p&gt;
@@ -346,9 +346,9 @@ You found me!
     
     <item>
       <title>Display Jupyter Notebooks with Academic</title>
-      <link>/post/jupyter/</link>
+      <link>/post/prev/jupyter/</link>
       <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>/post/jupyter/</guid>
+      <guid>/post/prev/jupyter/</guid>
       <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from IPython.core.display import Image
 Image(&#39;https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png&#39;)
 &lt;/code&gt;&lt;/pre&gt;
@@ -568,9 +568,9 @@ Three
     
     <item>
       <title>Academic: the website builder for Hugo</title>
-      <link>/post/getting-started/</link>
+      <link>/post/prev/getting-started/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/post/getting-started/</guid>
+      <guid>/post/prev/getting-started/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Create a free website with Academic using Markdown, Jupyter, or RStudio. Choose a beautiful color theme and build anything with the Page Builder - over 40 &lt;em&gt;widgets&lt;/em&gt;, &lt;em&gt;themes&lt;/em&gt;, and &lt;em&gt;language packs&lt;/em&gt; included!&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;
 &lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Check out the latest &lt;strong&gt;demo&lt;/strong&gt;&lt;/a&gt; of what you&amp;rsquo;ll get in less than 10 minutes, or 
@@ -732,9 +732,9 @@ Three
     
     <item>
       <title>Hello R Markdown</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
+      <link>/post/prev/2015-07-23-r-rmarkdown/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
+      <guid>/post/prev/2015-07-23-r-rmarkdown/</guid>
       <description>
 
 
@@ -798,6 +798,1700 @@ Figure 1: A fancy pie chart.
 &lt;p&gt;Supplementary notes can be added here, including 
 &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/post/clusterizar-disenos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/post/clusterizar-disenos/</guid>
+      <description>&lt;h1 id=&#34;clusterize-design-patterns&#34;&gt;Clusterize design patterns&lt;/h1&gt;
+&lt;p&gt;¿How can I find patterns in design?&lt;/p&gt;
+&lt;p&gt;With so many adds around, one would think that that process is quite standardized
+but it remains, most times, a manual labor. This is, I believe mostly,
+because of how competitive that market is. To stand out, graphic designers have
+still a lot of work&lt;/p&gt;
+&lt;p&gt;But that doesn&amp;rsquo;t mean that we can&amp;rsquo;t find design patterns, after all, after
+a few thousend design even the best designer tend to have trends.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://lucasenrich.netlify.com/en/post/clusterizar-disenos/&#34;&gt;Read more &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/banner-example.png&#34; width=&#34;400px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Input data&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This problem had, originally, many houndred of designs, in this example
+I will use just a few made ad hoc for this purposes because
+in the end, clustering algorithms doesn&amp;rsquo;t need that many data to
+be effective.&lt;/p&gt;
+&lt;p&gt;Given these are manual examples, it&amp;rsquo;s all about sizes and shapes. I
+left behind fonts, content of the images and other. What I look for is
+pattern in the layout of the elements in the banner&lt;/p&gt;
+&lt;p&gt;Once extracted, data came in this form:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/input_data.png&#34; width=&#34;65%&#34; style=&#34;float:left; padding:20px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;font size = 3&gt; &lt;em&gt;y&lt;/em&gt; : Distance from the top &lt;/font&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;font size = 3&gt; &lt;em&gt;x&lt;/em&gt; : Distance from the left &lt;/font&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;font size = 3&gt; &lt;em&gt;w&lt;/em&gt; : Width &lt;/font&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;font size = 3&gt; &lt;em&gt;h&lt;/em&gt; : Height &lt;/font&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If we have 50 exameples, with 3 elements each, and 4 variables per element
+the shape of the input file is 50 × 3 × 4. Algorithms like I used like
+2D data better, so I spread them to 50 × 12 for which:&lt;/p&gt;
+&lt;p&gt;First, iterate file by file and transform each from 1 × 3 × 4 to
+1 × 12. In R code:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(tidyverse)
+cols_used = c(&#39;element_top&#39;, &#39;element_left&#39;, &#39;element_width&#39;, &#39;element_height&#39;)
+spread_file&amp;lt;-function(data, cols_used){
+  cols_used_a = c(&#39;element_name&#39;,cols_used)
+  y=data[cols_used]
+  h = data[cols_used_a]
+  z=c(1,1,1,1)
+  for(i in 1:nrow(y)) {
+    z = cbind(z,y[i,])
+  }
+  z = z[1,-1] 
+  
+  newcols &amp;lt;- c()
+  for (i in  h[&#39;element_name&#39;]){
+    newcols&amp;lt;-cbind(newcols,paste(i,cols_used[1], sep = &#39;.&#39;))
+    newcols&amp;lt;-cbind(newcols,paste(i,cols_used[2], sep = &#39;.&#39;))
+    newcols&amp;lt;-cbind(newcols,paste(i,cols_used[3], sep = &#39;.&#39;))
+    newcols&amp;lt;-cbind(newcols,paste(i,cols_used[4], sep = &#39;.&#39;))
+  }
+  newcols2&amp;lt;-c()
+  for(i in 1:nrow(newcols)) {
+    for(j in 1:4){
+      newcols2&amp;lt;-c(newcols2,newcols[i,j])
+    }
+  }
+  colnames(z)&amp;lt;-newcols2
+  n&amp;lt;-as_vector(data[&#39;id&#39;])
+  z[&#39;id&#39;]&amp;lt;-n[1]
+  z
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And then iterate to transform this&lt;/p&gt;
+&lt;p&gt;$$\begin{bmatrix} elem1 &amp;amp; y_1 &amp;amp; x_1 &amp;amp; w_1 &amp;amp; h_1 \\   elem2 &amp;amp; y_2 &amp;amp; x_2 &amp;amp; w_2 &amp;amp; h_2  \\   \vdots \\   elemk &amp;amp; y_2 &amp;amp; x_k &amp;amp; w_k &amp;amp; h_k \end{bmatrix}$$
+in this:&lt;/p&gt;
+&lt;p&gt;$$\begin{bmatrix}
+id.1 &amp;amp; elem.1.x &amp;amp; elem.1.y &amp;amp; elem.1.h &amp;amp; elem.1.w &amp;amp; &amp;hellip; &amp;amp; elem.k.w
+\end{bmatrix}$$
+This way, you can stack them into:&lt;/p&gt;
+&lt;p&gt;$$\begin{bmatrix} id.1 &amp;amp; elem.1.x &amp;amp; elem.1.y &amp;amp; elem.1.h &amp;amp; elem.1.w &amp;amp; &amp;hellip; &amp;amp; elem.k.w \\ id.2 &amp;amp; elem.1.x &amp;amp; elem.1.y &amp;amp; elem.1.h &amp;amp; elem.1.w &amp;amp; &amp;hellip; &amp;amp; elem.k.w \\ \vdots \\ id.N &amp;amp; elem.1.x &amp;amp; elem.1.y &amp;amp; elem.1.h &amp;amp; elem.1.w &amp;amp; &amp;hellip; &amp;amp; elem.k.w \end{bmatrix}$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;font size = 3&gt; Dimentionality reduction + Clustering &lt;/font&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This most direct form of clusterization for this porpuses is &lt;strong&gt;dbscan&lt;/strong&gt; and
+run it on our transform base. This didn&amp;rsquo;t work as expected so first I
+used a technique to reduce dimensionality and then do the clustering.&lt;/p&gt;
+&lt;p&gt;PCA and t-SNE are the most popular algorithms in dimensionality reduction
+but UMAP is the new kid in the block (well it has almost 2 years now)
+with some fancy math behind it, it preserves global and local structures.
+and works faster using graphs. One thing to keep in mind when using it is that at one
+point uses a random procedure which makes it that each time you run it
+the mapping into 2D will look slightly different, but every point is
+similary close to others in each iteration. To prevent this, set.seed()
+is the way to go.&lt;/p&gt;
+&lt;p&gt;And finally:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(umap)
+library(dbscan)
+umap_data&amp;lt;- umap(data)
+cl &amp;lt;-hdbscan(x = umap_data, minPts = 3)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This worked better than with the full dimentions, but not quite as needed. Its time to&amp;hellip;&lt;/p&gt;
+&lt;p&gt;&lt;font size = 3&gt; Transform and normalice&lt;/p&gt;
+&lt;p&gt;Most common option &lt;/font&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;font size = 2&gt; Standarization (z-score): Represents the number of standard
+deviations up or down of resulting value. &lt;strong&gt;Useful for normally distributed
+variables&lt;/strong&gt;
+&lt;/font&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;font size = 2&gt; Normalization (min-max scaler): It allows to transform the data
+into values between 0 and 1. &lt;strong&gt;Useful when working with variables with different
+orders of magnitude&lt;/strong&gt;
+&lt;/font&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;/img/normaliz_data.png&#34; width=&#34;65%&#34; style=&#34;float:left; padding:20px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Can I use this transformations in this data?&lt;/strong&gt;&lt;/p&gt;
+&lt;font size = 4&gt;
+&lt;ul&gt;
+&lt;li&gt;Not really, what this variables describe are absolute positions in space
+and are quite linked to one-another.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/font&gt;
+&lt;font size = 4&gt;
+&lt;ul&gt;
+&lt;li&gt;What can I do? Instead of using absolute positions and dimentions,
+lets use its &lt;em&gt;relative&lt;/em&gt;, what I&amp;rsquo;ll call &amp;ldquo;geometric normalization&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- --&gt;
+&lt;pre&gt;&lt;code&gt;normalize_geometric&amp;lt;-function(df){
+  df[&#39;total_area&#39;]&amp;lt;-max(df[&#39;element_height&#39;])*max(df[&#39;element_width&#39;])
+
+  df[&#39;rel_area&#39;]&amp;lt;-df[&#39;element_height&#39;]*df[&#39;element_width&#39;]/df[&#39;total_area&#39;]
+  
+  df[&#39;orientation&#39;]&amp;lt;-df[&#39;element_height&#39;]/df[&#39;element_width&#39;]
+  
+  df[&#39;element_top_relative&#39;]&amp;lt;-df[&#39;element_top&#39;]/max(df[&#39;element_height&#39;])
+  
+  df[&#39;element_left_relative&#39;]&amp;lt;-df[&#39;element_left&#39;]/max(df[&#39;element_width&#39;])
+  
+  df
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/font&gt;
+&lt;ul&gt;
+&lt;li&gt;x&amp;rsquo; is now the proportion of x in respecto the total width of the canvas&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;font size = 3&gt; &lt;em&gt;My new variable is x&amp;rsquo;, red line divided the blue one&lt;/em&gt; &lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/x_demo_plot.jpeg&#34; width=&#34;65%&#34; style=&#34;float:left; padding:20px&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;y&amp;rsquo; is now the proportion of x in respecto the total height of the canvas&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;font size = 3&gt; &lt;em&gt;My new variable is y&amp;rsquo;, red line divided the blue one&lt;/em&gt; &lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/demo_plot_y.jpeg&#34; width=&#34;65%&#34; style=&#34;float:left; padding:20px&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;areaRelativa is the proportion of the canvas the element occupies&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;font size = 3&gt; &lt;em&gt;My new variable areaRelativa is: the are of the small rectangle divided
+divided the area of the big one&lt;/em&gt; &lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/area_plot.jpeg&#34; width=&#34;65%&#34; style=&#34;float:left; padding:20px&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;disposition is to know if the elmenet in horizontal position, vertical or if
+it is a square&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;font size = 3&gt; &lt;em&gt;My new variable disposicion es: heigth/width&lt;/em&gt; &lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/rectangular.png&#34; width=&#34;30%&#34; style=&#34;float:center; padding:0% 35%&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;p&gt;To begin to analize the results, every &amp;ldquo;spread&amp;rdquo; has to have a &amp;ldquo;gather&amp;rdquo;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;gather_file&amp;lt;-function(gdf){
+  x&amp;lt;-strsplit(colnames(gdf), &#39;\\.&#39;)
+  
+  element_name=unique(unlist(map(x, 1)))
+  original_cols=unique(unlist(map(x, 2)))
+  gdf1&amp;lt;-data.frame(element_name)
+  gdf1[original_cols[1]]&amp;lt;-0
+  gdf1[original_cols[2]]&amp;lt;-0
+  gdf1[original_cols[3]]&amp;lt;-0
+  gdf1[original_cols[4]]&amp;lt;-0
+  
+  
+  
+  rel_area&amp;lt;-c()
+  orientation&amp;lt;-c()
+  element_top_relative&amp;lt;-c()
+  element_left_relative&amp;lt;-c()
+  
+  for(i in seq(from=1, to=length(gdf), by=4)){
+    #  stuff, such as
+    rel_area=c(rel_area,gdf[i])
+    orientation=c(orientation,gdf[i+1])
+    element_top_relative = c(element_top_relative,gdf[i+2])
+    element_left_relative = c(element_left_relative,gdf[i+3])
+  }
+  
+  gdf1[&#39;rel_area&#39;]=as_vector(unlist(rel_area))
+  gdf1[&#39;orientation&#39;]=as_vector(unlist(orientation))
+  gdf1[&#39;element_top_relative&#39;]=as_vector(unlist(element_top_relative))
+  gdf1[&#39;element_left_relative&#39;]=as_vector(unlist(element_left_relative))
+  gdf1}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let&amp;rsquo;s first see how the clustering works with and without geometric normalization&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/unnamed-chunk-12-1.png&#34; width=&#34;30%&#34; style=&#34;float:center; padding:0% 35%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;And finally, examples of each group:&lt;/p&gt;
+&lt;p&gt;First cluster:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/c1img.jpeg&#34; width=&#34;30%&#34; style=&#34;float:center; padding:0% 35%&#34; /&gt;
+000003.png&lt;/p&gt;
+&lt;p&gt;Second cluster:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/cl2img.jpeg&#34; width=&#34;30%&#34; style=&#34;float:center; padding:0% 35%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Third:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/cl3img.jpeg&#34; width=&#34;30%&#34; style=&#34;float:center; padding:0% 35%&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/post/dedupl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/post/dedupl/</guid>
+      <description>&lt;h1 id=&#34;de-duplicación-de-avisos&#34;&gt;De-duplicación de Avisos&lt;/h1&gt;
+&lt;p&gt;Cualquiera que haya hecho un curso introductorio o leído un libro de
+Ciencia de Datos sabe que se dice mucho que la limpieza de un dataset
+es, por lo menos el 80% del trabajo y luego el modelado. Pero eso no
+quiere decir que no hagan falta técnicas propias del modelado para
+limpiar un dataset.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://lucasenrich.netlify.com/post/dedupl/&#34;&gt;Read more &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Con un scrap hecho a ZonaProp, de las unidades en alquiler en Recoleta
+en febrero 2020, luego de una exahustiva limpieza de unificación de la
+moneda, de corrección de datos implícitos (NA&amp;rsquo;s que implicaban un dato,
+por ejemplo, cocheras-si es NA, cocheras=0).&lt;/p&gt;
+&lt;p&gt;El problema que quedó fue que el resultado es una base de datos de
+&lt;em&gt;avisos&lt;/em&gt;, pero, ¿que pasa si yo quiero que mi base de datos sea de
+&lt;em&gt;inmuebles&lt;/em&gt;? El problema que me encuentro es que hay avisos duplicados,
+ya sea porque vuelven a estar publicados o porque un mismo inmueble es
+publicado por más de una inmobiliaria.&lt;/p&gt;
+&lt;p&gt;¿Cómo se pueden detectar sistematicamente esas duplicaciones? Debajo hay
+un método posible&lt;/p&gt;
+&lt;h3 id=&#34;los-datos&#34;&gt;Los Datos&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;library(tidyverse)
+alqs&amp;lt;-read_csv(&amp;quot;alq_feb20_recoleta.csv&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Bien, este es el dataset. Una primera idea sería: si dos publicaciones
+se parecen lo suficiente, sospechamos que son la misma.&lt;/p&gt;
+&lt;p&gt;Las columnas son&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th&gt;Columna&lt;/th&gt;
+&lt;th&gt;Descrpción&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;WEB&lt;/td&gt;
+&lt;td&gt;La url de la publicación&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;Provincia&lt;/td&gt;
+&lt;td&gt;La provincia de la publicación&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;Tipo_Op&lt;/td&gt;
+&lt;td&gt;Si corresponde a venta o alquiler&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;Tipo&lt;/td&gt;
+&lt;td&gt;Si es casa, comercio,oficina, PH, departamento, etc&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;Zona&lt;/td&gt;
+&lt;td&gt;El barrio, para CABA, el municipio para las provincias&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;Dirección&lt;/td&gt;
+&lt;td&gt;La dirección de la publicación&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;Latitud y Longittud&lt;/td&gt;
+&lt;td&gt;Georreferencia&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;Inmobiliaria&lt;/td&gt;
+&lt;td&gt;Quien está publicando&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;Tiempo&lt;/td&gt;
+&lt;td&gt;Cuanto tiempo lleva publicado en días&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;Cochera&lt;/td&gt;
+&lt;td&gt;Si tiene cochera, boolean&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;Expensas&lt;/td&gt;
+&lt;td&gt;Cuanto se paga de expensas&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;Prices&lt;/td&gt;
+&lt;td&gt;El precio de venta/alquiler&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;Antigüedad&lt;/td&gt;
+&lt;td&gt;Cuantos años tiene de construido&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;Metros&lt;/td&gt;
+&lt;td&gt;Tamaño en metros cuadrados&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;Ambientes&lt;/td&gt;
+&lt;td&gt;Cantidad de Ambientes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;Descripción&lt;/td&gt;
+&lt;td&gt;El texto de la descripción&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;Baños&lt;/td&gt;
+&lt;td&gt;Cantidad de baños&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Ahora bien, cualquier procedimiento de detección de duplicados requiere
+necesariamente cierta flexibilidad, sino buscamos aquellos identicos y
+listo; pero la realidad es que la duplicación en general va a tener un
+motivo en concreto, sea por corrección de algún dato en particular, sea
+por ponerlo en otra inmobiliaria, sea por cambio de la descripción para
+que sea más atractiva. Pero por otro lado, revisar todos los pares
+posible nos va a llevar a que, si &lt;em&gt;N&lt;/em&gt; es la cantidad de publicaciones en
+el dataset, los chequeos sean &lt;em&gt;N&lt;/em&gt;&lt;sup&gt;2&lt;/sup&gt;. Manualmente, esto, es
+inviable.&lt;/p&gt;
+&lt;p&gt;Entonces, lo que se puede hacer es:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Ver la tasa de variación de las variables numéricas.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Verificar la distancia (aprovechando que estan georreferenciados)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ver cuanto se parecen las descripciones&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;tasa-de-variacion-de-las-variables-numericas&#34;&gt;Tasa de variacion de las variables numericas&lt;/h3&gt;
+&lt;p&gt;Una opción sería considerar solo las variables que son iguales, pero eso
+descarta la posibilidad que haya una corrección en los datos, ni hablar
+si alguno de los datos se considera missing (&lt;em&gt;N**A&lt;/em&gt;).&lt;/p&gt;
+&lt;p&gt;Una cuestión antes de arrancar con esta sección, se estará generando una
+matriz simétrica para cada una de estas variables númericas. En la cual
+&lt;em&gt;x&lt;/em&gt;&lt;sub&gt;&lt;em&gt;i**j&lt;/em&gt;&lt;/sub&gt; va a ser la tasa de variación entre las
+observaciones; y por lo tanto la diagonal cuando &lt;em&gt;i&lt;/em&gt; = &lt;em&gt;j&lt;/em&gt;,
+&lt;em&gt;x&lt;/em&gt;&lt;sub&gt;&lt;em&gt;i**j&lt;/em&gt;&lt;/sub&gt; = 0&lt;/p&gt;
+&lt;p&gt;Empecemos&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pmx&amp;lt;-matrix(nrow=nrow(alqs1), ncol=nrow(alqs1))
+for(i in 1:nrow(alqs)){
+  for(j in 1:nrow(alqs)){
+    h= abs(alqs3$Prices[i]-alqs3$Prices[j])/max(alqs3$Prices[i],alqs3$Prices[j], na.rm = T)
+    pmx[i,j] = h
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;¿Qué está mal con esta aproximación? Que es un loop anidado, por lo que
+el Big O, es cuadrático, la forma &lt;em&gt;menos&lt;/em&gt; eficiente de llenar una
+matriz. Esto quiere decir, que el tiempo que tarda el terminar este loop
+depende cuadráticamente del tamaño de las filas.&lt;/p&gt;
+&lt;p&gt;Se puede aprovechar las operaciones vectorizadas que tiene R-Base para
+quedarnos con una Big O lineal.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pmx&amp;lt;-matrix(nrow=nrow(alqs1), ncol=nrow(alqs1))
+for(i in 1:nrow(alqs)){
+  pmx[i,] = abs(alqs3$Prices[i]-alqs3$Prices)/max(alqs3$Prices[i],alqs3$Prices, na.rm = T)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Esto es mejor, pero R tiene su propio diálecto para tratar con loops y
+es la facilidad que tiene para trabajar vectorialmente y la familia de
+funciones de &lt;em&gt;apply&lt;/em&gt;, y de paso ponemos en práctica la máxima de &lt;em&gt;evitar
+los loops&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;rel_dif = function(a,b){
+  abs(a-b)/max(a,b, na.rm = T)
+}
+pmx&amp;lt;-sapply(FUN = rel_dif, alqs1$Prices,alqs1$Prices)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ahora que podemos obtener la matriz de diferencias con una sola linea de
+código, hagamoslo para todoas las variables númericas.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mts.mx&amp;lt;-sapply(FUN = rel_dif, alqs1$Metros,alqs1$Metros) #Metros cuadrados
+
+antig.pmx&amp;lt;-sapply(FUN = rel_dif, alqs1$Antiguedad,alqs1$Antiguedad) #Antigüedad
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Solo una cosa, lo que queremos es ver cuan cerca están, pero hasta ahora
+vimos la variación, por lo que la cercacia va a estar dada por:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pmx&amp;lt;-1-as.matrix(pmx)
+pmts&amp;lt;-1-as.matrix(pmts)
+pantg&amp;lt;-1-as.matrix(pantg)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;distancia-geográfica&#34;&gt;Distancia geográfica&lt;/h4&gt;
+&lt;p&gt;Para calcular la distancia geográfica vamos a estar necesitando el
+paquete &lt;em&gt;geosphere&lt;/em&gt; para lo cual se usa el criterio de la distancia
+entre dos puntos en una superficie esférica, llamada la distancia
+Haversine.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;latlongs&amp;lt;-alqs1 %&amp;gt;% select(Latitud,Longitud)
+dm &amp;lt;- distm(latlongs,latlongs, fun=distHaversine)  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;La función llamada &lt;strong&gt;distm&lt;/strong&gt; es realmente útil porque viene con una
+implementación vectorizada,lo cual soluciona de entrada el problema de
+los potenciales loops anidados que teniamos antes.&lt;/p&gt;
+&lt;h4 id=&#34;descripción&#34;&gt;Descripción&lt;/h4&gt;
+&lt;p&gt;Bueno, llegamos al punto álgido, y por esto me refiero a que el criterio
+para determinar que tan cerca están dos descripciones no es tan obvio
+como la distancia o la variación relativa de alguna variable, porque
+estamos tratando ahora con variables no numéricas; por lo tanto antes de
+realizar la comparación necesitamos convertir a ese texto en un vector
+numérico, para lo cual existen varias vías.&lt;/p&gt;
+&lt;p&gt;La utilizada en este caso fue &lt;em&gt;T**F&lt;/em&gt; − &lt;em&gt;I&lt;strong&gt;D&lt;/strong&gt;F&lt;/em&gt; que significa &lt;strong&gt;&amp;ldquo;term
+frequency–inverse document frequency,&amp;quot;&lt;/strong&gt;, el cual genera un vector
+numérico ponderado por la importancia de cada palabra en el texto (term
+frequency) y la frecuencia de la palabra en todos los textos (inverse
+document frequency)&lt;/p&gt;
+&lt;p&gt;Es decir, la ponderación indica que no todas la palabras tienen el mismo
+peso para describir una descripción, sino que hay algunas que deben
+ponderarse más y otras que deben ponderarse menos. En el caso de una
+descripción de un inmueble, las palabras que son más comunes a todas las
+descripciones, como pueden ser &amp;ldquo;baño&amp;rdquo; ó &amp;ldquo;cocina&amp;rdquo;, son ponderadas menos
+que las palabras que son menos frecuentes a cada descripción, como &amp;ldquo;a
+tres cuadras de la estacion Primera Junta&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Este score esta definido por
+$$
+TFIDF_{xy} = TF_{xy}*log\frac{N}{df}
+$$
+donde:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;T**F&lt;/em&gt;&lt;sub&gt;&lt;em&gt;x**y&lt;/em&gt;&lt;/sub&gt; es la frecuencia de la palabra &lt;em&gt;x&lt;/em&gt; en la
+descripción &lt;em&gt;y&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;N&lt;/em&gt; es el número total de descripciones&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;d**f&lt;/em&gt; es el número total de documentos que contienen la palabra &lt;em&gt;x&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Por suerte, python tienen una libreria para (casi)todo, por lo que esta
+vectorización require solo unas pocas lineas de código;
+desafortunadamente, el texto está &amp;ldquo;sucio&amp;rdquo; y debe ser limpiado antes de
+la vectorización.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#Eliminar caracteres especiales y espacios innecesarios
+cleanFun &amp;lt;- function(htmlString) {
+  #Saco los tags de html
+  t=(gsub(&amp;quot;\t&amp;quot;,&amp;quot;&amp;quot;,gsub(&amp;quot;\n&amp;quot;,&amp;quot;&amp;quot;,gsub(&amp;quot;&amp;lt;.*?&amp;gt;&amp;quot;, &amp;quot;&amp;quot;, htmlString))))
+  #Lo paso a minuscula
+  t=tolower(t)
+  #Le saco los caracteres no alfanumericos
+  t=str_replace_all(t, &amp;quot;[[:punct:]]&amp;quot;, &amp;quot; &amp;quot;)
+  t
+  
+}
+#Tokenización y eliminación de stopwords
+prepTx &amp;lt;- function(tx){
+  t1=word_tokenizer(cleanFun(tx))
+  t2 = t1[!(t1%in%stopwords(kind=&amp;quot;es&amp;quot;))]
+  t2 = unlist(t2)[nchar(unlist(t2))&amp;gt;2]
+  t2
+  
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ok, ahora que el text está limpio, es hora de generar la conversión a
+numeros&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(tcR)
+prep_fun &amp;lt;- cleanFun
+tok_fun &amp;lt;- word_tokenizer
+smp_size&amp;lt;-floor(0.75*length(descripciones))
+set.seed(123)
+train_ind &amp;lt;- sample(seq_len(length(descripciones)), size = smp_size)
+train &amp;lt;- descripciones
+it_train &amp;lt;- itoken(train, 
+                   preprocessor = prep_fun, 
+                   tokenizer = tok_fun,
+                   progressbar = TRUE)
+vocab &amp;lt;- create_vocabulary(it_train)
+pruned_vocab = prune_vocabulary(vocab, term_count_min = 100,
+                                doc_proportion_max = 0.5, doc_proportion_min = 0.001)
+vectorizer &amp;lt;- vocab_vectorizer(pruned_vocab)
+dtm_train &amp;lt;- create_dtm(it_train, vectorizer)
+
+tfidf = TfIdf$new()
+dtm_transformed = tfidf$fit_transform(dtm_train)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ahora &lt;em&gt;dtm_transformed&lt;/em&gt; es nuestra variable que contiene los vectores
+numericos para cada descripción. Como son vectores, una forma sencilla
+de compararlos es usando la distancia coseno.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;d1_d2_tfidf_cos_sim = sim2(x = dtm_transformed, method = &amp;quot;cosine&amp;quot;, norm = &amp;quot;l2&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Y ahora si, nuestra matriz de similitud &lt;em&gt;d1_d2_tfidf_cos_sim&lt;/em&gt; nos
+permite comparar las descripciones.&lt;/p&gt;
+&lt;h4 id=&#34;unificación-de-las-matrices-de-similitud&#34;&gt;Unificación de las matrices de similitud&lt;/h4&gt;
+&lt;p&gt;Ahora que tenemos todas las matrices que comparan todos los registros
+con todos los demás, es hora de unificarlas.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;A&amp;lt;-pmx
+B&amp;lt;-pmts
+C&amp;lt;-pantg
+D&amp;lt;-d1_d2_tfidf_cos_sim
+E&amp;lt;-dm
+
+colnames(A)&amp;lt;-alqs3$id
+rownames(A)&amp;lt;-alqs3$id
+
+colnames(B)&amp;lt;-alqs3$id
+rownames(B)&amp;lt;-alqs3$id
+
+colnames(C)&amp;lt;-alqs3$id
+rownames(C)&amp;lt;-alqs3$id
+
+colnames(D)&amp;lt;-alqs3$id
+rownames(D)&amp;lt;-alqs3$id
+
+colnames(E)&amp;lt;-alqs3$id
+rownames(E)&amp;lt;-alqs3$id
+
+
+Aa&amp;lt;-as.data.frame(as.table(A)) %&amp;gt;% distinct(Var1,Var2, .keep_all = T)
+Bb&amp;lt;-as.data.frame(as.table(B)) %&amp;gt;% distinct(Var1,Var2, .keep_all = T)
+Cc&amp;lt;-as.data.frame(as.table(C)) %&amp;gt;% distinct(Var1,Var2, .keep_all = T)
+Dd&amp;lt;-as.data.frame(as.table(D)) %&amp;gt;% distinct(Var1,Var2, .keep_all = T)
+Ee&amp;lt;-as.data.frame(as.table(E)) %&amp;gt;% distinct(Var1,Var2, .keep_all = T)
+
+
+colnames(Aa)[3]=&#39;precios&#39;
+colnames(Bb)[3]=&#39;metros&#39;
+colnames(Cc)[3]=&#39;antiguedad&#39;
+colnames(Dd)[3]=&#39;descripcion&#39;
+colnames(Ee)[3]=&#39;dist_mts&#39;
+
+AB&amp;lt;-right_join(Aa,Bb, by = c(&#39;Var1&#39;,&#39;Var2&#39;))
+CD&amp;lt;-right_join(Cc,Dd, by = c(&#39;Var1&#39;,&#39;Var2&#39;))
+ABCD&amp;lt;-right_join(AB,CD,by = c(&#39;Var1&#39;,&#39;Var2&#39;))
+ABCDE&amp;lt;-right_join(ABCD,Ee,by = c(&#39;Var1&#39;,&#39;Var2&#39;))
+
+ABCDE&amp;lt;-ABCDE %&amp;gt;% filter(Var1!=Var2) %&amp;gt;% as_tibble()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ahora &lt;em&gt;ABCDE&lt;/em&gt; es nuestra dataframe con todos los pares de &lt;em&gt;i**d&lt;/em&gt;′&lt;em&gt;s&lt;/em&gt;, y
+las columnas con cada criterio de similitud se agregan en la misma fila&lt;/p&gt;
+&lt;p&gt;Lo que sigue es un poco arbitrario y seguro hay mejores métodos para
+hacerlo. Pero nuestros candidatos a duplicados son aquellos que,
+decimos, cumplen los siguientes criterios (en simultaneo):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Estan a menos de 300mts entre sí.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tienen una variación en Metros menor al 10%&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tienen una variación en Precio menor al 25%&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tienen una variación en la descripcion menor al 30%&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tienen una variación en antigüedad menor al 10%&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;En todos los casos se mantienen los resultados &lt;em&gt;NA&lt;/em&gt; porque eso nos
+indica que podría haberse agregado el dato.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cand_dupls&amp;lt;-ABCDE %&amp;gt;% filter(dist_mts&amp;lt;=300 | is.na(dist_mts)) %&amp;gt;% 
+  filter(metros&amp;gt;0.9| is.na(metros)) %&amp;gt;% filter(precios&amp;gt;0.75| is.na(precios)) %&amp;gt;% 
+  filter(descripcion&amp;gt;0.7| is.na(descripcion))%&amp;gt;% filter(antiguedad&amp;gt;0.90| is.na(antiguedad))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;El resultado de esto es de 840 pares que son potencialmente duplicados.
+Lo cual es una reducción bastante drástica de los 1716&lt;sup&gt;2&lt;/sup&gt; que
+llevaría revisar todos los registros de una base de 1716 registros.&lt;/p&gt;
+&lt;p&gt;Finalmente, hay un paso más que puede hacerse para que el proceso sea
+más robusto y es considerar la propiedad transitiva de los pares,
+realizar un network analysis, lo que significa agrupar todos aquellos
+id&amp;rsquo;s que tienen suficiente similitud, para eso generamos una variable
+que sea 1 para aquellos pares que cumplen los criterios y 0 para
+aquellos que no:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cand_dupls&amp;lt;-cand_dupls %&amp;gt;% mutate(
+  potdup = case_when(
+   (precios &amp;gt; 0.75 |  is.na(precios)) &amp;amp; (metros &amp;gt; 0.9 |  is.na(metros)) &amp;amp; 
+     (antiguedad &amp;gt; 0.9 |  is.na(antiguedad)) &amp;amp; (descripcion &amp;gt; 0.9 |  is.na(descripcion)) &amp;amp;
+     (dist_mts&amp;lt;300 | is.na(dist_mts)) ~ 1,
+   T ~ 0
+  )
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Lo que tenemos ahora, es un dataframe que tiene los pares que creemos
+que son duplicados, estos van a ser nuestros vinculos en el analisis de
+red, los &lt;em&gt;edges&lt;/em&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;edges&amp;lt;-cand_dupls %&amp;gt;% select(Var1, Var2, potdup)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Que tienen esta forma&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th&gt;ID1&lt;/th&gt;
+&lt;th&gt;ID2&lt;/th&gt;
+&lt;th&gt;match&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;45557690&lt;/td&gt;
+&lt;td&gt;44375852&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;44349226&lt;/td&gt;
+&lt;td&gt;45589067&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;45620618&lt;/td&gt;
+&lt;td&gt;44714730&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Que es la forma que acepta el paquete igraph para generar el grafo que
+va a vincular el id como en la imagen debajo, donde&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/nodes.png&#34; width=&#34;400px&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;6,9,10 y 4 serían un anuncio separado del resto, por ejemplo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- --&gt;
+&lt;pre&gt;&lt;code&gt;library(igraph)
+g &amp;lt;- graph_from_data_frame(edges)
+fc &amp;lt;- fastgreedy.community(as.undirected(g))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ahora fc es una lista en el que cada elemento es un vector de id&amp;rsquo;s que
+corresponderían al mismo inmueble para ver por ejemplo el grupo 3
+podemos hacer:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;alqs %&amp;gt;% filter(id%in%  as.numeric(fc[[3]])) %&amp;gt;% View()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Los links asociados al grupo 3, entonces, son:&lt;/p&gt;
+&lt;p&gt;[1]
+&amp;ldquo;&lt;a href=&#34;https://www.zonaprop.com.ar/propiedades/arenales-y-callao-excelente-edificio-de-estilo-44714730.html&#34;&gt;https://www.zonaprop.com.ar/propiedades/arenales-y-callao-excelente-edificio-de-estilo-44714730.html&lt;/a&gt;&amp;rdquo;&lt;br&gt;
+[2]
+&amp;ldquo;&lt;a href=&#34;https://www.zonaprop.com.ar/propiedades/arenales-1700-43499494.html&#34;&gt;https://www.zonaprop.com.ar/propiedades/arenales-1700-43499494.html&lt;/a&gt;&amp;rdquo;
+[3]
+&amp;ldquo;&lt;a href=&#34;https://www.zonaprop.com.ar/propiedades/petit-hotel-arenales-y-callao-700-m-sup2--lote-propio-45138045.html&#34;&gt;https://www.zonaprop.com.ar/propiedades/petit-hotel-arenales-y-callao-700-m-sup2--lote-propio-45138045.html&lt;/a&gt;&amp;rdquo;
+[4]
+&amp;ldquo;&lt;a href=&#34;https://www.zonaprop.com.ar/propiedades/petit-hotel-arenales-y-callao-700-m-sup2--lote-propio-45564366.html&#34;&gt;https://www.zonaprop.com.ar/propiedades/petit-hotel-arenales-y-callao-700-m-sup2--lote-propio-45564366.html&lt;/a&gt;&amp;rdquo;
+[5]
+&amp;ldquo;&lt;a href=&#34;https://www.zonaprop.com.ar/propiedades/petit-hotel-arenales-y-callao-700-m-sup2--lote-propio-45564348.html&#34;&gt;https://www.zonaprop.com.ar/propiedades/petit-hotel-arenales-y-callao-700-m-sup2--lote-propio-45564348.html&lt;/a&gt;&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Al grupo 10:&lt;/p&gt;
+&lt;p&gt;[1]
+&amp;ldquo;&lt;a href=&#34;https://www.zonaprop.com.ar/propiedades/piso-pueyrredon-y-guido-191-m-sup2--una-o-dos-44047718.html&#34;&gt;https://www.zonaprop.com.ar/propiedades/piso-pueyrredon-y-guido-191-m-sup2--una-o-dos-44047718.html&lt;/a&gt;&amp;rdquo;&lt;br&gt;
+[2]
+&amp;ldquo;&lt;a href=&#34;https://www.zonaprop.com.ar/propiedades/pueyrredon-y-guido-piso-191-m-sup2--1-o-2-cocheras-44748468.html&#34;&gt;https://www.zonaprop.com.ar/propiedades/pueyrredon-y-guido-piso-191-m-sup2--1-o-2-cocheras-44748468.html&lt;/a&gt;&amp;rdquo;
+[3]
+&amp;ldquo;&lt;a href=&#34;https://www.zonaprop.com.ar/propiedades/piso-pueyrredon-y-guido-191-m-sup2--una-o-dos-45455991.html&#34;&gt;https://www.zonaprop.com.ar/propiedades/piso-pueyrredon-y-guido-191-m-sup2--una-o-dos-45455991.html&lt;/a&gt;&amp;rdquo;&lt;br&gt;
+[4]
+&amp;ldquo;&lt;a href=&#34;https://www.zonaprop.com.ar/propiedades/pueyrredon-2400-45078667.html&#34;&gt;https://www.zonaprop.com.ar/propiedades/pueyrredon-2400-45078667.html&lt;/a&gt;&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Pero no todo es un éxito, tambien existen grupos tales como el 1, en el
+que hay más de uno:&lt;/p&gt;
+&lt;p&gt;[1]
+&amp;ldquo;&lt;a href=&#34;https://www.zonaprop.com.ar/propiedades/en-alquiler-temporario-departamentos-tipo-lofts-de-47-40313161.html&#34;&gt;https://www.zonaprop.com.ar/propiedades/en-alquiler-temporario-departamentos-tipo-lofts-de-47-40313161.html&lt;/a&gt;&amp;rdquo;
+[2]
+&amp;ldquo;&lt;a href=&#34;https://www.zonaprop.com.ar/propiedades/departamentos-en-alquiler-temporario-posadas-1300-40075639.html&#34;&gt;https://www.zonaprop.com.ar/propiedades/departamentos-en-alquiler-temporario-posadas-1300-40075639.html&lt;/a&gt;&amp;rdquo;&lt;br&gt;
+[3]
+&amp;ldquo;&lt;a href=&#34;https://www.zonaprop.com.ar/propiedades/alquiler-loft-m-sup2--47-posadas-1323-recoleta-amobl-y-41937518.html&#34;&gt;https://www.zonaprop.com.ar/propiedades/alquiler-loft-m-sup2--47-posadas-1323-recoleta-amobl-y-41937518.html&lt;/a&gt;&amp;rdquo;
+[4]
+&amp;ldquo;&lt;a href=&#34;https://www.zonaprop.com.ar/propiedades/gran-oport-recoleta-1-amb-47-m-sup2--piso-alto-en-41324130.html&#34;&gt;https://www.zonaprop.com.ar/propiedades/gran-oport-recoleta-1-amb-47-m-sup2--piso-alto-en-41324130.html&lt;/a&gt;&amp;rdquo;&lt;br&gt;
+[5]
+&amp;ldquo;&lt;a href=&#34;https://www.zonaprop.com.ar/propiedades/venta-1amb-al-frente-m-sup2--47-balcon-vista-a-los-41324195.html&#34;&gt;https://www.zonaprop.com.ar/propiedades/venta-1amb-al-frente-m-sup2--47-balcon-vista-a-los-41324195.html&lt;/a&gt;&amp;rdquo;&lt;br&gt;
+[6]
+&amp;ldquo;&lt;a href=&#34;https://www.zonaprop.com.ar/propiedades/venta-gran-oport-posadas-1323-1-amb-m-sup2--47-balcon-41163069.html&#34;&gt;https://www.zonaprop.com.ar/propiedades/venta-gran-oport-posadas-1323-1-amb-m-sup2--47-balcon-41163069.html&lt;/a&gt;&amp;rdquo;
+[7]
+&amp;ldquo;&lt;a href=&#34;https://www.zonaprop.com.ar/propiedades/departamento-tipo-lofts-m-sup2--47-amoblados-y-41242674.html&#34;&gt;https://www.zonaprop.com.ar/propiedades/departamento-tipo-lofts-m-sup2--47-amoblados-y-41242674.html&lt;/a&gt;&amp;rdquo;&lt;br&gt;
+[8]
+&amp;ldquo;&lt;a href=&#34;https://www.zonaprop.com.ar/propiedades/posadas-1323-edificio-alquiler-temporal-departamentos-41683158.html&#34;&gt;https://www.zonaprop.com.ar/propiedades/posadas-1323-edificio-alquiler-temporal-departamentos-41683158.html&lt;/a&gt;&amp;rdquo;
+[9]
+&amp;ldquo;&lt;a href=&#34;https://www.zonaprop.com.ar/propiedades/loft-al-frente.-amueblado-y-decoracion-de-diseno-42984563.html&#34;&gt;https://www.zonaprop.com.ar/propiedades/loft-al-frente.-amueblado-y-decoracion-de-diseno-42984563.html&lt;/a&gt;&amp;rdquo;&lt;br&gt;
+[10]
+&amp;ldquo;&lt;a href=&#34;https://www.zonaprop.com.ar/propiedades/posadas-1323-alquiler-depto-amobl.-y-equip-lofts-41775461.html&#34;&gt;https://www.zonaprop.com.ar/propiedades/posadas-1323-alquiler-depto-amobl.-y-equip-lofts-41775461.html&lt;/a&gt;&amp;rdquo;&lt;br&gt;
+[11]
+&amp;ldquo;&lt;a href=&#34;https://www.zonaprop.com.ar/propiedades/venta-y-alquiler-temporal-apartments-amoblados-41242680.html&#34;&gt;https://www.zonaprop.com.ar/propiedades/venta-y-alquiler-temporal-apartments-amoblados-41242680.html&lt;/a&gt;&amp;rdquo;&lt;br&gt;
+[12]
+&amp;ldquo;&lt;a href=&#34;https://www.zonaprop.com.ar/propiedades/venta-loft-m-sup2--47-balcon-al-frente.-o-en-alquiler-40116759.html&#34;&gt;https://www.zonaprop.com.ar/propiedades/venta-loft-m-sup2--47-balcon-al-frente.-o-en-alquiler-40116759.html&lt;/a&gt;&amp;rdquo;
+[13]
+&amp;ldquo;&lt;a href=&#34;https://www.zonaprop.com.ar/propiedades/posadas-1323-lofts-m-sup2--47-amobl-y-equip-confort-41768916.html&#34;&gt;https://www.zonaprop.com.ar/propiedades/posadas-1323-lofts-m-sup2--47-amobl-y-equip-confort-41768916.html&lt;/a&gt;&amp;rdquo;&lt;br&gt;
+[14]
+&amp;ldquo;&lt;a href=&#34;https://www.zonaprop.com.ar/propiedades/posadas-1323-apart-hotel-departamento-41682584.html&#34;&gt;https://www.zonaprop.com.ar/propiedades/posadas-1323-apart-hotel-departamento-41682584.html&lt;/a&gt;&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Pero en todo caso, esto efectivamente detecta gran parte de los
+duplicados y puede asistir a que un ser humano genere la identificación
+de duplicados.&lt;/p&gt;
+&lt;p&gt;Esto es un ejemplo de aprendizaje no-supervisado, pero si este analisis
+se llevara a fondo obtendríamos un set de datos de duplicaciones
+etiquetadas, lo cual podría ser la base para el analisis con
+procedimientos de analisis supervisados, y así encontrar patrones de que
+causa la duplicaciones; lo cual mejoraría el proceso de identificación
+de duplicados y podría usarse también para optimizar los criterios
+subjetivos que utilicé mas arriba.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/post/mardel_realstate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/post/mardel_realstate/</guid>
+      <description>&lt;h1 id=&#34;analysis-of-supply-and-evolution-of-the-real-state-market&#34;&gt;ANALYSIS OF SUPPLY AND EVOLUTION OF THE REAL STATE MARKET&lt;/h1&gt;
+&lt;p&gt;The real state market is composed of a series of goods and sevices that
+are heterogeneous in their characteristics and in their localization&lt;/p&gt;
+&lt;p&gt;The features of each of the housing units in supply are, together, the
+features of the market in general in a given timeframe&lt;/p&gt;
+&lt;p&gt;Usually, what is obvserved is the supply stock and it is assumed that
+the price is in equilibrium, in this sense, the supply is fixing a price
+which will allow them to sell or rent at a price in the least amount of
+time. Nevertheless, the flux of actual sales is not observable in this
+sample, but it might be yet possible to determine by analysing the
+changes in supply over time&lt;/p&gt;
+&lt;p&gt;The scrapping methods takes the data monthly in order to get the
+necessary data to perform such analysis.&lt;/p&gt;
+&lt;p&gt;In this presentation, we&amp;rsquo;ll give a view of the supply. Leaving the
+demand analysis for future oportunity&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://lucasenrich.netlify.com/en/post/mardel_realstate/&#34;&gt;Read more &lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;study-of-supply&#34;&gt;Study of supply&lt;/h2&gt;
+&lt;p&gt;The total amount of registers we have for the third trimester of 2019 in
+our scrapping, once deleted repeated adds, is roughly 25675; of which
+15562 are apartments and 5489 to houses.&lt;/p&gt;
+&lt;p&gt;The next table is a summary of total and average squared meters, and
+their values in US Dollars for Mar del Plata&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;references&lt;/strong&gt; Departamento = Apartment Casa = House PH = Horizontal
+Property, a building with housing units much bigger that apartments but
+has less than 3 floors Terreno = Land Local Comercial = Comerce shop
+Local Comercial = Comerce office Garage = Garage Fondo de Comercio =
+On-going business in sale Bodega-Galpon = shed (as big as a block
+usually) Edificio = Building&lt;/p&gt;
+&lt;table&gt;
+&lt;caption&gt;Features of Sales dataset&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;Tipo&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Cantidad&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Precio_M2&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Tamaño&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Precio&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Departamento&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;15562&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2066&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;70&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;138747&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Casa&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5489&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;811&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;434&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;245960&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;PH&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1645&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1207&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;101&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;99352&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Terrenos&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1451&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;743&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;700&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;316334&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Local comercial&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;659&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1751&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;208&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;197579&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Oficina comercial&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;287&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1569&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;98&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;125887&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Garage&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;245&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;912&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1932&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;803429&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Fondo de Comercio&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;132&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1221&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;968&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1340016&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Bodega-Galpón&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;99&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;611&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;875&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;336943&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Edificio&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;51&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1737&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;759&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;887350&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;From this table it came out that 82.16% of the supply is composed by
+Departamento (60.74%) y Casa (21.42%) and that the apartments have the
+highest prices by squared meter and the least change in supply&lt;/p&gt;
+&lt;p&gt;Likewise the data reveal the variation in quantities, prices and sizes
+of each type of housing unit&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/unnamed-chunk-3-1.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;In this case we can see, for example, that, for apartments, the rise in
+size (total squared meters) causes that, even though the total price
+risses, the price by squared meters falls. The oposite occurs for the
+PH&amp;rsquo;s&lt;/p&gt;
+&lt;p&gt;The dataset also provides housing units that have activaly reduce it&amp;rsquo;s
+prices in the last three months&lt;/p&gt;
+&lt;table&gt;
+&lt;caption&gt;Bajaron de Precio&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;Tipo&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Cantidad&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Bajó&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Precio_M2&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;var Precio m2&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Tamaño&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;var Tamaño&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Precio&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;var Precio&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Departamento&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;207&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;8.63%&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1891&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;-13.51%&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;54&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;-33.65%&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;100875&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;-35.72%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;PH&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;10&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;9.80%&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1173&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;12.05%&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;81&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;-50.80%&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;91780&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;-27.27%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;In the table we can see that the average price of apartments drop 8.63%,
+meanwhile the prices of the PHs dropped even more, an average of 9.8%.&lt;/p&gt;
+&lt;p&gt;The housing units that lowered the price also present a series of
+features we can exam.&lt;/p&gt;
+&lt;p&gt;The prices for squared meter that lowered the price are 13.5% cheaper
+than the overall average, meaning that those which lower the price were
+already cheaper than the overall sample. The same for sizes&lt;/p&gt;
+&lt;p&gt;The PH&amp;rsquo;s have a peculiar feature. Even though, those which lowered the
+price are smaller than the general sample, the price by squared meter is
+higher. This is because the difference between the average size si
+higher than the difference between the price of the housing unit&lt;/p&gt;
+&lt;h2 id=&#34;real-state-brokers&#34;&gt;Real State brokers&lt;/h2&gt;
+&lt;p&gt;The dataset provides as well, the real state broker since november 2019.
+This allows us to evaluate better who is offering.&lt;/p&gt;
+&lt;p&gt;To begin with, we can see that the majority of the brokers have a few
+publications, 77% have less than 22 in this trimester. But there is also
+brokers with a lot of publications; 1% of the brokers have between 276
+and 419 publications&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/unnamed-chunk-6-1.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;This data can also be used to track the market-share of each broker, and
+analyse the evolution&lt;/p&gt;
+&lt;h2 id=&#34;zones-of-supply-density&#34;&gt;Zones of Supply Density&lt;/h2&gt;
+&lt;p&gt;The data is geolocated in 97%, which permits us to map it and visualize
+the density of the real state supply. As expected, the major density are
+near the center of town, near the bus terminal and near the cost; given
+that Mar del Plata is a major tourist center&lt;/p&gt;
+&lt;iframe seamless src=&#34;/img/densidad.html&#34; width=&#34;100%&#34; height=&#34;500&#34;&gt;&lt;/iframe&gt;
+&lt;p&gt;A further anlysis of each zone can be made, so we can describe them&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/unnamed-chunk-8-1.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Overall, how is the supply distributed in each zone?&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/unnamed-chunk-9-1.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Esto nos dice que si bien la zona 6 ocupa el 10% de los m² ofrecidos,
+constituye el 26% de las publicaciones. Y, conjuntamente con la zona 5,
+son el 25% de los m² ofrecidos, pero superan el 52% del total de
+publicaciones. This tell us that, even though zone 6 occupies 10% the m²
+offered, is 26% of the publications. And, toghether with zone 5, they
+are more than 52% of the publications&lt;/p&gt;
+&lt;p&gt;The variables than will be described for each zone are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Type of housing unit&lt;/li&gt;
+&lt;li&gt;Size in squared meters&lt;/li&gt;
+&lt;li&gt;Price by squared meter&lt;/li&gt;
+&lt;li&gt;Total price&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;type&#34;&gt;Type&lt;/h3&gt;
+&lt;p&gt;Below, we can see that the zone of least density (zone 0), the market is
+composed mainly with land and houses. And as we advance to the zone of
+major density (zone 6) the composition of the supply varies. In the
+first place, the land are no longer offered, the apartments takes over
+as the main type and in the center of town also appears comercial shops
+and garages&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/unnamed-chunk-10-1.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;This is exactly what one would expect, if the housing unit is smaller,
+more units fit in a given space&lt;/p&gt;
+&lt;h3 id=&#34;sizes&#34;&gt;Sizes&lt;/h3&gt;
+&lt;p&gt;The sizes of each unit play a fundamental role in the geographical
+concentration of the supply&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/unnamed-chunk-11-1.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;As we saw in the &amp;ldquo;Type&amp;rdquo; section, we can quantify how the types which are
+traditionaly the largest (houses, land) affect the concentration&lt;/p&gt;
+&lt;h3 id=&#34;prices&#34;&gt;Prices&lt;/h3&gt;
+&lt;p&gt;The prices in each area are more homogeneous than the sizes or any other
+variable previously analyse. There is still a tendency that more supply
+means less prices. For example, the least average price is in zone 6&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/unnamed-chunk-12-2.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;This information, doesn&amp;rsquo;t reflect how the prices varies in each zone.
+Prices in zone 6 may be the least, in average, but this prices hide a
+major variabilty. Prices in zone 6 have 50% variation than in zone 0.
+Meaning that, even though the prices are lower, in average, there are a
+lot with higher prices, and with lower prices. And in zones where houses
+are the main unit, the prices are more steady&lt;/p&gt;
+&lt;h3 id=&#34;price-by-squared-meter&#34;&gt;Price by squared meter&lt;/h3&gt;
+&lt;p&gt;This a sort of conclution of the two previous parts. We saw that the
+units gets larger in less concentrated areas, and the total prices
+doesn&amp;rsquo;t change that much. This means that the prices by squared meter
+will be higher there where there is a major supply concentration&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/unnamed-chunk-13-1.png&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;as-price-zones&#34;&gt;As price zones&amp;hellip;&lt;/h3&gt;
+&lt;p&gt;The same methology can be used to extract different zones, Prices,
+number of rooms, etc which can be made ad hoc&lt;/p&gt;
+&lt;iframe seamless src=&#34;/img/pm2_d.html&#34; width=&#34;100%&#34; height=&#34;500&#34;&gt;&lt;/iframe&gt;
+&lt;p&gt;Some of the alternative maps can be seen in: 
+&lt;a href=&#34;https://lucariel.shinyapps.io/mapa_inmobiliario/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;mapa
+interactivo&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/post/paso2019/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/post/paso2019/</guid>
+      <description>&lt;h1 id=&#34;twitter-y-las-paso&#34;&gt;Twitter y las Paso&lt;/h1&gt;
+&lt;p&gt;Esta fue mi primera aproximacion a minar datos de redes sociales,
+amigarme con las APIs, y algún analysis rudimentario. Siguiendo
+metodologias propuestas por otros.&lt;/p&gt;
+&lt;p&gt;En principio vamos a comenzar con lo primero ¿como hice para minar los
+datos de twitter? Bueno para eso use tweepy (&lt;a href=&#34;http://www.tweepy.org/&#34;&gt;http://www.tweepy.org/&lt;/a&gt;)
+Asique la primera parte va a estar en Python.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://lucasenrich.netlify.com/post/PASO2019/&#34;&gt;Read more &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Importando lo importante&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import tweepy
+from tweepy.streaming import StreamListener
+from tweepy import Stream
+import time
+from slistener import SListener
+import os
+import matplotlib.pyplot as plt
+import json
+import requests
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;por slistener es un script cortesia de
+&lt;a href=&#34;https://github.com/alexhanna/hse-twitter/blob/master/bin/slistener.py&#34;&gt;https://github.com/alexhanna/hse-twitter/blob/master/bin/slistener.py&lt;/a&gt;
+que permite crear un objeto que va a ser el &amp;ldquo;listener&amp;rdquo; o &amp;ldquo;escuchante&amp;rdquo; de
+twitter. Para tomar los datos en tiempo real y poder ir guardandolos.&lt;/p&gt;
+&lt;p&gt;Instanciando lo instanciable y setiando los paths donde van las cosas&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;auth = tweepy.OAuthHandler(&#39;zarazatoken&#39;, &#39;zarazatoken)
+auth.set_access_token(&#39;zarazatoken&#39;, &#39;zarazatoken&#39;)
+api = tweepy.API(auth)
+
+datapath = os.path.join(os.getcwd(), &#39;data&#39;)
+datafiles = os.listdir(datapath)
+
+Y vamos a poder el escuchante a escuchar twitter
+
+keywords_to_track = [&#39;EleccionesPASO2019&#39;, &#39;FrenteDeTodos&#39;,&#39;Frente Todos&#39;,
+                     &#39;Juntos por el Cambio&#39;,&#39;Juntos Cambio&#39;,&#39;Elecciones&#39;,&#39;PASO&#39;,
+                     &#39;YoTeVotoAlberto&#39;,&#39;NoVuelvenNuncaMas&#39;,
+                    
+&#39;ArgentinaVota&#39;,&#39;Macri&#39;,&#39;YoLoVoto&#39;,&#39;Fernandez&#39;,&#39;Kirchner&#39;]
+stream.filter(track = keywords_to_track)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Los keywords a trackear se eligieron tomando los trending topic en
+argentina referidos a las elecciones y algunos elegidos por mi, a mano&lt;/p&gt;
+&lt;p&gt;stream.filter() lo que se encarga de hacer es ir tomando la muestra en
+tiempo real de datos de twitter que se ajusten al filtro. Mientras corra
+(es decir, mientras no se interrumpa) va a ir juntando los datos. Esto
+lo empece a correr el domingo de las paso a las 7am y lo frené el mismo
+día a las 17hs.&lt;/p&gt;
+&lt;p&gt;La siguiente parte me fue bastante mas dificil de lo que habia
+anticipado, porque estas muestras se guardan en formato &amp;ldquo;.json&amp;rdquo; lo cual
+tenia que convertir a &amp;ldquo;.csv&amp;rdquo; para poder trabajar mejor&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import pandas as pd
+import numpy as np
+tweets = []
+with open(os.path.join(datapath,datafiles[1]), &#39;r&#39;,encoding=&#39;utf-8&#39;, errors=&#39;ignore&#39;) as t:
+    tw_json = t.read().split(&#39;\n&#39;)
+    for tw in tw_json:
+        #print(tw)
+        #print(&#39;\t\t&#39;)
+        try:
+            tweet_obj = json.loads(tw)
+        except:
+            pass
+        if &#39;extended_tweet&#39;in tweet_obj:
+            tweet_obj[&#39;extended_tweet-text&#39;] =  tweet_obj[&#39;extended_tweet&#39;][&#39;full_text&#39;]
+            if tw != &#39;&#39;:
+                tweets.append(tw)
+        
+pd.DataFrame(tweets)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;¡Ahora si! Ya tenemos bonito el data_frame en pandas para guardarlo y
+seguir desde allí&lt;/p&gt;
+&lt;p&gt;La siguiente tarea seria el topic extraction, pero la realidad es que
+cuando lo hice no llegue a ningun lado, porque, obviamente y como es de
+esperar, estaba todo referido a as elecciones. Lo que si termine
+haciendo fue filtrar el dataset que me quedo por las keywords que
+nombrar a los dos principales candidatos&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{&#39;YoVotoMM&#39;,&#39;juntosporelcambio&#39;, &#39;votomm&#39;,&#39;NoVuelvenNuncaMas&#39;, &#39;yolovoto&#39;,&#39;Macri&#39;} ## Quedarón 6,320 registros
+
+{&#39;FrenteDeTodos&#39;,&#39;futurocontodos&#39;,&#39;YoTeVotoAlberto&#39;,&#39;FernandezFernandez&#39;,&#39;CFK,&#39;cristina kirchner&#39;&#39;Alberto Fernandez&#39;} ## Quedarón 5,554 registros
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ahora bien, ¿de quien se hablaba mas en twitter?&lt;/p&gt;
+&lt;p&gt;Primero al dataframe de cada topic se agrega la variable
+correspondiente, se generan las dummies y luego se saca el promedio por
+hora, lo que resulta en la proporcion de tuits de cada uno&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;macri[&#39;p&#39;] = &#39;MM&#39;
+frente_de_todos[&#39;p&#39;] = &#39;FF&#39;
+
+df1 = pd.concat([macri, frente_de_todos])
+
+df2 = pd.get_dummies(df1.p)
+
+
+mean_mm = df2[&#39;MM&#39;].resample(&#39;1 h&#39;).mean()
+mean_ff = df2[&#39;FF&#39;].resample(&#39;1 h&#39;).mean()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Sacando el plot:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/plotpaso1.jpeg&#34; width=&#34;30%&#34; style=&#34;float:center; padding:0% 35%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Se ve que salvo a la mañana y bien entrada la tarde, se hablo mas de
+Macri.&lt;/p&gt;
+&lt;p&gt;Bueno, habiendo hecho la primera parte en Python, es hora de continuar
+con la parte de sentiment analysis de los tuits de las PASO. Esta vez,
+en R. Vamos a empezar por las bibliotecas que necesitamos:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;library(tidyverse)
+library(tidytext)
+library(stopwords)
+library(syuzhet)
+library(stopwords)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Luego traemos los datos:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;paso&amp;lt;-read_csv(&#39;paso.csv&#39;)
+paso&amp;lt;-paso[colnames(paso)!=&amp;quot;X1&amp;quot;]
+paso_unique&amp;lt;-unique(paso$`extended_tweet-full_text`)
+paso_unique2&amp;lt;-as_tibble(paso_unique)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;El unique() nos sirve para filtrar tuits duplicados. Que pueden ocurrir
+por que un usuario citó a otro.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;length(paso$`extended_tweet-full_text`)
+ 
+#Quedan 44423 registros
+
+
+length(unique(paso$`extended_tweet-full_text`)) 
+#Quedan 43996 registros
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Vamos a tokenizar las palabras:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;tweet_token&amp;lt;-paso_unique2%&amp;gt;%
+  unnest_tokens(word, txt)
+
+
+tweet_token&amp;lt;-tweet_token%&amp;gt;%
+  count(word, sort = T)%&amp;gt;%
+  filter(!word%in% stopwords(&#39;es&#39;))%&amp;gt;%
+  filter(!word%in% stopwords(&#39;en&#39;))%&amp;gt;%
+  filter(str_detect(word, &amp;quot;^[a-zA-z]|^#|^@&amp;quot;))%&amp;gt;%
+  ungroup()%&amp;gt;%
+  arrange(desc(n))%&amp;gt;%
+  mutate(w = word,
+         freq = n)%&amp;gt;%
+  select(w, freq)
+
+## Resultado
+
+   w                   freq
+   &amp;lt;chr&amp;gt;              &amp;lt;int&amp;gt;
+ 1 t.co               18839
+ 2 https              18834
+ 3 paso               16293
+ 4 elecciones          8401
+ 5 macri               7982
+ 6 si                  5853
+ 7 eleccionespaso2019  5498
+ 8 votar               4950
+ 9 q                   4318
+10 hoy                 3304
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Esto no es muuy bueno, hay tokens que hay que sacar.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;tweet_token_2&amp;lt;-tweet_token%&amp;gt;%filter(w!=&#39;t.co&#39;)%&amp;gt;%filter(w!=&#39;https&#39;)%&amp;gt;%
+  filter(w!=&#39;q&#39;)%&amp;gt;%filter(w!=&#39;to&#39;)%&amp;gt;%filter(w!=&#39;si&#39;)%&amp;gt;%filter(w!=&#39;and&#39;)%&amp;gt;%
+  filter(w!=&#39;rt&#39;)
+
+   w                    freq
+   &amp;lt;chr&amp;gt;               &amp;lt;int&amp;gt;
+ 1 paso                16293
+ 2 elecciones           8401
+ 3 macri                7982
+ 4 eleccionespaso2019   5498
+ 5 votar                4950
+ 6 hoy                  3304
+ 7 argentinavota        3043
+ 8 eleccionesargentina  2878
+ 9 voto                 2588
+10 trump                2409
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ahora si, mira que loco lo de Trump. Igual esto se ve mucho mejor con un
+gráfico, además, no filtre todavia los stopwords y no filtre por tuits
+en español, asique probablemente sean tuits colados de otro tema&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;tweet_token_2 [ 1 : 25 , ] %&amp;gt;%
+  mutate ( w = forcats :: fct_inorder ( w ) ) %&amp;gt;%
+  ggplot ( aes ( x = w , y = freq ) ) +
+  geom_segment ( aes ( x = w , xend = w , y = 0 , yend = freq ) , color= &amp;quot;grey&amp;quot; )+
+  geom_point(size = 3, color = &amp;quot;#009A44&amp;quot;)+
+  coord_flip()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/img/plotpaso2.jpeg&#34; width=&#34;30%&#34; style=&#34;float:center; padding:0% 35%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Bueno, el termino &amp;ldquo;paso&amp;rdquo; es evidentemente el mas frecuente, lo cual es
+mas que esperable. Luego, nos quedaria ver como se sentia la gente
+respecto a esto. Para esto se uso la libreria syuzhet&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;base_emocion&amp;lt;-get_nrc_sentiment(unlist(paso_unique2))
+base_emocion &amp;lt;- data.frame(t(base_emocion))
+base_emocion &amp;lt;- data.frame ( rowMeans ( base_emocion ) )
+names ( base_emocion ) [ 1 ] &amp;lt;- &amp;quot;Proporcion&amp;quot;
+base_emocion &amp;lt;- cbind ( &#39;Sentimiento&#39; = rownames ( base_emocion ) , base_emocion )
+
+base_emocion%&amp;gt;%
+  ggplot()+geom_bar(aes(x = Sentimiento, y = Proporcion), stat = &#39;identity&#39;, fill = &#39;green&#39;, alpha = 0.8)+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Esta es la parte mas relevante que tome de Hernan, la diferencia que
+tome, fue que él tomo la suma de cada una de los casos de cada
+sentimiento, y yo la proporcion. Creo que eso puede reflejar de otra
+forma cual es la emocion predominante en cada caso:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/plotpaso3.jpeg&#34; width=&#34;30%&#34; style=&#34;float:center; padding:0% 35%&#34; /&gt;
+En este caso general, se ve que entre &amp;ldquo;positivo&amp;rdquo; y &amp;ldquo;negativo&amp;rdquo; son los
+predominantes, seguidos por &amp;ldquo;confianza&amp;rdquo; y &amp;ldquo;enojo&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Esta misma metodologia se puede usar para los dos datasets separados
+para cada topic pre-seleccionado, los referidos al frente de todos y a
+juntos por el cambio&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/plotpaso4.jpeg&#34; width=&#34;30%&#34; style=&#34;float:center; padding:0% 35%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/plotpaso5.jpeg&#34; width=&#34;30%&#34; style=&#34;float:center; padding:0% 35%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Todos se quejan, pero de Cristina hablan todos. Igual hay que considerar
+que de este conteo, se filtraron los nombres y apellidos de los
+candidatos a la presidencia ya que es lo que se uso de filtro.&lt;/p&gt;
+&lt;p&gt;¿Como se sienten?
+&lt;img src=&#34;/img/plotpaso6.jpeg&#34; width=&#34;30%&#34; style=&#34;float:center; padding:0% 35%&#34; /&gt;
+&lt;img src=&#34;/img/plotpaso7.jpeg&#34; width=&#34;30%&#34; style=&#34;float:center; padding:0% 35%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Un poco de esto confirma no solo los resultado de la eleccion sino
+tambien la lectura del voto &amp;ldquo;enojo&amp;rdquo;. Porque los sentimientos asociados a
+cambiemos tienen mayor participacion de enojo y sentimientos negativos.
+Mientras que los asociados al frente de todos tiene mucha mayor
+participacion los tuits positivos.&lt;/p&gt;
+&lt;p&gt;Un bonus track de python nada mas (esbozo de network analysis) ¿A quien
+se le contestaba mas para cada grupo?&lt;/p&gt;
+&lt;p&gt;Las libreras de python son las mismas que el post anterior solo con la
+adicional de Networkx que permite hacer el analisis de redes.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import networkx as nx
+
+frente_de_todos = pd.read_csv(&#39;frente_de_todos.csv&#39;)
+cambiemos = pd.read_csv(&#39;cambiemos.csv&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Una vez leidos, filtramos los tuits que &amp;ldquo;son respuesta a&amp;rdquo;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cambiemos_nx = cambiemos_nx[-cambiemos_nx[&#39;in_reply_to_screen_name&#39;].isnull()]
+cambiemos_nx[&#39;in_reply_to_screen_name&#39;]
+frente_de_todos_nx = frente_de_todos_nx[-frente_de_todos_nx[&#39;in_reply_to_screen_name&#39;].isnull()]
+frente_de_todos_nx[&#39;in_reply_to_screen_name&#39;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Se generan las redes de c/u; esto genera que cada usuario sea un nodo y
+que la relacion entre los usuarios se dá, en este caso particular, si
+responden a un tuit es decir: si yo te respondo un tuit, nosotros dos
+generamos una red que tiene mi nombre (mi usuario) como nodo de inicio y
+tu nodo (tu usuario) como nodo destino. Cada objeto, entonces, va a
+tener tantas salidas como respuestas haya hecho y tantas entradas como
+respuestas haya recibido:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;G_reply_c = nx.from_pandas_edgelist(
+    cambiemos_nx,
+    source = &#39;user-screen_name&#39;,
+    target = &#39;in_reply_to_screen_name&#39;,
+    create_using = nx.DiGraph())
+
+G_reply_f = nx.from_pandas_edgelist(
+    frente_de_todos_nx,
+    source = &#39;user-screen_name&#39;,
+    target = &#39;in_reply_to_screen_name&#39;,
+    create_using = nx.DiGraph())
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Y vemos la centralidad de cada tuitero (&amp;ldquo;in-degree-centrality&amp;rdquo;), que en
+realidad seria la respuesta a la pregunta &amp;ldquo;¿A quien se le esta
+contestando más?&amp;rdquo;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#Para Frente de Todos - ¿a quien se le contesta cuando se habla de estse #tema?
+
+G_reply_f = nx.from_pandas_edgelist(
+    frente_de_todos_nx,
+    source = &#39;user-screen_name&#39;,
+    target = &#39;in_reply_to_screen_name&#39;,
+    create_using = nx.DiGraph())
+
+
+bc = nx.in_degree_centrality(G_reply_f)
+indg = pd.DataFrame(list(bc.items()), columns =[&amp;quot;Name&amp;quot;,&#39;Cent&#39;])
+indg.sort_values(&#39;Cent&#39;, ascending=False)
+Name    Cent
+153 alferdez        0.018328
+18  ierrejon        0.017182
+137 LotusHerbals    0.017182
+115 todonoticias    0.016037
+113 fllorenteantoni 0.013746
+746 AlbertoRavell   0.010309
+159 FernandezAnibal 0.010309
+147 LeonelFernandez 0.006873
+236 mirthalegrand   0.006873
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Y en el caso del Juntos Por el Cambio&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;G_reply_c = nx.from_pandas_edgelist(
+    cambiemos_nx,
+    source = &#39;user-screen_name&#39;,
+    target = &#39;in_reply_to_screen_name&#39;,
+    create_using = nx.DiGraph())
+
+bc = nx.in_degree_centrality(G_reply_c)
+indg = pd.DataFrame(list(bc.items()), columns =[&amp;quot;Name&amp;quot;,&#39;Cent&#39;])
+indg.sort_values(&#39;Cent&#39;, ascending=False)
+
+Name    Cent
+36  mauriciomacri   0.021858
+148 fllorenteantoni 0.012610
+131 gabicerru       0.011349
+84  juansolervalls  0.008827
+119 EsmeraldaMitre  0.007566
+3   todonoticias    0.005885
+99  CamiSolovitas   0.004624
+17  Alfredo5019     0.004624
+23  SantoroLeandro  0.004203 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;FIN! Gracias por leer hasta acá! Si tienen alguna recomendacion para
+tener en cuenta futuros analisis se los agradece!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/post/review_rating/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/post/review_rating/</guid>
+      <description>&lt;h1 id=&#34;review-rating&#34;&gt;Review Rating&lt;/h1&gt;
+&lt;p&gt;¿Cómo generar un puntaje númerico en base a un texto?&lt;/p&gt;
+&lt;p&gt;Mucho de lo expuesto es en realidad distintas formas de pensar el
+problema y quedarse con la mejor solución.&lt;/p&gt;
+&lt;p&gt;Paseo por Doc2Vec, Regresiones lineales, randomForests y redes convolutivas
+con GloVe&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://lucasenrich.netlify.com/post/review_rating/&#34;&gt;Read more &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;En principio, lo que se va a ver es las calificaciones haciendo uso de
+Doc2Vec para convertir el texto en un vector numerico y poder, con esos
+vectores numericos como input, realizar la predicción de cual sería la
+calificación que hubiera tenido según el texto. Haciendo uso de
+algortimos de aprendizaje supervisado.&lt;/p&gt;
+&lt;p&gt;Por otro lado, dado que los datos no son tantos, lo que perjudica la
+construcción del vector numerico a partir de los textos, se hará uso de
+un &amp;ldquo;word embedding&amp;rdquo; ya entrenado y posteriormente se verá como mejora el
+poder predictivo.&lt;/p&gt;
+&lt;h3 id=&#34;los-datos-y-la-limpieza&#34;&gt;Los datos y la limpieza&lt;/h3&gt;
+&lt;p&gt;Para empezar, veamos como se ven los datos:&lt;/p&gt;
+&lt;table style=&#34;width:39%;&#34;&gt;
+&lt;colgroup&gt;
+&lt;col width=&#34;16%&#34; /&gt;
+&lt;col width=&#34;22%&#34; /&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th&gt;review.rating&lt;/th&gt;
+&lt;th&gt;review.text&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;Our experience at Rancho Valencia was absolutely perfect from beginning to end!!!! We felt special and very happy during our stayed. I would come back in a heart beat!!!&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;Amazing place. Everyone was extremely warm and welcoming. We&#39;ve stayed at some top notch places and this is definitely in our top 2. Great for a romantic getaway or take the kids along as we did. Had a couple stuffed animals waiting for our girls upon arrival. Can&#39;t wait to go back.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;We booked a 3 night stay at Rancho Valencia to play some tennis, since it is one of the highest rated tennis resorts in America. This place is really over the top from a luxury standpoint and overall experience. The villas are really perfect, the staff is great, attention to details (includes fresh squeezed orange juice each morning), restaurants, bar and room service amazing, and the tennis program was really impressive as well. We will want to come back here again.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;En lugar de importar todos los paquetes juntos, vamos a ir importando a
+medida que vayamos necesitando.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import pandas as pd
+cc = pd.read_csv(&#39;./hotel-reviews/Datafiniti_Hotel_Reviews.csv&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Vamos a seleccionar las columnas necesarias y cambiarle el nombre para
+que sea mas facil luego seleccionarlas.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cc = cc[[&#39;reviews.title&#39;,&#39;reviews.text&#39;,&#39;reviews.rating&#39;]]
+cc.columns = [&#39;titulo&#39;,&#39;comentarios&#39;,&#39;calificacion&#39;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;El primer paso a la hora de trabajar con estos textos, es reducir a la
+maxima expresión la cardinalidad del vocabulario. ¿Que significa esto?
+Si tenemos una gran cantidad de usos de un verbo, como por ejemplo,
+&amp;ldquo;correr&amp;rdquo; en sus distintas conjugaciones, &amp;ldquo;corría&amp;rdquo;,&amp;ldquo;corriendo&amp;rdquo;,&amp;ldquo;corrian&amp;rdquo;
+y queremos armar un listado de frecuencias de palabras, esto daria como
+resultado que cada uno de esas palabras aparezca una sola vez; pero si
+logramos que la referencia a la acción concreta de &amp;ldquo;correr&amp;rdquo; sume
+independientemente de su conjugación, reduciríamos la cardinalidad de
+nuestro diccionario, eso es para lo que se usa la &lt;em&gt;lematización&lt;/em&gt;.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th&gt;Original&lt;/th&gt;
+&lt;th&gt;Lemmatizacion&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;corrian&lt;/td&gt;
+&lt;td&gt;correr&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;corriendo&lt;/td&gt;
+&lt;td&gt;correr&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;corrio&lt;/td&gt;
+&lt;td&gt;correr&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Luego, hay sustantivos y otras palabras que tienen la misma raiz y
+dependiendo del sujeto, se puede reducir el tamaño del diccionario
+cortando de la raiz la palabra, lo que se conoce como &lt;em&gt;stemmización&lt;/em&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th&gt;Original&lt;/th&gt;
+&lt;th&gt;Stemmización&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;niña&lt;/td&gt;
+&lt;td&gt;niñe&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td&gt;niño&lt;/td&gt;
+&lt;td&gt;niñe&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td&gt;niñe&lt;/td&gt;
+&lt;td&gt;niñe&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;El proceso de lematización y stemización, en su conjunto, se puede
+entender como normalizar el vocabulario y por lo tanto, una función que
+se encarge de hacer estas dos cosas, puede llamarse &lt;em&gt;normalize(text)&lt;/em&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def normalize(text):
+    from nltk.stem import PorterStemmer
+    from nltk.tokenize import word_tokenize
+    import unidecode
+    import spacy
+    nlp = spacy.load(&#39;en_core_web_sm&#39;)
+    porter = PorterStemmer()
+    doc = nlp(text)
+    lemmas = [unidecode.unidecode(tok.lemma_.lower()) for tok in doc if not tok.is_punct ]
+    #En este caso, estoy eliminando palabras con menos de 3 letras y las negaciones, esto no es necesario estrictamente, y depende mucho del caso de aplicación, a veces funciona, a veces no.
+    lexical_tokens = [t.lower() for t in lemmas if (len(t) &amp;gt; 3 or t ==&amp;quot;no&amp;quot;) and t.isalpha()]
+    lexical_tokens = [porter.stem(t) for t in lexical_tokens]
+    return lexical_tokens
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Esta funcion tiene como input una frace y escupe objeto tipo list()
+asique lo que haré es aplicarla a cada texto y despues volverla a unir
+para que cada fila tenga un texto y no un array&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;norm_token = []
+for i in range(len(cc.comentarios)):
+    try:
+        a = normalize(cc.comentarios[i])
+    except:
+        a = &#39;&#39;
+    norm_token.append(a)
+norm_text = [&#39; &#39;.join(x) for x in norm_token]
+cc[&#39;norm_text&#39;] = norm_text
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;doc2vec-generando-el-embedding-numérico&#34;&gt;Doc2Vec: Generando el embedding numérico&lt;/h3&gt;
+&lt;p&gt;¿Porque no tratar directo con los tokens? Por la sencilla razón hay un
+paquete que permite aplicar Doc2Vec, asociando un texto a una clase,
+&lt;em&gt;gensim&lt;/em&gt; nos va a venir bien para esto:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;from gensim.models.doc2vec import Doc2Vec, TaggedDocument
+#Primera la separacion entre test y train
+train, test = train_test_split(cc, test_size=0.2, random_state=42)
+
+train_tagged = train.apply(
+    lambda r: TaggedDocument(words=word_tokenize(r.norm_text), tags=[r.calificacion]), axis=1)
+test_tagged = test.apply(
+    lambda r: TaggedDocument(words=word_tokenize(r.norm_text), tags=[r.calificacion]), axis=1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Una vez que tenemos los elementos de train y test, hay que entrenar el
+Doc2Vec, para, así pasar el texto a un vector númerico que pueda ser el
+input del algoritmo de clasificación&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;for epoch in range(30):
+
+    model_dbow.train(utils.shuffle([x for x in tqdm(train_tagged.values)]), total_examples=len(train_tagged.values), epochs=1)
+    model_dbow.alpha -= 0.002
+    model_dbow.min_alpha = model_dbow.alpha
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Con el modelo Doc2Vec entrenado, podemos darle pasar los textos y
+obtener el vector numerico deseado. Ahora bien, para facilitar la
+implementación del modelo después, generemos una función con dos ouputs,
+el vector numerico por un lado, y el rating asociado a ese vector
+numérico&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def vec_for_learning(model, tagged_docs):
+    sents = tagged_docs.values
+    targets, regressors = zip(*[(doc.tags[0], model.infer_vector(doc.words, steps=20)) for doc in sents])
+    return targets, regressors
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ahora que tenemos la función que nos genera el vector númerico
+terminamos con el proceso de preparación de los datos. Es curioso notar
+que siempre se dice que el 80% del trabajo consiste en la preparación y
+limpieza de datos, y el 20% el modelado. Hasta ahora se puede ver que no
+es una distinción tan discreta, sino que es continua. ¿A qué me refiero?
+Bueno, para preparar los datos hizo falta algoritmos de embedding
+(Doc2Vec). Y no es poco común que ocurran estas cosas.&lt;/p&gt;
+&lt;p&gt;Ahora bien, volvamos a lo nuestro, es hora de correr los algoritmos de
+regresión:&lt;/p&gt;
+&lt;h3 id=&#34;regresión&#34;&gt;Regresión&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;from sklearn.ensemble import RandomForestRegressor
+from sklearn.linear_model import LinearRegression
+
+y_train, X_train = vec_for_learning(model_dbow, train_tagged)
+y_test, X_test = vec_for_learning(model_dbow, test_tagged)
+
+lr = LinearRegression()
+lr.fit(X_train, y_train)
+y_pred = lr.predict(X_test)
+
+print(np.sqrt(mean_squared_error(y_test, y_pred))) #1.15
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Este resultado no me convence demasiado si consideramos al puntaje como
+una regresión. El error cuadratico medio es del 1.15pts, para los que no
+recuerdan, el error cuadratico medio toma la diferencia entre el valor
+predecido y el valor real, lo eleva al cuadrado y de ello toma el
+promedio. Les dejo un &lt;a href=&#34;https://www.youtube.com/watch?v=8wgy8Vopv3E&#34;&gt;video &lt;/a&gt; de mi canal de Youtube con la visualización
+de lo que significa&lt;/p&gt;
+&lt;h3 id=&#34;clasificación&#34;&gt;Clasificación&lt;/h3&gt;
+&lt;p&gt;Otra forma de entender el problema es como uno de clasificación. ¿Pero
+como pasamos de un target continuo a uno discreto? Podríamos pensar que
+los puntajes de 4 ó 5 son &amp;ldquo;buenos&amp;rdquo;, y asignarles un 1, y los de menos de
+4 son &amp;ldquo;malos&amp;rdquo;, y asignarles un 0, y nos quedamos con un problema de
+clasificación binaria.&lt;/p&gt;
+&lt;p&gt;Además, con estas conceptualización, tenes que volver a correr el
+embedding porque los &amp;ldquo;tags&amp;rdquo; no son ahora los puntajes del 1 al 5 sino
+que son {1,0}&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cl = []
+for i in cc.calificacion:
+    if i &amp;lt;4:
+        cl.append(0)
+    else:
+        cl.append(1)
+cc.calificacion = cl
+
+train, test = train_test_split(cc, test_size=0.2, random_state=42)
+
+train_tagged = train.apply(
+    lambda r: TaggedDocument(words=word_tokenize(r.norm_text), tags=[r.calificacion]), axis=1)
+test_tagged = test.apply(
+    lambda r: TaggedDocument(words=word_tokenize(r.norm_text), tags=[r.calificacion]), axis=1)
+model_dbow = Doc2Vec(dm=0, vector_size=300, negative=5, hs=0, min_count=2, sample = 0)
+model_dbow.build_vocab([x for x in tqdm(train_tagged.values)])
+for epoch in range(30):
+    model_dbow.train(utils.shuffle([x for x in tqdm(train_tagged.values)]), total_examples=len(train_tagged.values), epochs=1)
+    model_dbow.alpha -= 0.002
+    model_dbow.min_alpha = model_dbow.alpha
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ahora si, sacamos los vectores del modelo Doc2Vec y lo fiteamos a un
+randomForest clasificador:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;from sklearn.ensemble import RandomForestClassifier
+y_train, X_train = vec_for_learning(model_dbow, train_tagged)
+y_test, X_test = vec_for_learning(model_dbow, test_tagged)
+
+
+rfr = RandomForestClassifier(n_estimators = 500, random_state = 42)
+rfr.fit(X_train, y_train)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;¿Cómo evaluamos esta clasificación? Bueno, primero nos fijamos cuanto
+coincide la predicción respecto al valor real, para eso se usa la matriz
+de confusión&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;from sklearn.metrics import confusion_matrix
+y_pred = rfr.predict(X_test)
+tn, fp, fn, tp = confusion_matrix(y_test, y_pred, labels=[0,1]).ravel()
+
+
+np.mean(y_test == y_pred)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Nuestra precisión es del 72,4%, nada mal, solo un detalle. Si mandamos
+un modelo que siempre diga &amp;ldquo;1&amp;rdquo;, tendremos una precisión equivalente a la
+proporción de &amp;ldquo;1&amp;rdquo; en el set. Que en la base completa es de 72,8%. Es
+decir, este modelo no mejor que decir que todas son igual a &amp;ldquo;1&amp;rdquo;.&lt;/p&gt;
+&lt;h3 id=&#34;polaridad-como-métrica&#34;&gt;Polaridad como métrica&lt;/h3&gt;
+&lt;p&gt;Otra alternativa puede ser extraer la polaridad del texto, herramienta
+muy útil en los procesos de sentiment analysis. Y podríamos pensar que,
+cuan más positivo sea la polaridad, estará asociado a un mejor puntaje&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;from textblob import TextBlob 
+pls = []
+sbj = []
+for i in range(len(cc.comentarios)):
+    try:
+        senti = TextBlob(cc.comentarios[i]) 
+        polarity = senti.sentiment
+        pls.append(polarity[0])
+        sbj.append(polarity[1])
+    except:
+        pls.append(0)
+        sbj.append(0)
+        
+
+polscore = [int(x &amp;gt; 0) for x in pls] # Acá 0 es un valor arbitrario de corte, 
+#un ejericio podría incluir la optimización de este valor como un hiperparametro. 
+#La polaridad genera un indice de -1, 1. Siendo -1 cuan más negativo es, y 1 cuan más #positivo es, y polscore dice que aquellos que tienen valoracion positiva sean 1 y los demás 0
+np.mean(polscore == np.array(cc.calificacion))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Sirve esto? Y, esto esta dando un resultado de 78.55%, es, a mi
+sorpresa, una mejora respecto al punto anterior. Aunque todavía no es
+satisfactorio.&lt;/p&gt;
+&lt;p&gt;Evidentemente el score de polarización agrega información.&lt;/p&gt;
+&lt;h3 id=&#34;redes-neuronales-y-glove&#34;&gt;Redes neuronales y GloVe&lt;/h3&gt;
+&lt;p&gt;Global Vectors ó &lt;a href=&#34;https://nlp.stanford.edu/projects/glove/&#34;&gt;GloVe &lt;/a&gt; es una tecnica que, a diferencia de Doc2Vec, que
+es un algortimo supervisado, es no-supervisado y obtiene embedings
+númericos de palabras según estadisticas de co-ocurrencia. De esta
+manera puede encontrar analogías tales como &amp;ldquo;los que varón es a mujer,
+rey es a reina&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Más allá las &lt;a href=&#34;https://towardsdatascience.com/gender-bias-word-embeddings-76d9806a0e17&#34;&gt;controversias &lt;/a&gt;,
+es una herramienta bastante útil para muchos casos&lt;/p&gt;
+&lt;p&gt;El objetivo de esta sección es ver como, haciendo uso de un modelo de
+lenguage pre-existente, se puede usar el proceso de transfer-learning
+para incorporar nuestros textos y sus calificaciones y adaptarlo a
+nuestras necesidades.&lt;/p&gt;
+&lt;p&gt;Esto es interesante e importante porque hay muchos modelos de lenguage
+que han hecho uso de datasets enormes en hardwares mucho más potentes
+que los que podría pagar, que se puede aprovechar&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import os
+import sys
+import numpy as np
+from keras.preprocessing.text import Tokenizer
+from keras.preprocessing.sequence import pad_sequences
+from keras.utils import to_categorical
+from keras.layers import Dense, Input, GlobalMaxPooling1D
+from keras.layers import Conv1D, MaxPooling1D, Embedding
+from keras.models import Model
+from keras.initializers import Constant
+
+
+BASE_DIR = os.getcwd()
+GLOVE_DIR = os.path.join(BASE_DIR, &#39;glove.6B&#39;) #Este es el modelo pre-entrenado
+TEXT_DATA_DIR = os.path.join(BASE_DIR, &#39;20_newsgroup&#39;)
+MAX_SEQUENCE_LENGTH = 1000 #entrenar sobre oraciones de hasta estas palabras
+MAX_NUM_WORDS = 20000 #tamaño máximo del vocabulario
+EMBEDDING_DIM = 300 #dimensión del vector númerico resultante
+VALIDATION_SPLIT = 0.2
+
+#Volvemos a cargar la información
+import pandas as pd
+cc = pd.read_csv(&#39;./hotel-reviews/Datafiniti_Hotel_Reviews.csv&#39;)
+cc = cc[[&#39;reviews.title&#39;,&#39;reviews.text&#39;,&#39;reviews.rating&#39;]]
+cc.columns = [&#39;titulo&#39;,&#39;comentarios&#39;,&#39;calificacion&#39;]
+
+cl = []
+for i in cc.calificacion:
+    if i &amp;lt;4:
+        cl.append(0)
+    else:
+        cl.append(1)
+cc.calificacion=cl
+
+#Preparación de los datos
+TEXT_DATA_DIR = cc.comentarios
+
+embeddings_index = {}
+with open(os.path.join(GLOVE_DIR, &#39;glove.6B.100d.txt&#39;)) as f:
+    for line in f:
+        word, coefs = line.split(maxsplit=1)
+        coefs = np.fromstring(coefs, &#39;f&#39;, sep=&#39; &#39;)
+        embeddings_index[word] = coefs
+
+texts = [x for x  in cc.comentarios]  # listado de muestras de texto
+labels_index = {1:1, 2:2, 3:3, 4:4, 5:5}  # diccionario mapeando los revies a los target
+labels = [int(x) for x in cc.calificacion] # target
+
+# Tokenizar las palabras
+texts = np.array(texts)
+tokenizer = Tokenizer(num_words=MAX_NUM_WORDS)
+tokenizer.fit_on_texts(texts)
+sequences = tokenizer.texts_to_sequences(texts)
+word_index = tokenizer.word_index
+
+
+#Con las palabras  tokenizadas, se hace el padding, para que todos tengan la misma longitud, para eso se agrega 0 hasta que se llene
+data = pad_sequences(sequences, maxlen=MAX_SEQUENCE_LENGTH)
+
+labels = to_categorical(np.asarray(labels))
+
+indices = np.arange(data.shape[0])
+np.random.shuffle(indices)
+data = data[indices]
+labels = labels[indices]
+num_validation_samples = int(VALIDATION_SPLIT * data.shape[0])
+
+x_train = data[:-num_validation_samples]
+y_train = labels[:-num_validation_samples]
+x_val = data[-num_validation_samples:]
+y_val = labels[-num_validation_samples:]
+
+
+num_words = min(MAX_NUM_WORDS, len(word_index) + 1)
+embedding_matrix = np.zeros((num_words, EMBEDDING_DIM))
+for word, i in word_index.items():
+    if i &amp;gt;= MAX_NUM_WORDS:
+        continue
+    embedding_vector = embeddings_index.get(word)
+    if embedding_vector is not None:
+        embedding_matrix[i] = embedding_vector
+
+#Este es el proceso que genera los embeddings
+embedding_layer = Embedding(num_words,
+                            EMBEDDING_DIM,
+                            embeddings_initializer=Constant(embedding_matrix),
+                            input_length=MAX_SEQUENCE_LENGTH,
+                            trainable=False)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ok, hasta ahi la preparación de los datos, es hora de entrenar una red
+neuronal convolutiva con los embeddings realizados para obtener el
+modelo que clasifique las reiews:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sequence_input = Input(shape=(MAX_SEQUENCE_LENGTH,), dtype=&#39;int32&#39;)
+embedded_sequences = embedding_layer(sequence_input)
+x = Conv1D(128, 6, activation=&#39;relu&#39;)(embedded_sequences)
+x = MaxPooling1D(5)(x)
+x = Conv1D(128, 6, activation=&#39;relu&#39;)(x)
+x = MaxPooling1D(6)(x)
+x = Conv1D(128, 6, activation=&#39;relu&#39;)(x)
+x = GlobalMaxPooling1D()(x)
+x = Dense(128, activation=&#39;relu&#39;)(x)
+preds = Dense(2, activation=&#39;softmax&#39;)(x)
+
+model = Model(sequence_input, preds)
+model.compile(loss=&#39;categorical_crossentropy&#39;,
+              optimizer=&#39;rmsprop&#39;,
+              metrics=[&#39;acc&#39;])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Hay mucho código repetido en este caso, pero eso es para simplicidad de
+exposición, lo relevante a enteder es que así se define la capa
+convolutiva, que esla que se repite:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;x = Conv1D(128, 6, activation=&#39;relu&#39;)(embedded_sequences)
+x = MaxPooling1D(5)(x)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Y así la ultima capa, que como terminamos con las &amp;ldquo;buenas&amp;rdquo; y &amp;ldquo;malas&amp;rdquo;
+reviews, tiene una función de activación binaria en el output&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;x = Dense(128, activation=&#39;relu&#39;)(x)
+preds = Dense(2, activation=&#39;softmax&#39;)(x)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Una vez preparados los datos, y una vez definidas las capas de la red
+neuronal se entrena:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;model.fit(x_train, y_train,
+          batch_size=128,
+          epochs=10,
+          validation_data=(x_val, y_val))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Este fit, obtiene un accuracy que supera el 90%. Un gran paso adelante.&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -18,12 +18,12 @@
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>/talk/example/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/talk/example/</loc>
+    <loc>/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url>
   
@@ -38,7 +38,12 @@
   </url>
   
   <url>
-    <loc>/post/writing-technical-content/</loc>
+    <loc>/post/prev/</loc>
+    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/prev/writing-technical-content/</loc>
     <lastmod>2019-07-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -88,7 +93,7 @@
   </url>
   
   <url>
-    <loc>/post/jupyter/</loc>
+    <loc>/post/prev/jupyter/</loc>
     <lastmod>2019-09-05T00:00:00+00:00</lastmod>
   </url>
   
@@ -143,7 +148,7 @@
   </url>
   
   <url>
-    <loc>/post/getting-started/</loc>
+    <loc>/post/prev/getting-started/</loc>
     <lastmod>2019-04-17T00:00:00+00:00</lastmod>
   </url>
   
@@ -188,7 +193,7 @@
   </url>
   
   <url>
-    <loc>/post/2015-07-23-r-rmarkdown/</loc>
+    <loc>/post/prev/2015-07-23-r-rmarkdown/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
   
@@ -220,6 +225,26 @@
   <url>
     <loc>/publication/conference-paper/</loc>
     <lastmod>2013-07-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/clusterizar-disenos/</loc>
+  </url>
+  
+  <url>
+    <loc>/post/dedupl/</loc>
+  </url>
+  
+  <url>
+    <loc>/post/mardel_realstate/</loc>
+  </url>
+  
+  <url>
+    <loc>/post/paso2019/</loc>
+  </url>
+  
+  <url>
+    <loc>/post/review_rating/</loc>
   </url>
   
 </urlset>
