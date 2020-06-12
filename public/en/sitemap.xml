@@ -3,39 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/en/en/post/clusterizar-disenos/</loc>
-  </url>
-  
-  <url>
     <loc>/en/post/clusterizar-disenos/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/post/clusterizar-disenos/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/post/clusterizar-disenos/"
-                />
-  </url>
-  
-  <url>
-    <loc>/en/en/post/mardel_realstate/</loc>
   </url>
   
   <url>
     <loc>/en/post/mardel_realstate/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/post/mardel_realstate/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/post/mardel_realstate/"
-                />
   </url>
   
   <url>
@@ -67,10 +39,6 @@
   </url>
   
   <url>
-    <loc>/en/en/</loc>
-  </url>
-  
-  <url>
     <loc>/en/</loc>
     <xhtml:link
                 rel="alternate"
@@ -86,16 +54,6 @@
   
   <url>
     <loc>/en/post/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/post/"
-                />
   </url>
   
   <url>

@@ -3,22 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/courses/example/example1/</loc>
+    <loc>/es/courses/example/example1/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/example/</loc>
+    <loc>/es/courses/example/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/example/example2/</loc>
+    <loc>/es/courses/example/example2/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/</loc>
+    <loc>/es/courses/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/es/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
@@ -38,53 +43,37 @@
   </url>
   
   <url>
-    <loc>/privacy/</loc>
+    <loc>/es/privacy/</loc>
     <lastmod>2018-06-28T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/terms/</loc>
+    <loc>/es/terms/</loc>
     <lastmod>2018-06-28T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/clusterizar-disenos/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/post/clusterizar-disenos/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/post/clusterizar-disenos/"
-                />
+    <loc>/es/post/clusterizar-disenos/</loc>
   </url>
   
   <url>
-    <loc>/post/dedupl/</loc>
+    <loc>/es/post/dedupl/</loc>
   </url>
   
   <url>
-    <loc>/post/mardel_realstate/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/post/mardel_realstate/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/post/mardel_realstate/"
-                />
+    <loc>/es/post/mardel_realstate/</loc>
   </url>
   
   <url>
-    <loc>/post/paso2019/</loc>
+    <loc>/es/post/paso2019/</loc>
   </url>
   
   <url>
-    <loc>/post/review_rating/</loc>
+    <loc>/es/post/review_rating/</loc>
+  </url>
+  
+  <url>
+    <loc>/author/admin/</loc>
   </url>
   
   <url>
@@ -116,21 +105,7 @@
   </url>
   
   <url>
-    <loc>/author/nelson-bighetti/</loc>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/post/"
-                />
+    <loc>/es/authors/admin/</loc>
   </url>
   
   <url>
@@ -163,6 +138,10 @@
   
   <url>
     <loc>/author/%E5%90%B3%E6%81%A9%E9%81%94/</loc>
+  </url>
+  
+  <url>
+    <loc>/es/authors/%E5%90%B3%E6%81%A9%E9%81%94/</loc>
   </url>
   
 </urlset>
